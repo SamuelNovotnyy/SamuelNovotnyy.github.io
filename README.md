@@ -1,0 +1,2 @@
+# SamuelNovotnyy.github.io
+FirstSemestralWebsite
