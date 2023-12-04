@@ -28,21 +28,17 @@
 
               .text #bar2 div {
                      display: table;
-                     height: calc(800px - 42vw);
               }
 
               .text #example1 {
                      display: table-cell;
-                     column-width: 42vw;
-              }
-
-              .text #example1 div {
-                     display: block;
+                     width: 49%;
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
               }
 
               .text #info1 {
                      display: table-cell;
-                     column-width: 42vw;
                      border-left: var(--marg) solid var(--body-color);
                      padding: 1em 2em 1em 2em;
                      background-color: var(--Bg-color);
@@ -51,10 +47,17 @@
               .text #bar3 {
                      background-color: var(--Bg-color);
                      height: 300px;
+                     padding: 1em 2em 1em 2em;
+              }
+
+              .text #example2 {
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
               }
 
               .text #example2 div {
                      height: 300px;
+
               }
 
               #a,
@@ -90,7 +93,7 @@
        </style>
 
        <div class="topnav" id="topnav">
-              <a href="index.html">
+              <a href="../index.html">
                      <div id="logo">
                             <svg id="logCover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.67 138.67">
                                    <g id="Layer_2" data-name="Layer 2">
@@ -119,13 +122,13 @@
                                           </g>
                                    </g>
                             </svg>
-                            <img src="images/picAsset 4.png">
+                            <img src="../images/picAsset 4.png">
                      </div>
               </a>
               <div id="tempbox"></div>
               <ul>
-                     <li><a href="podstranky/kontakt.html">kontakt</a></li>
-                     <li><a href="podstranky/literatura.html" id="lit">literatura</a></li>
+                     <li><a>kontakt</a></li>
+                     <li><a href="literatura.html" id="lit">literatura</a></li>
               </ul>
               <button onclick="toggleDM()"><span id="sidesprite">
                             <p>mode</p>
@@ -144,9 +147,9 @@
        <div class="text" id="text">
               <div id="topbar">
                      <h1>
-                            Vitajte
+                            kontakt
                      </h1>
-                     <img src="images/abstract-technology-background--networks--connections.jpg">
+                     <img src="../images/abstract-technology-background--networks--connections.jpg">
               </div>
               <div class="context" id="bar1">
                      <p>
@@ -158,7 +161,7 @@
                      </p>
               </div>
               <div class="context" id="bar2">
-                     <div>
+                     <div style="width: 100%;">
                             <span class="example" id="example1">
                                    <h3>Example eins</h3>
                                    <p>this is an example of code</p>
@@ -197,16 +200,16 @@
                                    event listeners for mouseover and mouseout actions. The loop runs from 0 to the
                                    length of listLen2. Within each iteration, two immediately invoked function
                                    expressions (IIFEs) are used to encapsulate the event listener attachment.
-                                   <br>
+                                   <br><br>
                                    For every element at index i in the listLen2 array, the script attempts to add a
                                    mouseover event listener. Upon a mouseover event, it calls functions
                                    setPropsMouseover(i) and setPropsCotrMouseover(i) (assuming listLen2 and cListLen2
                                    arrays exist and contain DOM elements).
-                                   <br>
+                                   <br><br>
                                    Similarly, the script tries to add mouseout event listeners for the same elements. On
                                    triggering a mouseout event, functions setPropsMouseout(i) and
                                    setPropsCotrMouseout(i) are called.
-                                   <br>
+                                   <br><br>
                                    The try...catch blocks are implemented to handle potential errors that might arise if
                                    the elements or event listeners are not present or if there are other runtime issues.
                                    However, there are a few structural issues in the script, such as missing closing
@@ -214,7 +217,10 @@
                             </span>
                      </div>
               </div>
-              <div class="context" id="bar3">edthrethjrethrhrrthrrhrthrthrthththrhthrthth</div>
+              <div class="context" id="bar3">
+                     <h3>Header 3 YAY</h3>
+                     <p>edthrethjrethrhrrthrrhrthrthrthththrhthrthth</p>
+              </div>
               <div class="context" id="bar4">
                      <div>
                             <span class="example" id="example2">
@@ -259,14 +265,14 @@
                      <div id="footerBottom">
                             <div id="footerIcons">
                                    <a href="https://www.linkedin.com/in/samuel-novotn%C3%BD-5b322729a/"><img
-                                                 src="images/ico-linked.svg"></a>
+                                                 src="../images/ico-linked.svg"></a>
                                    <a href="https://www.facebook.com/samuel.novotny.733/"><img
-                                                 src="images/ico-fb.svg"></a>
+                                                 src="../images/ico-fb.svg"></a>
                                    <a href="https://www.instagram.com/bearable_sometimes/"><img
-                                                 src="images/ico-insta.svg"></a>
+                                                 src="../images/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
-                                                 src="images/ico-yt.svg"></a>
-                                   <p>Copyright © 2023 All rights reserved.</p>
+                                                 src="../images/ico-yt.svg"></a>
+                                   <p>Copywight © 2023 All rights reserved.</p>
 
                             </div>
                      </div>
@@ -275,28 +281,28 @@
 
        </div>
        <div class="botnav" id="botnav">
-              <a href="podstranky/uvod.html">
+              <a href="uvod.html">
                      <span id="a">
                             <div id="a1">
                                    <p>Úvod</p>
                             </div>
                      </span>
               </a>
-              <a href="podstranky/stav.html">
+              <a href="stav.html">
                      <span id="b">
                             <div id="b1">
                                    <p>Stav</p>
                             </div>
                      </span>
               </a>
-              <a href="podstranky/future.html">
+              <a href="future.html">
                      <span id="c">
                             <div id="c1">
                                    <p>Future</p>
                             </div>
                      </span>
               </a>
-              <a href="podstranky/zaver.html">
+              <a href="zaver.html">
                      <span id="d">
                             <div id="d1">
                                    <p>Záver</p>
@@ -305,5 +311,5 @@
               </a>
        </div>
 
-       <script src="script.js"></script>
+       <script src="../script.js"></script>
 </body>

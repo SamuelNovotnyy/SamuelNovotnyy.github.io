@@ -21,6 +21,46 @@
                      color: var(--Text-color);
               }
 
+              .text #bar1 a {
+                     text-decoration: none;
+                     color: var(--citation);
+                     font-weight: 800;
+              }
+
+              .text #bar1 i {
+                     text-decoration: underline;
+              }
+
+              .text #bar2 {
+                     display: table;
+              }
+
+              .text #bar2 a {
+                     text-decoration: none;
+                     color: var(--citation);
+                     font-weight: 800;
+              }
+
+              .text #bar2 i {
+                     text-decoration: underline;
+              }
+
+              .text #info1 {
+                     display: table-cell;
+                     width: 49%;
+                     border-right: var(--marg) solid var(--body-color);
+                     padding: 1em 2em 1em 2em;
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
+              }
+
+              .text #pic1 {
+                     display: table-cell;
+                     width: 49%;
+                     background-color: var(--Bg-color);
+                     color: var(--Text-color);
+              }
+
               #b,
               #c,
               #d {
@@ -87,8 +127,8 @@
               </a>
               <div id="tempbox"></div>
               <ul>
-                     <li><a href="podstranky/kontakt.html">kontakt</a></li>
-                     <li><a href="podstranky/literatura.html" id="lit">literatura</a></li>
+                     <li><a href="kontakt.html">kontakt</a></li>
+                     <li><a href="literatura.html" id="lit">literatura</a></li>
               </ul>
               <button onclick="toggleDM()"><span id="sidesprite">
                             <p>mode</p>
@@ -107,18 +147,96 @@
        <div class="text" id="text">
               <div id="topbar">
                      <h1>
-                            Vitajte
+                            Stav
                      </h1>
-                     <img src="../images/abstract-classic-blue-background_23-2148434248.jpg">
+                     <img src="../images/gradient-particle-wave-background_23-2150491615.jpg">
               </div>
               <div class="context" id="bar1">
+                     <h3>Momentary state of security</h3>
                      <p>
-                            Welcome to my website! Here, I invite you on a journey behind the scenes, delving into the
-                            intricacies of the code that powers this very platform. As an enthusiast of web development
-                            and coding, I am thrilled to share insights, techniques, and the creative process behind
-                            constructing this site. Join me as I unravel the layers of code, offering a unique
-                            perspective on the craftsmanship and technical nuances involved in its creation.
+                            The current state of online communication represents an intricate tapestry of connectivity
+                            and risks. With the rapid evolution of digital platforms and the proliferation of social
+                            media, online communication has become ubiquitous in daily life. However, this widespread
+                            adoption has brought forth a spectrum of risks. Cyberbullying, misinformation, privacy
+                            breaches, and the spread of harmful content stand as significant challenges. As Safiya Umoja
+                            Noble highlighted in <i>"Algorithms of Oppression," the algorithms embedded in online
+                                   platforms
+                                   can perpetuate biases, shaping the information users consume and influencing societal
+                                   perceptions.<a href="#footerIcons"><sup>[1]</sup></a></i> Furthermore, the rise of
+                            disinformation and fake news, as
+                            elucidated by
+                            Claire Wardle in <i>"Information Disorder," poses a threat to the credibility of information
+                                   sources, undermining trust and perpetuating societal discord.<a
+                                          href="#footerIcons"><sup>[2]</sup></a></i> The digital
+                            landscape's
+                            inherent vulnerabilities, including data breaches and identity theft, underscore the need
+                            for robust cybersecurity measures to safeguard personal information. The current milieu of
+                            online communication demands a vigilant approach to navigate these risks effectively while
+                            harnessing the unparalleled opportunities for connectivity and collaboration that digital
+                            platforms offer.
                      </p>
+              </div>
+              <div class="context" id="bar2">
+                     <div style="width: 100%;">
+                            <span id="info1">
+                                   <h3>Currency of our privacy</h3>
+                                   <p>The contemporary landscape of online communication presents a multifaceted
+                                          environment where
+                                          connectivity coexists with inherent risks. The pervasive nature of social
+                                          media platforms
+                                          and digital channels has reshaped how individuals engage and disseminate
+                                          information
+                                          globally. However, this unprecedented connectivity has led to a rise in
+                                          cyberbullying, as
+                                          explored by Sameer Hinduja and Justin W. Patchin in <i>"Bullying Beyond the
+                                                 Schoolyard,"
+                                                 where
+                                                 they underscore the prevalence and detrimental effects of online
+                                                 harassment on
+                                                 individuals,
+                                                 particularly the youth.<a href="#footerIcons"><sup>[3]</sup></a></i>
+                                          <br><br>
+                                          Moreover, the
+                                          phenomenon of echo chambers and filter bubbles, as
+                                          articulated by Cass Sunstein in <i>"Republic.com," perpetuates the
+                                                 polarization of opinions
+                                                 by
+                                                 presenting users with tailored content that aligns with their existing
+                                                 beliefs,
+                                                 potentially
+                                                 hindering critical thinking and fostering societal divisions.<a
+                                                        href="#footerIcons"><sup>[4]</sup></a></i> The advent of social
+                                          media
+                                          influencers and the dissemination of unverified information have exacerbated
+                                          the challenge
+                                          of misinformation, amplifying the spread of false narratives and undermining
+                                          trust in
+                                          traditional media sources.
+                                          <br><br>
+                                          Amidst these risks, issues of online privacy
+                                          violations,
+                                          illustrated by Julia Angwin in <i>"Dragnet Nation," call attention to the
+                                                 surveillance and
+                                                 data
+                                                 collection practices by online entities, raising concerns about
+                                                 individual autonomy
+                                                 and data
+                                                 security.<a href="#footerIcons"><sup>[5]</sup></a></i> Thus, while
+                                          online
+                                          communication offers unprecedented connectivity and
+                                          opportunities, it concurrently demands a nuanced understanding of the risks to
+                                          navigate this
+                                          digital realm effectively.
+                                   </p>
+                            </span>
+                            <span class="pic" id="pic1">
+                                   <h3>Obr.1</h3>
+                                   <p>Contextual picture</p>
+                                   <div>
+                                          <img src="../images/privacyPic1.webp" style="height: 500px;">
+                                   </div>
+                            </span>
+                     </div>
               </div>
 
               <div class="context" id="footer">
@@ -136,8 +254,34 @@
                                                  src="../images/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
                                                  src="../images/ico-yt.svg"></a>
-                                   <p>Copyright © 2023 All rights reserved.</p>
-
+                                   <p>Copywight © 2023 All rights reserved.</p>
+                                   <span id="citats">
+                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[1] Noble, S. U.
+                                                 (2018).
+                                                 Algorithms of Oppression: How Search Engines Reinforce Racism. NYU
+                                                 Press.
+                                          </a>
+                                          <a
+                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
+                                                 [2] Wardle, C., & Derakhshan, H. (2017). Information Disorder: Toward
+                                                 an
+                                                 Interdisciplinary
+                                                 Framework for Research and Policy Making. Council of Europe.</a>
+                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[3] Hinduja, S., &
+                                                 Patchin,
+                                                 J. W. (2015). Bullying Beyond the Schoolyard: Preventing and
+                                                 Responding to Cyberbullying. SAGE Publications, Inc.
+                                          </a>
+                                          <a
+                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
+                                                 [4] Sunstein, C. R. (2002). Republic.com. Princeton University
+                                                 Press.</a>
+                                          <a
+                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
+                                                 [5] Angwin, J. (2014). Dragnet Nation: A Quest for Privacy, Security,
+                                                 and
+                                                 Freedom in a World of
+                                                 Relentless Surveillance. Times Books.</a></span>
                             </div>
                      </div>
               </div>

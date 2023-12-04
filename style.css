@@ -14,6 +14,7 @@
 
   --Text-color: rgb(121, 47, 67);
   --cText-color: rgb(255, 255, 255);
+  --citation: #da5f9d;
   --Text-shadow: rgba(0, 0, 0, 0.1);
   --Drop-shadow: rgba(0, 0, 0, 0.3);
   --Topnav-color: #fff5fb;
@@ -38,6 +39,7 @@
 :root.dark {
   --Text-color: #fff5fb;
   --cText-color: #ffffff;
+  --citation: #decfff;
   --Text-shadow: rgba(0, 0, 0, 0.2);
   --Drop-shadow: rgba(0, 0, 0, 0.6);
   --Arrow-shadow: rgba(0, 0, 0, 0.5);
@@ -65,10 +67,13 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
 body {
   background-color: var(--body-color);
   width: 100%;
-  overflow-x: hidden;
 }
 * {
   margin: 0%;
@@ -101,7 +106,7 @@ body {
   z-index: 11;
   border-radius: 50%;
   fill: var(--cTopnav-color);
-  filter: drop-shadow(0px 0px 2px var(--Drop-shadow));
+  filter: drop-shadow(0px 0px 0.2vh var(--Drop-shadow));
 }
 .topnav #logShadow {
   position: inherit;
@@ -112,12 +117,13 @@ body {
 .topnav img {
   position: inherit;
   inset: 50% 50%;
-  transform: translate(-50%, -50%) scale(8%);
+  transform: translate(-50%, -50%);
+  height: calc(var(--ico-size) + 8%);
   z-index: 9;
   border-radius: 50%;
 }
 .topnav #logo:hover {
-  box-shadow: 0 0 0 8px var(--selector-color);
+  box-shadow: 0 0 0 0.8vh var(--selector-color);
 }
 .topnav ul {
   height: 100%;
@@ -130,13 +136,13 @@ body {
   z-index: -10;
   float: right;
   height: 100%;
-  width: calc(26% - 40px);
-  min-width: 160px;
+  width: 20%;
+  min-width: 140px;
 }
 .topnav li {
   position: relative;
   display: inline;
-  margin-left: 50px;
+  margin-right: 5vw;
 }
 .topnav li a {
   color: var(--Text-color);
@@ -179,11 +185,11 @@ body {
   background-color: var(--cTopnav-color);
   color: var(--navT-col);
   text-shadow: 2px 1px 2px var(--Text-shadow);
-  filter: drop-shadow(0px 0px 2px var(--Drop-shadow));
+  filter: drop-shadow(0px 0px 0.2vh var(--Drop-shadow));
   transition: all 200ms ease;
 }
 .topnav #sidesprite:hover {
-  box-shadow: 0 0 0 8px var(--selector-color);
+  box-shadow: 0 0 0 0.8vh var(--selector-color);
   cursor: pointer;
 }
 .topnav #sidesprite p {
@@ -193,14 +199,13 @@ body {
   font-size: 20px;
   text-transform: capitalize;
   line-height: 0%;
-  top: 48%;
-  left: 30px;
+  top: 50%;
+  left: calc(1% + 50px);
 }
 .topnav #ciricon {
-  position: absolute;
   transform: translate(0, -50%);
   top: 50%;
-  left: 80px;
+  left: 1%;
   position: absolute;
   height: 100%;
   aspect-ratio: 1;
@@ -212,9 +217,9 @@ body {
 }
 /**Context part of the page, [information data pictures]**/
 .text {
-  font-family: "Lora", serif;
-  font-weight: 300;
-  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   text-shadow: 2px 1px 2px var(--Text-shadow);
   color: var(--Text-color);
   margin-top: calc(var(--topBarH) + var(--topBodyH) + var(--marg));
@@ -240,8 +245,6 @@ body {
 .example {
   display: block;
   padding: 1em 2em 1em 2em;
-  background-color: var(--cBg-color);
-  color: var(--cText-color);
 }
 .example div {
   display: block;
@@ -254,6 +257,16 @@ body {
   overflow: scroll;
   border-left: 4px solid var(--exmpleLine);
 }
+.pic {
+  display: block;
+  padding: 1em 2em 1em 2em;
+}
+.pic div {
+  display: flex;
+  background-color: var(--exmple);
+  overflow: hidden;
+  border-left: 4px solid var(--exmpleLine);
+}
 .text #topbar {
   position: absolute;
   width: 100%;
@@ -263,6 +276,7 @@ body {
   z-index: -10;
 }
 .text #topbar img {
+  position: absolute;
   height: 100%;
   width: 100%;
   transform: scale(1.1);
@@ -275,7 +289,7 @@ body {
   left: 50%;
   top: 54%;
   color: white;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 35px;
   letter-spacing: 2px;
@@ -324,6 +338,9 @@ body {
 .text #footer #footerIcons img {
   border-radius: 50%;
 }
+.text #footer #footerIcons #citats a {
+  display: block;
+}
 .text #footerIcons a:hover {
   color: var(--exmpleLine) !important;
 }
@@ -332,9 +349,9 @@ body {
 }
 .text #bg {
   position: absolute;
-  width: 110%;
+  width: 102%;
   height: 100px;
-  left: -5%;
+  left: -1%;
   top: calc(var(--topBarH) + var(--topBodyH));
   z-index: -2;
   background-color: var(--body-color);

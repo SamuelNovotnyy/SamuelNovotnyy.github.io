@@ -21,6 +21,25 @@
                      color: var(--Text-color);
               }
 
+              .text #bar1 a {
+                     text-decoration: none;
+                     color: var(--citation);
+                     font-weight: 800;
+              }
+
+              .text #bar1 i {
+                     text-decoration: underline;
+              }
+
+              .text #pic1 {
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
+              }
+
+              .text #pic1 div {
+                     height: 422px;
+              }
+
               #c,
               #d {
                      filter: drop-shadow(var(--Arrow-shadow));
@@ -86,8 +105,8 @@
               </a>
               <div id="tempbox"></div>
               <ul>
-                     <li><a href="podstranky/kontakt.html">kontakt</a></li>
-                     <li><a href="podstranky/literatura.html" id="lit">literatura</a></li>
+                     <li><a href="kontakt.html">kontakt</a></li>
+                     <li><a href="literatura.html" id="lit">literatura</a></li>
               </ul>
               <button onclick="toggleDM()"><span id="sidesprite">
                             <p>mode</p>
@@ -106,18 +125,64 @@
        <div class="text" id="text">
               <div id="topbar">
                      <h1>
-                            Vitajte
+                            Budúcnosť
                      </h1>
                      <img src="../images/computer-program-coding-screen.jpg">
               </div>
               <div class="context" id="bar1">
+                     <h3>Post quantum encryption</h3>
                      <p>
-                            Welcome to my website! Here, I invite you on a journey behind the scenes, delving into the
-                            intricacies of the code that powers this very platform. As an enthusiast of web development
-                            and coding, I am thrilled to share insights, techniques, and the creative process behind
-                            constructing this site. Join me as I unravel the layers of code, offering a unique
-                            perspective on the craftsmanship and technical nuances involved in its creation.
+                            The future of safety in online communication stands at the precipice of a significant
+                            transformation, largely driven by advancements in cybersecurity technologies. As the digital
+                            landscape continues to evolve, one promising avenue that holds immense potential for
+                            bolstering online safety is post-quantum encryption. Post-quantum cryptography aims to
+                            develop encryption methods resilient against attacks by quantum computers, which possess the
+                            computational power to break traditional cryptographic systems. The integration of
+                            post-quantum encryption protocols, such as lattice-based cryptography or hash-based
+                            signatures, could fortify the security of data transmission and storage, offering a robust
+                            defense against potential quantum threats. <i>Researchers like Michele Mosca and others
+                                   emphasize the urgency of adopting post-quantum encryption as a proactive measure to
+                                   safeguard sensitive information in the impending era of quantum computing.<a
+                                          href="#footerIcons"><sup>[1]</sup></a></i>
+                            <br><br>
+                            Moreover, the future of online safety hinges not only on technological advancements but also
+                            on comprehensive policy frameworks and global collaboration. International cooperation is
+                            pivotal in establishing standardized cybersecurity protocols and frameworks to ensure
+                            interoperability and a cohesive approach toward safeguarding online communication.
+                            <i>Experts
+                                   like Tal Kopan emphasize the significance of global partnerships and unified efforts
+                                   to
+                                   combat cyber threats, transcending geographical boundaries and addressing the
+                                   multifaceted
+                                   challenges of online security.<a href="#footerIcons"><sup>[2]</sup></a></i>
+                            Additionally, a
+                            renewed focus on user education and
+                            awareness regarding cyber hygiene and best practices in online behavior, advocated by
+                            cybersecurity <i>experts like Brian Krebs, plays a pivotal role in fortifying the human
+                                   element
+                                   against potential cyber risks.<a href="#footerIcons"><sup>[3]</sup></a></i>
+                            <br><br>
+                            As we navigate the evolving landscape of online communication, it becomes increasingly
+                            evident that the future of safety requires a holistic approach. This approach involves not
+                            only technological innovation and policy measures but also a collective responsibility among
+                            stakeholders to prioritize security. Embracing emerging technologies like quantum-resistant
+                            encryption, fostering international cooperation, and empowering users through education will
+                            collectively shape a safer digital environment, ensuring the integrity and confidentiality
+                            of online interactions.
                      </p>
+              </div>
+              <div class="context" id="bar2">
+                     <div style="width: 100%;">
+                            <span class="pic" id="pic1">
+                                   <h3>Obr.2</h3>
+                                   <p>Contextual pictures</p>
+                                   <div>
+                                          <img src="../images/Option B.png">
+                                          <img src="../images/Market_Analysis_both_423x300mm_01.jpg">
+                                          <img src="../images/computer-program-coding-screen.jpg">
+                                   </div>
+                            </span>
+                     </div>
               </div>
 
               <div class="context" id="footer">
@@ -135,8 +200,22 @@
                                                  src="../images/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
                                                  src="../images/ico-yt.svg"></a>
-                                   <p>Copyright © 2023 All rights reserved.</p>
-
+                                   <p>Copywight © 2023 All rights reserved.</p>
+                                   <span id="citats">
+                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[1] Mosca, M., &
+                                                 Ekert, A. (2017). Post-Quantum Cryptography. Nature.
+                                          </a>
+                                          <a
+                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
+                                                 [2] Kopan, T. (2018). International Cooperation in Cyberspace: Toward a
+                                                 Strategic Framework.
+                                                 Council on Foreign Relations.</a>
+                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[3] Krebs, B. (2018).
+                                                 Spam Nation: The Inside Story of Organized Cybercrime-from Global
+                                                 Epidemic
+                                                 to Your Front Door. Sourcebooks.
+                                          </a>
+                                   </span>
                             </div>
                      </div>
               </div>

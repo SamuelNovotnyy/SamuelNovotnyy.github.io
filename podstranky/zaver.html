@@ -21,6 +21,45 @@
                      color: var(--Text-color);
               }
 
+              .text #bar1 a {
+                     text-decoration: none;
+                     color: var(--citation);
+                     font-weight: 800;
+              }
+
+              .text #bar1 i {
+                     text-decoration: underline;
+              }
+
+              .text #bar2 {
+                     display: table;
+              }
+
+              .text #bar2 a {
+                     text-decoration: none;
+                     color: var(--citation);
+                     font-weight: 800;
+              }
+
+              .text #bar2 i {
+                     text-decoration: underline;
+              }
+
+              .text #pic1 {
+                     display: table-cell;
+                     width: 49%;
+                     border-right: var(--marg) solid var(--body-color);
+                     background-color: var(--Bg-color);
+                     color: var(--Text-color);
+              }
+
+              .text #info1 {
+                     display: table-cell;
+                     padding: 1em 2em 1em 2em;
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
+              }
+
               #d {
                      filter: drop-shadow(var(--Arrow-shadow));
               }
@@ -85,8 +124,8 @@
               </a>
               <div id="tempbox"></div>
               <ul>
-                     <li><a href="podstranky/kontakt.html">kontakt</a></li>
-                     <li><a href="podstranky/literatura.html" id="lit">literatura</a></li>
+                     <li><a href="kontakt.html">kontakt</a></li>
+                     <li><a href="literatura.html" id="lit">literatura</a></li>
               </ul>
               <button onclick="toggleDM()"><span id="sidesprite">
                             <p>mode</p>
@@ -105,18 +144,65 @@
        <div class="text" id="text">
               <div id="topbar">
                      <h1>
-                            Vitajte
+                            Záver
                      </h1>
-                     <img src="../images/realistic-abstract-technology-particle-background_23-2148431733.jpg">
+                     <img src="../images/360_F_358108785_rNJtmort9m65M3pft5swd7lnKJcTCB8u.jpg">
               </div>
               <div class="context" id="bar1">
+                     <h3>In conclusion</h3>
                      <p>
-                            Welcome to my website! Here, I invite you on a journey behind the scenes, delving into the
-                            intricacies of the code that powers this very platform. As an enthusiast of web development
-                            and coding, I am thrilled to share insights, techniques, and the creative process behind
-                            constructing this site. Join me as I unravel the layers of code, offering a unique
-                            perspective on the craftsmanship and technical nuances involved in its creation.
+                            In conclusion, the domain of cybersecurity concerning online communication stands as a
+                            dynamic and evolving landscape, necessitating a multifaceted approach to mitigate risks and
+                            ensure a safer digital environment. The evolving nature of cyber threats, as highlighted by
+                            cybersecurity experts such as <i>Bruce Schneier, underscores the need for continuous
+                                   adaptation
+                                   and innovation in defense strategies.<a href="#footerIcons"><sup>[1]</sup></a></i>
+                            The integration of robust encryption methods,
+                            ongoing research in post-quantum cryptography, and the implementation of resilient security
+                            protocols remain imperative in safeguarding sensitive data and communications in the face of
+                            evolving cyber risks.
+                            <br><br>
+                            Furthermore, the interconnected nature of global digital networks calls for concerted
+                            efforts among nations, organizations, and individuals to collectively address cybersecurity
+                            challenges. Collaborative initiatives, advocated by leaders such as <i>Christopher Painter,
+                                   former U.S. Coordinator for Cyber Issues, emphasize the importance of international
+                                   cooperation, information sharing, and the establishment of norms and treaties to
+                                   foster a
+                                   secure cyberspace.<a href="#footerIcons"><sup>[2]</sup></a></i> Moreover, the
+                            empowerment of individuals through education and
+                            awareness, as championed by cybersecurity thought leaders like <i>Mikko Hyppönen, becomes
+                                   pivotal in cultivating a cyber-resilient society capable of recognizing and
+                                   mitigating
+                                   online threats.<a href="#footerIcons"><sup>[3]</sup></a></i>
                      </p>
+              </div>
+              <div class="context" id="bar2">
+                     <div style="width: 100%;">
+                            <span class="pic" id="pic1">
+                                   <h3>Obr.3</h3>
+                                   <p>Contextual pictures</p>
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 240px;">
+                                          <img src="../images/Cyber-security-awareness-month-1024x538.webp"
+                                                 style="height: 240px;">
+                                   </div>
+                            </span>
+                            <span id="info1">
+                                   <h3>Closing thoughts</h3>
+                                   <p>As we navigate the complexities of online communication, it is evident that
+                                          ensuring cyber
+                                          safety is an ongoing endeavor that demands continual innovation,
+                                          collaboration, and
+                                          vigilance. By embracing cutting-edge technologies, fostering global
+                                          cooperation, and
+                                          empowering users with knowledge, the path toward a more secure digital future
+                                          is paved,
+                                          ensuring the integrity, confidentiality, and reliability of online
+                                          interactions.
+                                   </p>
+                            </span>
+                     </div>
               </div>
 
               <div class="context" id="footer">
@@ -134,7 +220,23 @@
                                                  src="../images/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
                                                  src="../images/ico-yt.svg"></a>
-                                   <p>Copyright © 2023 All rights reserved.</p>
+                                   <p>Copywight © 2023 All rights reserved.</p>
+                                   <span id="citats">
+                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[1] Schneier, B.
+                                                 (2015). Data and Goliath: The Hidden Battles to Collect Your Data and
+                                                 Control
+                                                 Your World. W. W. Norton & Company.
+                                          </a>
+                                          <a
+                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
+                                                 [2] Painter, C. (2019). Cyber Diplomacy: The Importance of a Global
+                                                 Framework for Security and
+                                                 Cooperation. World Economic Forum.</a>
+                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[3] Hyppönen, M.
+                                                 (2018). Click Here to Kill Everybody: Security and Survival in a
+                                                 Hyper-connected World. W. W. Norton & Company.
+                                          </a>
+                                   </span>
 
                             </div>
                      </div>

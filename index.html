@@ -28,21 +28,17 @@
 
               .text #bar2 div {
                      display: table;
-                     height: calc(800px - 35vw);
               }
 
               .text #example1 {
                      display: table-cell;
-                     column-width: 42vw;
-              }
-
-              .text #example1 div {
-                     display: block;
+                     width: 49%;
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
               }
 
               .text #info1 {
                      display: table-cell;
-                     column-width: 42vw;
                      border-left: var(--marg) solid var(--body-color);
                      padding: 1em 2em 1em 2em;
                      background-color: var(--Bg-color);
@@ -51,10 +47,17 @@
               .text #bar3 {
                      background-color: var(--Bg-color);
                      height: 300px;
+                     padding: 1em 2em 1em 2em;
+              }
+
+              .text #example2 {
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
               }
 
               .text #example2 div {
                      height: 300px;
+
               }
 
               #a,
@@ -146,7 +149,7 @@
                      <h1>
                             Vitajte
                      </h1>
-                     <img src="images/abstract-technology-background--networks--connections.jpg">
+                     <img src="images/960x0.webp">
               </div>
               <div class="context" id="bar1">
                      <p>
@@ -158,7 +161,7 @@
                      </p>
               </div>
               <div class="context" id="bar2">
-                     <div>
+                     <div style="width: 100%;">
                             <span class="example" id="example1">
                                    <h3>Example eins</h3>
                                    <p>this is an example of code</p>
@@ -197,16 +200,16 @@
                                    event listeners for mouseover and mouseout actions. The loop runs from 0 to the
                                    length of listLen2. Within each iteration, two immediately invoked function
                                    expressions (IIFEs) are used to encapsulate the event listener attachment.
-                                   <br>
+                                   <br><br>
                                    For every element at index i in the listLen2 array, the script attempts to add a
                                    mouseover event listener. Upon a mouseover event, it calls functions
                                    setPropsMouseover(i) and setPropsCotrMouseover(i) (assuming listLen2 and cListLen2
                                    arrays exist and contain DOM elements).
-                                   <br>
+                                   <br><br>
                                    Similarly, the script tries to add mouseout event listeners for the same elements. On
                                    triggering a mouseout event, functions setPropsMouseout(i) and
                                    setPropsCotrMouseout(i) are called.
-                                   <br>
+                                   <br><br>
                                    The try...catch blocks are implemented to handle potential errors that might arise if
                                    the elements or event listeners are not present or if there are other runtime issues.
                                    However, there are a few structural issues in the script, such as missing closing
@@ -214,7 +217,10 @@
                             </span>
                      </div>
               </div>
-              <div class="context" id="bar3">edthrethjrethrhrrthrrhrthrthrthththrhthrthth</div>
+              <div class="context" id="bar3">
+                     <h3>Header 3 YAY</h3>
+                     <p>edthrethjrethrhrrthrrhrthrthrthththrhthrthth</p>
+              </div>
               <div class="context" id="bar4">
                      <div>
                             <span class="example" id="example2">
@@ -266,7 +272,7 @@
                                                  src="images/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
                                                  src="images/ico-yt.svg"></a>
-                                   <p>Copyright © 2023 All rights reserved.</p>
+                                   <p>Copywight © 2023 All rights reserved.</p>
 
                             </div>
                      </div>
