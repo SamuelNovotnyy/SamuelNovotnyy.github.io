@@ -1,2 +1,2 @@
-# SamuelNovotnyy.github.io
-FirstSemestralWebsite
+# Samuel Novotnyy
+My First Semestral Website ^-^
