@@ -14,51 +14,57 @@
 
 <body>
        <style>
-              .text #bar1 {
-                     display: block;
+              .text {
+                     margin-top: calc(var(--marg) + var(--topBarH));
+              }
+
+              .text #table1,
+              #table2,
+              #table3,
+              #table4,
+              #table5,
+              #table6,
+              #table7,
+              #table8,
+              #table9 {
+                     display: table;
+              }
+
+              .text .tablesLink {
+                     text-decoration: none;
+                     color: var(--citation);
+                     font-weight: 800;
+              }
+
+              .text .infoInTable {
+                     display: table-cell;
+                     width: 200%;
                      padding: 1em 2em 1em 2em;
+                     border-right: var(--marg) solid var(--body-color);
                      background-color: var(--Bg-color);
                      color: var(--Text-color);
               }
 
-              .text #bar2 {
-                     display: block;
+              .text .infoInTable p {
+                     display: flex;
+                     width: 100%;
+              }
+
+              .text .picInTable {
+                     display: table-cell;
+                     background-color: var(--cBg-color);
+                     color: var(--Text-color);
+                     vertical-align: top;
+                     padding: 1em 2em 1em 2em;
+              }
+
+              .text .picInTable div {
+                     display: flex;
+                     background-color: var(--exmple);
                      overflow: hidden;
+                     border-left: 4px solid var(--exmpleLine);
               }
 
-              .text #bar2 div {
-                     display: table;
-              }
-
-              .text #example1 {
-                     display: table-cell;
-                     width: 49%;
-                     background-color: var(--cBg-color);
-                     color: var(--cText-color);
-              }
-
-              .text #info1 {
-                     display: table-cell;
-                     border-left: var(--marg) solid var(--body-color);
-                     padding: 1em 2em 1em 2em;
-                     background-color: var(--Bg-color);
-              }
-
-              .text #bar3 {
-                     background-color: var(--Bg-color);
-                     height: 300px;
-                     padding: 1em 2em 1em 2em;
-              }
-
-              .text #example2 {
-                     background-color: var(--cBg-color);
-                     color: var(--cText-color);
-              }
-
-              .text #example2 div {
-                     height: 300px;
-
-              }
 
               #a,
               #b,
@@ -145,118 +151,159 @@
                      </span></buton>
        </div>
        <div class="text" id="text">
-              <div id="topbar">
-                     <h1>
-                            Literatúra
-                     </h1>
-                     <img src="../images/SL_090519_23100_13.jpg">
-              </div>
-              <div class="context" id="bar1">
-                     <p>
-                            Welcome to my website! Here, I invite you on a journey behind the scenes, delving into the
-                            intricacies of the code that powers this very platform. As an enthusiast of web development
-                            and coding, I am thrilled to share insights, techniques, and the creative process behind
-                            constructing this site. Join me as I unravel the layers of code, offering a unique
-                            perspective on the craftsmanship and technical nuances involved in its creation.
-                     </p>
-              </div>
-              <div class="context" id="bar2">
-                     <div style="width: 100%;">
-                            <span class="example" id="example1">
-                                   <h3>Example eins</h3>
-                                   <p>this is an example of code</p>
-                                   <div>
-                                          <code>for (let i = 0; i < listLen2.length; i++) {
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseover", function () {  
-                     setPropsMouseover(i);
-                     } catch (e) {}
-              try {
-                  cListLen2[i].addEventListener("mouseover", function () {
-                  setPropsCotrMouseover(i);
-                  });
-                  } catch (e) {}
-              })();
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseout", function () {
-                     setPropsMouseout(i);
-                     });
-                     } catch (e) {}
-              try {
-                     cListLen2[i].addEventListener("mouseout", function () {
-                     setPropsCotrMouseout(i);
-                     });
-                     } catch (e) {}
-              })
-       ();
-}</code>
-                                   </div>
+              <div class="context" id="table1">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+
+                                   </p>
                             </span>
-                            <span id="info1">
-                                   <h3>Info about script eins</h3>
-                                   The provided script iterates through a list of elements using a for loop to attach
-                                   event listeners for mouseover and mouseout actions. The loop runs from 0 to the
-                                   length of listLen2. Within each iteration, two immediately invoked function
-                                   expressions (IIFEs) are used to encapsulate the event listener attachment.
-                                   <br><br>
-                                   For every element at index i in the listLen2 array, the script attempts to add a
-                                   mouseover event listener. Upon a mouseover event, it calls functions
-                                   setPropsMouseover(i) and setPropsCotrMouseover(i) (assuming listLen2 and cListLen2
-                                   arrays exist and contain DOM elements).
-                                   <br><br>
-                                   Similarly, the script tries to add mouseout event listeners for the same elements. On
-                                   triggering a mouseout event, functions setPropsMouseout(i) and
-                                   setPropsCotrMouseout(i) are called.
-                                   <br><br>
-                                   The try...catch blocks are implemented to handle potential errors that might arise if
-                                   the elements or event listeners are not present or if there are other runtime issues.
-                                   However, there are a few structural issues in the script, such as missing closing
-                                   braces for the addEventListener functions.
-                            </span>
-                     </div>
-              </div>
-              <div class="context" id="bar3">
-                     <h3>Header 3 YAY</h3>
-                     <p>edthrethjrethrhrrthrrhrthrthrthththrhthrthth</p>
-              </div>
-              <div class="context" id="bar4">
-                     <div>
-                            <span class="example" id="example2">
-                                   <h3>Example zwei</h3>
-                                   <p>this is an example of code</p>
+                            <span class="picInTable">
                                    <div>
-                                          <code>for (let i = 0; i < listLen2.length; i++) {
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseover", function () {  
-                     setPropsMouseover(i);
-                     } catch (e) {}
-              try {
-                  cListLen2[i].addEventListener("mouseover", function () {
-                  setPropsCotrMouseover(i);
-                  });
-                  } catch (e) {}
-              })();
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseout", function () {
-                     setPropsMouseout(i);
-                     });
-                     } catch (e) {}
-              try {
-                     cListLen2[i].addEventListener("mouseout", function () {
-                     setPropsCotrMouseout(i);
-                     });
-                     } catch (e) {}
-              })
-       ();
-}</code>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
                                    </div>
                             </span>
                      </div>
               </div>
+              <div class="context" id="table2">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at
+                                          least what i borrowed from
+
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table3">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table4">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+                                          it OK? use chatGPT or something you fucknut, just add text because otherwise
+                                          the page will look stupid.
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table5">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+                                          it OK? use chatGPT or something you fucknut, just add text because otherwise
+                                          the page will look stupid.
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table6">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+                                          it OK? use chatGPT or something you fucknut, just add text because otherwise
+                                          the page will look stupid.
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table7">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+                                          it OK? use chatGPT or something you fucknut, just add text because otherwise
+                                          the page will look stupid.
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table8">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+                                          it OK? use chatGPT or something you fucknut, just add text because otherwise
+                                          the page will look stupid.
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="table9">
+                     <div style="display:table-row">
+                            <span class="infoInTable">
+                                   <h3>The whole entire link goes here in the style of https blah blah</h3>
+                                   <p>Here will be a longERRRR description of the link, or at least what i borrowed from
+                                          it OK? use chatGPT or something you fucknut, just add text because otherwise
+                                          the page will look stupid.
+                                   </p>
+                            </span>
+                            <span class="picInTable">
+                                   <div>
+                                          <img src="../images/Custom-Cybersecurity-Software-Development.avif"
+                                                 style="height: 100px;">
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+
+
               <div class="context" id="footer">
                      <div id="footerTop">
                             <div id="footerTxt">Empowering connections, fostering creativity, and embracing

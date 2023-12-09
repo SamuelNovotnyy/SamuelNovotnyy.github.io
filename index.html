@@ -32,7 +32,13 @@
 
               .text #example1 {
                      display: table-cell;
-                     width: 49%;
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
+              }
+
+              .text #example11 {
+                     display: table-cell;
+                     border-left: var(--marg) solid var(--body-color);
                      background-color: var(--cBg-color);
                      color: var(--cText-color);
               }
@@ -149,71 +155,113 @@
                      <h1>
                             Vitajte
                      </h1>
-                     <img src="images/960x0.webp">
+                     <img src="images/960x0.webp" fetchpriority="high">
               </div>
               <div class="context" id="bar1">
-                     <p>
-                            Welcome to my website! Here, I invite you on a journey behind the scenes, delving into the
-                            intricacies of the code that powers this very platform. As an enthusiast of web development
-                            and coding, I am thrilled to share insights, techniques, and the creative process behind
-                            constructing this site. Join me as I unravel the layers of code, offering a unique
-                            perspective on the craftsmanship and technical nuances involved in its creation.
-                     </p>
+                     <p>Vitajte na mojej úvodnej stránke! Rád by som Vám ukázal, ako som zostavil tento projekt, aby ste
+                            mohli nahliadnuť do môjho sveta tvorby webových stránok. Tu nájdete informácie o kóde, ktorý
+                            som použil na vytvorenie efektov tejto stránky, vrátane JavaScriptu a CSS. Chcel by som
+                            zdieľať kusy kódu a postupy, ktoré som použil, aby ste mohli lepšie porozumieť môjmu
+                            procesu. Dúfam, že Vám tieto informácie pomôžu aj pri Vašich vlastných projektoch a že sa
+                            budete cítiť inšpirovaní pri ďalšom objavovaní sveta web-designu. Ďakujem, že ste tu!</p>
               </div>
               <div class="context" id="bar2">
-                     <div style="width: 100%;">
+                     <div style="display:table-row">
                             <span class="example" id="example1">
-                                   <h3>Example eins</h3>
-                                   <p>this is an example of code</p>
+                                   <h3>Kód 1 {CSS3}</h3>
+                                   <p>CSS kód nastavujúci adresár premenných :root</p>
                                    <div>
-                                          <code>for (let i = 0; i < listLen2.length; i++) {
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseover", function () {  
-                     setPropsMouseover(i);
-                     } catch (e) {}
-              try {
-                  cListLen2[i].addEventListener("mouseover", function () {
-                  setPropsCotrMouseover(i);
-                  });
-                  } catch (e) {}
-              })();
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseout", function () {
-                     setPropsMouseout(i);
-                     });
-                     } catch (e) {}
-              try {
-                     cListLen2[i].addEventListener("mouseout", function () {
-                     setPropsCotrMouseout(i);
-                     });
-                     } catch (e) {}
-              })
-       ();
+                                          <code>:root {
+       --topBarH: 10.9vh;
+       --topBodyH: 27.5vh;
+       --botBarH: 14.6vh;
+                                                      
+       --w0: 4.6;
+       --x0: 4.7;
+       --y0: 5.9;
+                                                      
+       --Text-color: rgb(121, 47, 67);
+       --cText-color: rgb(255, 255, 255);
+       --citation: #da5f9d;
+       --Text-shadow: rgba(0, 0, 0, 0.1);
+       --Drop-shadow: rgba(0, 0, 0, 0.3);
+
+:root.dark {
+       --Text-color: #fff5fb;
+       --cText-color: #ffffff;
+       --citation: #decfff;
+       --Topnav-color: #231931;
+       --selector-color: rgba(163, 163, 163, 0.4);
+       --Bg-color: #3d3b42;
+       --cBg-color: #464646;
+       --exmple: rgb(43, 43, 43);
+       --exmpleLine: #ff7474;</code>
+                                   </div>
+                            </span>
+                            <span class="example" id="example11">
+                                   <h3>Kód 1 {JavaScript}</h3>
+                                   <p>Jednoduchý JS kód na iniciáciu klasy ".dark", po ktorej aktivovaní sa zmenia CSS
+                                          premenné</p>
+                                   <div>
+                                          <code>function toggleDM(init) {
+  var pageStyle = localStorage.getItem("pageMode");
+
+  if (!init) {
+    if (pageStyle == "dark") {
+      pageStyle = "light";
+    } else {
+      pageStyle = "dark";
+    }
+  }
+
+  document.documentElement.classList.remove("dark");
+  if (pageStyle == "dark") {
+    document.documentElement.classList.add("dark");
+  }
+
+  localStorage.setItem("pageMode", pageStyle);
+  resetCols();
 }</code>
                                    </div>
                             </span>
                             <span id="info1">
-                                   <h3>Info about script eins</h3>
-                                   The provided script iterates through a list of elements using a for loop to attach
-                                   event listeners for mouseover and mouseout actions. The loop runs from 0 to the
-                                   length of listLen2. Within each iteration, two immediately invoked function
-                                   expressions (IIFEs) are used to encapsulate the event listener attachment.
-                                   <br><br>
-                                   For every element at index i in the listLen2 array, the script attempts to add a
-                                   mouseover event listener. Upon a mouseover event, it calls functions
-                                   setPropsMouseover(i) and setPropsCotrMouseover(i) (assuming listLen2 and cListLen2
-                                   arrays exist and contain DOM elements).
-                                   <br><br>
-                                   Similarly, the script tries to add mouseout event listeners for the same elements. On
-                                   triggering a mouseout event, functions setPropsMouseout(i) and
-                                   setPropsCotrMouseout(i) are called.
-                                   <br><br>
-                                   The try...catch blocks are implemented to handle potential errors that might arise if
-                                   the elements or event listeners are not present or if there are other runtime issues.
-                                   However, there are a few structural issues in the script, such as missing closing
-                                   braces for the addEventListener functions.
+                                   <h3>Prehľad funkcionality kódov 1 a 2</h3>
+                                   <p>Kód naľavo je bežné spisovanie farieb a iných globálnych premenných používaných v
+                                          celom dokumente. Robí sa to v každom programovacom jazyku, vrátane CSS.
+                                          Takisto
+                                          umožňuje jednu dôležitú funkciu, a to prepínanie týchto globálnych premenných
+                                          jednou
+                                          JS-native funkciou.
+                                          <br><br>
+                                          Kód napravo je JavaScriptová funkcia nazvaná toggleDM. Zodpovedná za
+                                          prepínanie
+                                          temného režimu na webovej stránke. Pri jej vyvolaní overuje aktuálny režim
+                                          uložený v
+                                          localStorage pod kľúčom "pageMode". Ak parameter init nie je poskytnutý alebo
+                                          je
+                                          nastavený na false, prepína režim medzi "svetlým" a "tmavým" módom. Ak je
+                                          aktuálny
+                                          režim "tmavý", zmení ho na "svetlý" a naopak.
+                                          <br><br>
+                                          Táto funkcia pracuje s koreňovým prvkom HTML dokumentu
+                                          (document.documentElement)
+                                          tým, že prepína prítomnosť CSS triedy ".dark" pomocou classListu. Ak je
+                                          pageStyle
+                                          nastavený na "dark", pridá triedu "dark" k koreňovému prvku :root, čím povolí
+                                          temný
+                                          režim. Ak pageStyle nie je " dark" alebo je nastavený na "svetlý", odstráni
+                                          triedu
+                                          "dark", čím vráti štýl stránky na predvolený "svetlý" režim.
+                                          <br><br>
+                                          Okrem toho táto funkcia aktualizuje localStorage, aby uložila aktuálny režim,
+                                          zabezpečujúc, že vybraný režim pretrvá aj po obnovení alebo znovuotvorení
+                                          stránky.
+                                          Nakoniec volá funkciu resetCols(), na vykonanie úprav týkajúcich sa farebnej
+                                          schémy
+                                          na základe zmeny režimu. Tento kód je spúšťaný tlačidlom na stránke na
+                                          prepínanie
+                                          medzi tmavým a svetlým režimom webovej stránky.
+                                   </p>
                             </span>
                      </div>
               </div>

@@ -25,6 +25,7 @@
   --cBg-color: rgb(121, 47, 67);
   --exmple: rgb(58, 29, 37);
   --exmpleLine: #deffa1;
+  --sprite-col: rgb(179, 133, 129);
   --body-color: rgb(220, 208, 226);
   --footer-color: rgb(27, 27, 34);
   --footerT-col: #b3b3b3;
@@ -51,10 +52,11 @@
   --cBg-color: #464646;
   --exmple: rgb(43, 43, 43);
   --exmpleLine: #ff7474;
+  --sprite-col: #858ea3;
   --body-color: #2a282b;
   --footer-color: rgb(27, 27, 34);
   --footerT-col: #b3b3b3;
-  --ArrowT-col: rgb(34, 34, 34);
+  --ArrowT-col: #222222;
   --Arrow-shadow: 2px 5px 3px rgba(0, 0, 0, 0.4);
   --ArrT-shadow: rgba(0, 0, 0, 0.4);
   --A0-col: #ffecf8;
@@ -70,6 +72,10 @@
 html {
   scroll-behavior: smooth !important;
   overflow-x: hidden;
+}
+html a {
+  text-decoration: none;
+  cursor: pointer;
 }
 body {
   background-color: var(--body-color);
@@ -331,7 +337,7 @@ body {
   transition: all 200ms ease;
 }
 .text #footer #footerIcons a {
-  margin-right: 20px;
+  margin: 0 10px 0 10px;
   text-decoration: none;
   color: var(--footerT-col);
 }
