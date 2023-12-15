@@ -8,8 +8,11 @@
        <title>SNsite</title>
        <link rel="stylesheet" href="../style.css">
        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-       <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800,900|Poppins:300,400,500,600,800,900|Lora:300,400,500,600,800,900"
+       <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,800,900|Poppins:300,400,500,600,800,900|Lora:300,400,500,600,800,900"
               rel="stylesheet">
+       <script src="https://cdn.jsdelivr.net/npm/@criticalcarpet/hyperlinks/dist/index.bundle.js" type="module"
+              defer></script>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@criticalcarpet/hyperlinks/dist/main.css">
 </head>
 
 <body>
@@ -59,6 +62,11 @@
                      width: 49%;
                      background-color: var(--Bg-color);
                      color: var(--Text-color);
+              }
+
+              .text #example1 {
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
               }
 
               #b,
@@ -122,7 +130,7 @@
                                           </g>
                                    </g>
                             </svg>
-                            <img src="../images/picAsset 4.png">
+                            <img id="logIMG" src="..">
                      </div>
               </a>
               <div id="tempbox"></div>
@@ -149,91 +157,128 @@
                      <h1>
                             Stav
                      </h1>
-                     <img src="../images/gradient-particle-wave-background_23-2150491615.jpg" fetchpriority="high">
+                     <img src="../images/pngs jpgs/gradient-particle-wave-background_23-2150491615.jpg"
+                            fetchpriority="high">
               </div>
               <div class="context" id="bar1">
-                     <h3>Momentary state of security</h3>
+                     <h3>Metódy a ich implementácia</h3>
                      <p>
-                            The current state of online communication represents an intricate tapestry of connectivity
-                            and risks. With the rapid evolution of digital platforms and the proliferation of social
-                            media, online communication has become ubiquitous in daily life. However, this widespread
-                            adoption has brought forth a spectrum of risks. Cyberbullying, misinformation, privacy
-                            breaches, and the spread of harmful content stand as significant challenges. As Safiya Umoja
-                            Noble highlighted in <i>"Algorithms of Oppression," the algorithms embedded in online
-                                   platforms
-                                   can perpetuate biases, shaping the information users consume and influencing societal
-                                   perceptions.<a href="#footerIcons"><sup>[1]</sup></a></i> Furthermore, the rise of
-                            disinformation and fake news, as
-                            elucidated by
-                            Claire Wardle in <i>"Information Disorder," poses a threat to the credibility of information
-                                   sources, undermining trust and perpetuating societal discord.<a
-                                          href="#footerIcons"><sup>[2]</sup></a></i> The digital
-                            landscape's
-                            inherent vulnerabilities, including data breaches and identity theft, underscore the need
-                            for robust cybersecurity measures to safeguard personal information. The current milieu of
-                            online communication demands a vigilant approach to navigate these risks effectively while
-                            harnessing the unparalleled opportunities for connectivity and collaboration that digital
-                            platforms offer.
+                            Aktuálny stav bezpečnosti elektronickej komunikácie na počítačoch a smartfónoch zdôrazňuje
+                            sústavné úsilie o posilnenie ochrany údajov v rámci sahajúcich sa kybernetických hrozieb.
+                            Rôzne šifrovacie metódy sú kľúčové pri zabezpečení elektronickej komunikácie. „<i>Symetrické
+                                   šifrovacie algoritmy ako AES (Advanced Encryption Standard) a asymetrické metódy
+                                   šifrovania,
+                                   ako je napríklad RSA (Rivest-Shamir-Adleman), predstavujú bežné voľby, ktoré
+                                   zabezpečujú
+                                   dôvernosť údajov kódovaním informácií počas prenosu.</i>“<a
+                                   href="#footerIcons"><sup>[3]</sup></a> Napriek sofistikovanosti týchto
+                            šifrovacích techník pretrvávajú zraniteľnosti, často zneužívané prostredníctvom sociálnej
+                            inžinierie alebo phishingových útokov, čo poukazuje na potrebu komplexného prístupu v
+                            kybernetickej bezpečnosti, ktorý siaha za rámec samotného šifrovania.
+                            <br><br>
+                            Pri riešení nedostatkov v oblasti bezpečnosti zaviedli niektoré sociálne médiá robustné
+                            opatrenia na ochranu údajov používateľov a zvýšenie súkromia. Napríklad platformy ako
+                            WhatsApp, dcérsky podnik Facebooku, „<i>integrovali šifrovanie "end to end" do svojich
+                                   služieb na správy, čím zabezpečili, že obsah správ môžu získať len odosielateľ a
+                                   príjemca.</i>“<a href="#footerIcons"><sup>[4]</sup></a> Okrem toho boli viacfaktorové
+                            autentifikačné systémy (MFA) prijaté rôznymi platformami
+                            ako Twitter a LinkedIn, „<i>ktoré vyžadujú dodatočné overovacie kroky okrem hesiel na
+                                   prístup k
+                                   účtom, čím zvyšujú bezpečnosť pri prihlasovaní.</i>“<a
+                                   href="#footerIcons"><sup>[5]</sup></a> Napriek týmto aktívnym opatreniam však
+                            trvajúce výzvy v oblasti únikov údajov a obavy o súkromie zdôrazňujú nutnosť neustáleho
+                            inovovania a pozornej kontroly v oblasti kybernetickej bezpečnosti.
                      </p>
               </div>
               <div class="context" id="bar2">
                      <div style="width: 100%;">
                             <span id="info1">
-                                   <h3>Currency of our privacy</h3>
-                                   <p>The contemporary landscape of online communication presents a multifaceted
-                                          environment where
-                                          connectivity coexists with inherent risks. The pervasive nature of social
-                                          media platforms
-                                          and digital channels has reshaped how individuals engage and disseminate
-                                          information
-                                          globally. However, this unprecedented connectivity has led to a rise in
-                                          cyberbullying, as
-                                          explored by Sameer Hinduja and Justin W. Patchin in <i>"Bullying Beyond the
-                                                 Schoolyard,"
-                                                 where
-                                                 they underscore the prevalence and detrimental effects of online
-                                                 harassment on
-                                                 individuals,
-                                                 particularly the youth.<a href="#footerIcons"><sup>[3]</sup></a></i>
+                                   <h3>E2EE a PFS</h3>
+                                   <p>V rámci počítačovej vedy a kryptografie sa súčasný stav "End to end
+                                          encription/šifrovania" (E2EE) javí ako vrcholový úspech v zabezpečení
+                                          digitálnej komunikácie.
+                                          E2EE ako robustný kryptografický protokol zabezpečuje, že iba komunikujúci
+                                          používatelia, ani poskytovateľ služieb zabezpečujúci komunikáciu, nemôžu
+                                          získať prístup k obsahu správ. Tento proces sa dosahuje šifrovaním údajov na
+                                          zariadení odosielateľa pomocou šifrovacích kľúčov, ktoré vlastní iba zamýšľaný
+                                          príjemca, čím sa bráni neoprávnenému prístupu alebo odchytávaniu
+                                          prostredníctvom akéhokoľvek sprostredkovateľa alebo škodlivého subjektu.
                                           <br><br>
-                                          Moreover, the
-                                          phenomenon of echo chambers and filter bubbles, as
-                                          articulated by Cass Sunstein in <i>"Republic.com," perpetuates the
-                                                 polarization of opinions
-                                                 by
-                                                 presenting users with tailored content that aligns with their existing
-                                                 beliefs,
-                                                 potentially
-                                                 hindering critical thinking and fostering societal divisions.<a
-                                                        href="#footerIcons"><sup>[4]</sup></a></i> The advent of social
-                                          media
-                                          influencers and the dissemination of unverified information have exacerbated
-                                          the challenge
-                                          of misinformation, amplifying the spread of false narratives and undermining
-                                          trust in
-                                          traditional media sources.
+                                          Perfect Forward Secrecy (PFS) je kritickým atribútom v rámci kryptografických
+                                          protokolov, ktorý zabezpečuje dôvernosť komunikácie generovaním dočasných
+                                          relačných kľúčov pre každú výmenu, čím sa zabezpečuje, že aj v prípade
+                                          kompromitácie dlhodobých súkromných kľúčov sú zachytené minulé komunikácie
+                                          imúnne voči dešifrovaniu. „<i>The ping-pong pattern of new ephemeral
+                                                 Diffie-Hellman keys inject additionally entropy
+                                                 into this process, which is intended to continually achieve perfect
+                                                 forward secrecy as well as post-compromise
+                                                 security.</i>“<a href="#footerIcons"><sup>[6]</sup></a>
+                                          Využitím dočasných kľúčov odvodených pre každú
+                                          reláciu, PFS posilňuje bezpečnosť kryptografických systémov, brániac súperom v
+                                          retroaktívnom dešifrovaní zachytených komunikácií a zvyšujúc tak odolnosť
+                                          komunikačného kanálu voči kryptografickým útokom.
                                           <br><br>
-                                          Amidst these risks, issues of online privacy
-                                          violations,
-                                          illustrated by Julia Angwin in <i>"Dragnet Nation," call attention to the
-                                                 surveillance and
-                                                 data
-                                                 collection practices by online entities, raising concerns about
-                                                 individual autonomy
-                                                 and data
-                                                 security.<a href="#footerIcons"><sup>[5]</sup></a></i> Thus, while
-                                          online
-                                          communication offers unprecedented connectivity and
-                                          opportunities, it concurrently demands a nuanced understanding of the risks to
-                                          navigate this
-                                          digital realm effectively.
+                                          V podstate E2EE predstavuje vrchol šifrovacích technológií, poskytujúci
+                                          vysokú
+                                          úroveň zabezpečenia a súkromia pre digitálnu komunikáciu. Implementácia
+                                          funkcií ako perfektná predošlá tajnosť zohráva kľúčovú úlohu pri
+                                          posilňovaní
+                                          odolnosti protokolov E2EE voči potenciálnym bezpečnostným hrozbám.
                                    </p>
                             </span>
                             <span class="pic" id="pic1">
-                                   <h3>Obr.1</h3>
-                                   <p>Contextual picture</p>
+                                   <h3>Obr. 1</h3>
+                                   <p>Contextový obrázok</p>
                                    <div>
-                                          <img src="../images/privacyPic1.webp" style="height: 500px;">
+                                          <img src="../images/pngs jpgs/privacyPic1-transformed.webp"
+                                                 style="height: 450px;" width="100%">
+                                   </div>
+                                   <p
+                                          style="text-align: center; color: white; mix-blend-mode: difference; filter: opacity(0.2); margin-top: -1.8em;">
+                                          zdroj:
+                                          https://www.gettyimages.com/</p>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="bar3">
+                     <div style="width: 100%;">
+                            <span class="example" id="example1">
+                                   <h3>Kód 6 {JavaScript}</h3>
+                                   <p>Príklad JavaScriptového kódu ilustrujúceho end-to-end encryption</p>
+                                   <div>
+                                          <code><span id="comment">// Zariadenie odosielateľa</span>
+<span id="const">const</span> senderMessage = <span id="str">"Ahoj, ako sa máš?"</span>;
+<span id="const">const</span> senderEncryptionKey = <span id="inbuilt">generateEncryptionKey</span>(); <span id="comment">// Generovanie šifrovacieho kľúča</span>
+<span id="const">const</span> encryptedMessage = <span id="inbuilt">encryptMessage</span>(senderMessage, senderEncryptionKey);
+                                                 
+<span id="comment">// Prenos zašifrovanej správy...</span>
+                                                 
+<span id="comment">// Zariadenie príjemcu</span>
+<span id="const">const</span> recipientDecryptionKey = <span id="inbuilt">getDecryptionKeyFromRecipient</span>(); <span id="comment">// Získanie dešifrovacieho kľúča od príjemcu</span>
+<span id="const">const</span> decryptedMessage = <span id="inbuilt">decryptMessage</span>(encryptedMessage, recipientDecryptionKey);
+
+<span id="special">console</span>.<span id="inbuilt">log</span>(<span id="str">"Decrypted Message:"</span>, decryptedMessage);
+
+<span id="comment">// Funkcie simulujúce šifrovanie a dešifrovanie</span>
+<span id="const">function</span> <span id="inbuilt">generateEncryptionKey</span>() {
+       <span id="comment">// Kód na generovanie šifrovacieho kľúča</span>
+       return <span id="str">"exampleEncryptionKey"</span>;
+}
+
+<span id="const">function</span> <span id="inbuilt">encryptMessage</span>(message, key) {
+       <span id="comment">// Kód na zašifrovanie správy pomocou poskytnutého kľúča</span>
+       return <span id="str">`Encrypted:${message}`</span>;
+}
+
+<span id="const">function</span> <span id="inbuilt">getDecryptionKeyFromRecipient</span>() {
+       <span id="comment">// Kód na získanie dešifrovacieho kľúča od príjemcu</span>
+       return <span id="str">"exampleDecryptionKey"</span>;
+}
+
+<span id="const">function</span> <span id="inbuilt">decryptMessage</span>(encryptedMessage, key) {
+       <span id="comment">// Kód na dešifrovanie správy pomocou poskytnutého kľúča</span>
+       return encryptedMessage.split(<span id="str">":"</span>)[<span id="num">1</span>];
+}</code>
                                    </div>
                             </span>
                      </div>
@@ -241,47 +286,38 @@
 
               <div class="context" id="footer">
                      <div id="footerTop">
-                            <div id="footerTxt">Empowering connections, fostering creativity, and embracing
-                                   possibilities.</div>
+                            <div id="footerTxt">Semestrálny porjekt z INF I - Samuel Novotný - EkF TUKE</div>
                      </div>
                      <div id="footerBottom">
                             <div id="footerIcons">
                                    <a href="https://www.linkedin.com/in/samuel-novotn%C3%BD-5b322729a/"><img
-                                                 src="../images/ico-linked.svg"></a>
+                                                 src="../images/svgs/ico-linked.svg"></a>
                                    <a href="https://www.facebook.com/samuel.novotny.733/"><img
-                                                 src="../images/ico-fb.svg"></a>
+                                                 src="../images/svgs/ico-fb.svg"></a>
                                    <a href="https://www.instagram.com/bearable_sometimes/"><img
-                                                 src="../images/ico-insta.svg"></a>
+                                                 src="../images/svgs/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
-                                                 src="../images/ico-yt.svg"></a>
+                                                 src="../images/svgs/ico-yt.svg"></a>
                                    <p>Copywight © 2023 All rights reserved.</p>
                                    <span id="citats">
-                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[1] Noble, S. U.
-                                                 (2018).
-                                                 Algorithms of Oppression: How Search Engines Reinforce Racism. NYU
-                                                 Press.
+                                          <a class="hyperlinks" href="https://ieeexplore.ieee.org/document/1055638">[3]
+                                                 Diffie, W. &
+                                                 Hellman, H.
+                                                 (1976).
+                                                 New directions in cryptography.
                                           </a>
-                                          <a
-                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
-                                                 [2] Wardle, C., & Derakhshan, H. (2017). Information Disorder: Toward
-                                                 an
-                                                 Interdisciplinary
-                                                 Framework for Research and Policy Making. Council of Europe.</a>
-                                          <a href="https://psycnet.apa.org/record/2011-02278-000">[3] Hinduja, S., &
-                                                 Patchin,
-                                                 J. W. (2015). Bullying Beyond the Schoolyard: Preventing and
-                                                 Responding to Cyberbullying. SAGE Publications, Inc.
+                                          <a class="hyperlinks" href="https://faq.whatsapp.com/820124435853543">
+                                                 [4] WhatsApp Security Team. (2021). End-to-End Encryption.</a>
+                                          <a class="hyperlinks"
+                                                 href="https://blog.twitter.com/en_us/topics/company/2018/keeping-your-account-secure">[5]
+                                                 Twitter Safety. (2021). Keeping Your Account Secure.
                                           </a>
-                                          <a
-                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
-                                                 [4] Sunstein, C. R. (2002). Republic.com. Princeton University
-                                                 Press.</a>
-                                          <a
-                                                 href="https://www.researchgate.net/publication/262245164_The_Shallows_What_the_Internet_Is_Doing_to_Our_Brains_by_Nicholas_Carr_New_York_NY_W_W_Norton_2010_276_pp_2695_ISBN_0393072223_hardcover">
-                                                 [5] Angwin, J. (2014). Dragnet Nation: A Quest for Privacy, Security,
-                                                 and
-                                                 Freedom in a World of
-                                                 Relentless Surveillance. Times Books.</a></span>
+                                          <a class="hyperlinks"
+                                                 href="https://www.researchgate.net/publication/318127264_A_Formal_Security_Analysis_of_the_Signal_Messaging_Protocol">[6]
+                                                 Katriel, C. G. et al. (2017). A Formal Security Analysis of the Signal
+                                                 Messaging Protocol.
+                                          </a>
+                                   </span>
                             </div>
                      </div>
               </div>

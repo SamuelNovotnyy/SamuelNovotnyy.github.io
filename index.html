@@ -8,7 +8,7 @@
        <title>SNsite</title>
        <link rel="stylesheet" href="style.css">
        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-       <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800,900|Poppins:300,400,500,600,800,900|Lora:300,400,500,600,800,900"
+       <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,800,900|Poppins:300,400,500,600,800,900|Lora:300,400,500,600,800,900"
               rel="stylesheet">
 </head>
 
@@ -23,11 +23,6 @@
 
               .text #bar2 {
                      display: block;
-                     overflow: hidden;
-              }
-
-              .text #bar2 div {
-                     display: table;
               }
 
               .text #example1 {
@@ -36,7 +31,7 @@
                      color: var(--cText-color);
               }
 
-              .text #example11 {
+              .text #example1_1 {
                      display: table-cell;
                      border-left: var(--marg) solid var(--body-color);
                      background-color: var(--cBg-color);
@@ -51,9 +46,10 @@
               }
 
               .text #bar3 {
-                     background-color: var(--Bg-color);
-                     height: 300px;
+                     display: block;
                      padding: 1em 2em 1em 2em;
+                     background-color: var(--Bg-color);
+                     color: var(--Text-color);
               }
 
               .text #example2 {
@@ -61,9 +57,28 @@
                      color: var(--cText-color);
               }
 
-              .text #example2 div {
-                     height: 300px;
+              .text #bar5 {
+                     display: block;
+                     padding: 1em 2em 1em 2em;
+                     background-color: var(--Bg-color);
+                     color: var(--Text-color);
+              }
 
+              .text #bar6 {
+                     display: block;
+              }
+
+              .text #example3 {
+                     display: table-cell;
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
+              }
+
+              .text #example3_3 {
+                     display: table-cell;
+                     border-left: var(--marg) solid var(--body-color);
+                     background-color: var(--cBg-color);
+                     color: var(--cText-color);
               }
 
               #a,
@@ -128,7 +143,7 @@
                                           </g>
                                    </g>
                             </svg>
-                            <img src="images/picAsset 4.png">
+                            <img id="logIMG" src="..">
                      </div>
               </a>
               <div id="tempbox"></div>
@@ -155,9 +170,10 @@
                      <h1>
                             Vitajte
                      </h1>
-                     <img src="images/960x0.webp" fetchpriority="high">
+                     <img src="images/pngs jpgs/computer-program-coding-screen2.png" fetchpriority="high">
               </div>
               <div class="context" id="bar1">
+                     <h3>Prológ</h3>
                      <p>Vitajte na mojej úvodnej stránke! Rád by som Vám ukázal, ako som zostavil tento projekt, aby ste
                             mohli nahliadnuť do môjho sveta tvorby webových stránok. Tu nájdete informácie o kóde, ktorý
                             som použil na vytvorenie efektov tejto stránky, vrátane JavaScriptu a CSS. Chcel by som
@@ -166,61 +182,63 @@
                             budete cítiť inšpirovaní pri ďalšom objavovaní sveta web-designu. Ďakujem, že ste tu!</p>
               </div>
               <div class="context" id="bar2">
-                     <div style="display:table-row">
+                     <div style="width: 100%; display: table;">
                             <span class="example" id="example1">
                                    <h3>Kód 1 {CSS3}</h3>
                                    <p>CSS kód nastavujúci adresár premenných :root</p>
                                    <div>
-                                          <code>:root {
-       --topBarH: 10.9vh;
-       --topBodyH: 27.5vh;
-       --botBarH: 14.6vh;
-                                                      
-       --w0: 4.6;
-       --x0: 4.7;
-       --y0: 5.9;
-                                                      
-       --Text-color: rgb(121, 47, 67);
-       --cText-color: rgb(255, 255, 255);
-       --citation: #da5f9d;
-       --Text-shadow: rgba(0, 0, 0, 0.1);
-       --Drop-shadow: rgba(0, 0, 0, 0.3);
+                                          <code><span id="element">:root</span> {
+       --topBarH: <span id="value">10.9</span><span id="unit">vh</span>;
+       --topBodyH: <span id="value">27.5</span><span id="unit">vh</span>;
+       --botBarH: <span id="value">14.6</span><span id="unit">vh</span>;
 
-:root.dark {
-       --Text-color: #fff5fb;
-       --cText-color: #ffffff;
-       --citation: #decfff;
-       --Topnav-color: #231931;
-       --selector-color: rgba(163, 163, 163, 0.4);
-       --Bg-color: #3d3b42;
-       --cBg-color: #464646;
-       --exmple: rgb(43, 43, 43);
-       --exmpleLine: #ff7474;</code>
+       --w0: <span id="value">4.6</span>;
+       --x0: <span id="value">4.7</span>;
+       --y0: <span id="value">5.9</span>;
+
+       --Text-color: <span id="misc">rgb</span>(<span id="value">121, 47, 67</span>);
+       --cText-color: <span id="misc">rgb</span>(<span id="value">255, 255, 255</span>);
+       --citation: <span id="value">#da5f9d</span>;
+       --Text-shadow: <span id="misc">rgba</span>(<span id="value">0, 0, 0, 0.1</span>);
+       --Drop-shadow: <span id="misc">rgba</span>(<span id="value">0, 0, 0, 0.3</span>);
+}
+
+<span id="element">:root</span><span id="class">.dark</span> {
+       --Text-color: <span id="value">#fff5fb</span>;
+       --cText-color: <span id="value">#ffffff</span>;
+       --citation: <span id="value">#decfff</span>;
+       --Topnav-color: <span id="value">#231931</span>;
+       --selector-color: <span id="misc">rgba</span>(<span id="value">163, 163, 163, 0.4</span>);    
+       --Bg-color: <span id="value">#3d3b42</span>;
+       --cBg-color: <span id="value">#464646</span>;
+       --exmple: <span id="misc">rgb</span>(<span id="value">43, 43, 43</span>);
+       --exmpleLine: <span id="value">#ff7474</span>;
+}</code>
                                    </div>
                             </span>
-                            <span class="example" id="example11">
-                                   <h3>Kód 1 {JavaScript}</h3>
+                            <span class="example" id="example1_1">
+                                   <h3>Kód 2 {JavaScript}</h3>
                                    <p>Jednoduchý JS kód na iniciáciu klasy ".dark", po ktorej aktivovaní sa zmenia CSS
                                           premenné</p>
                                    <div>
-                                          <code>function toggleDM(init) {
-  var pageStyle = localStorage.getItem("pageMode");
+                                          <code><span id="const">function</span> <span id="inbuilt">toggleDM</span>(init) {
+  <span id="const">var</span> pageStyle = <span id="num">localStorage</span>.<span id="inbuilt">getItem</span>("pageMode");
 
-  if (!init) {
-    if (pageStyle == "dark") {
-      pageStyle = "light";
-    } else {
-      pageStyle = "dark";
+  <span id="special">if</span> (<span id="num">!init</span>) {
+    <span id="special">if</span> (pageStyle == <span id="str">"dark"</span>) {
+      pageStyle = <span id="str">"light"</span>;
+    } <span id="special">else</span> {
+      pageStyle = <span id="str">"dark"</span>;
     }
   }
 
-  document.documentElement.classList.remove("dark");
-  if (pageStyle == "dark") {
-    document.documentElement.classList.add("dark");
+  <span id="num">document</span>.<span id="miscelanious">documentElement</span>.<span id="miscelanious">classList</span>.<span id="inbuilt">remove</span>(<span id="str">"dark"</span>);    
+  <span id="special">if</span> (pageStyle == <span id="str">"dark"</span>) {
+    <span id="num">document</span>.<span id="miscelanious">documentElement</span>.<span id="miscelanious">classList</span>.<span id="inbuilt">add</span>(<span id="str">"dark"</span>);
   }
 
-  localStorage.setItem("pageMode", pageStyle);
-  resetCols();
+  <span id="num">localStorage</span>.<span id="inbuilt">setItem</span>(<span id="str">"pageMode"</span>, pageStyle);
+  <span id="inbuilt">resetCols</span>();
 }</code>
                                    </div>
                             </span>
@@ -266,40 +284,114 @@
                      </div>
               </div>
               <div class="context" id="bar3">
-                     <h3>Header 3 YAY</h3>
-                     <p>edthrethjrethrhrrthrrhrthrthrthththrhthrthth</p>
+                     <h3>Udalostný poslucháč "mouseover"</h3>
+                     <p>Úryvok kódu 3 je cyklus navrhnutý na iteráciu cez prvky v zozname listLen2. Pre každý prvok
+                            v tomto zozname sa kód snaží pripojiť udalostné poslucháče pomocou metódy addEventListener.
+                            Metóda addEventListener slúži na počúvanie konkrétnych udalostí, v tomto prípade "mouseover"
+                            a "mouseout", na prvkoch v zozname listLen2.
+                            <br><br>
+                            V rámci cyklu sa používa “immediately invoked function expression“ (IIFE), aby sa vytvoril
+                            nový rozsah pre každú iteráciu. V tejto funkcii sa pokúša pripojiť "mouseover" udalostný
+                            poslucháč k aktuálnemu prvku (listLen2[i]). Keď sa "mouseover" udalosť vyskytne na
+                            akomkoľvek z týchto prvkov, spustí sa vykonanie funkcie setPropsMouseover a prenesie sa
+                            aktuálna hodnota i ako argument do setPropsMouseover. Podobne sa pokúša pripojiť "mouseout"
+                            udalostný poslucháč na spracovanie situácie, keď sa kurzor pohne mimo prvku, a spustí sa
+                            funkcia setPropsMouseout s aktuálnou hodnotou i ako argumentom.
+                     </p>
               </div>
               <div class="context" id="bar4">
-                     <div>
+                     <div style="width: 100%;">
                             <span class="example" id="example2">
-                                   <h3>Example zwei</h3>
-                                   <p>this is an example of code</p>
+                                   <h3>Kód 3 {JavaScript}</h3>
+                                   <p>For loop na prejdenie všetkých elementov arrayu "ListLen2" a pripojenie funkcie
+                                          "setPropsMouseover" a naopak "setPropsMouseout"</p>
                                    <div>
-                                          <code>for (let i = 0; i < listLen2.length; i++) {
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseover", function () {  
-                     setPropsMouseover(i);
-                     } catch (e) {}
-              try {
-                  cListLen2[i].addEventListener("mouseover", function () {
-                  setPropsCotrMouseover(i);
-                  });
-                  } catch (e) {}
-              })();
-       (function () {
-              try {
-                     listLen2[i].addEventListener("mouseout", function () {
-                     setPropsMouseout(i);
-                     });
-                     } catch (e) {}
-              try {
-                     cListLen2[i].addEventListener("mouseout", function () {
-                     setPropsCotrMouseout(i);
-                     });
-                     } catch (e) {}
-              })
-       ();
+                                          <code><span id="const">for</span> (let <span id="num">i</span> = <span id="num">0</span>; <span id="num">i</span> < listLen2.<span id="inbuilt">length</span>; <span id="num">i++</span>) {
+  (<span id="const">function</span> () {
+    <span id="special">try</span> {
+      listLen2[<span id="num">i</span>].<span id="inbuilt">addEventListener</span>(<span id="str">"mouseover"</span>, <span id="const">function</span> () {
+        <span id="inbuilt">setPropsMouseover</span>(<span id="num">i</span>);
+      });
+    } <span id="special">catch</span> (e) {}
+  })();
+  (<span id="const">function</span> () {
+    <span id="special">try</span> {
+      listLen2[<span id="num">i</span>].<span id="inbuilt">addEventListener</span>(<span id="str">"mouseout"</span>, <span id="const">function</span> () {
+        <span id="inbuilt">setPropsMouseout</span>(<span id="num">i</span>);
+      });
+    } <span id="special">catch</span> (e) {}
+  })();
+}</code>
+                                   </div>
+                            </span>
+                     </div>
+              </div>
+              <div class="context" id="bar5">
+                     <h3>Pripájanie funkcionality k "mouseover"</h3>
+                     <p>Funkcie setPropsMouseover(i) a setPropsMouseout(i) boli navrhnuté na prejavenie správania
+                            "mouseover" a "mouseout" udalostných poslucháčov, ako bolo nastavené v predchádzajúcom kóde.
+                            Tieto funkcie upravujú vlastnosti prvkov súvisiacich s udalosťami myši, aby vytvorili
+                            vizuálne efekty a interaktivitu.
+                            <br><br>
+                            Funkcia setPropsMouseover(i) mení vlastnosti prvkov pri výskyte udalosti "mouseover".
+                            Prijíma index i ako argument, potom iteruje cez prvky z listLen2 a upravuje ich štýly na
+                            základe hodnoty i. Konkrétne mení pozadie, farbu textu, šírku a aplikuje CSS filter na prvky
+                            v listLen2. Snaží sa tiež upravovať vlastnosti prvkov v cListLen2, prípadne upravuje ich
+                            šírku, ak je to možné. Je však dôležité poznamenať, že táto funkcia používa bloky try-catch,
+                            na spracovanie prípadov, keď určité prvky nemusia existovať alebo vlastnosti nie je možné
+                            upraviť, čím sa predchádza výskytu chýb a prerušeniu kódu.
+                            <br><br>
+                            Na druhej strane funkcia setPropsMouseout(i) resetuje vlastnosti prvkov späť do ich
+                            pôvodného stavu pri výskyte udalosti "mouseout". Podobne ako setPropsMouseover(i), prijíma
+                            index i ako argument a iteruje cez prvky v listLen2 a prípadne aj v cListLen2. Vracia
+                            pozadie, farbu textu, šírku a CSS filter späť na ich pôvodné hodnoty a štýly, čím im
+                            podstatne vráti zmeny aplikované funkciou setPropsMouseover(i).
+                            <br><br>
+                            Obidve funkcie slúžia na dynamickú úpravu vzhľadu a štýlu prvkov súvisiacich s udalosťami
+                            myši, čím zlepšujú interaktivitu a vizuálnu spätnú väzbu, keď používateľ umiestni kurzor
+                            myši nad tieto prvky alebo ho od nich odtiahne na webovej stránke.
+                     </p>
+              </div>
+              <div class="context" id="bar6">
+                     <div style="width: 100%; display: table;">
+                            <span class="example" id="example3">
+                                   <h3>Kód 4 {JavaScript}</h3>
+                                   <p>Funkcia definovania CSS atributov na zmenenie, pri udalosti "mouseover"</p>
+                                   <div>
+                                          <code><span id="const">function</span> <span id="inbuilt">setPropsMouseover</span>(<span id="num">i</span>) {
+  <span id="const">for</span> (let <span id="num">n</span> = <span id="num">0</span>; <span id="num">n</span> < <span id="num">i</span> + <span id="num">1</span>; <span id="num">n++</span>) {
+    <span id="special">try</span> {
+      listLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">backgroundColor</span> = topNavCol;
+      listLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">color</span> = cTextCol;
+      listLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">width</span> = <span id="str">"103%"</span>;
+      listLen1[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="inbuilt">setProperty</span>(<span id="str">"-webkit-filter"</span>, NoShd);
+    } <span id="special">catch</span> (e) {}
+    <span id="special">try</span> {
+      cListLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">width</span> = <span id="str">"103%"</span>;
+    } <span id="special">catch</span> (e) {}
+  }
+}</code>
+                                   </div>
+                            </span>
+                            <span class="example" id="example3_3">
+                                   <h3>Kód 5 {JavaScript}</h3>
+                                   <p>Funkcia definovania CSS atributov na zmenenie, pri udalosti "mouseout"</p>
+                                   <div>
+                                          <code><span id="const">function</span> <span id="inbuilt">setPropsMouseout</span>(<span id="num">i</span>) {
+  <span id="const">for</span> (let <span id="num">n</span> = <span id="num">0</span>; <span id="num">n</span> < <span id="num">i</span> + <span id="num">1</span>; <span id="num">n++</span>) {
+    <span id="special">try</span> {
+      listLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">backgroundColor</span> = listBg[<span id="num">n</span>];
+      listLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">color</span> = textCol;
+      listLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">width</span> = <span id="str">"100%"</span>;
+      listLen1[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="inbuilt">setProperty</span>(
+        <span id="str">"-webkit-filter"</span>,
+        <span id="str">"drop-shadow("</span> + shd + <span id="str">")"</span>
+      );
+    } <span id="special">catch</span> (e) {}
+    <span id="special">try</span> {
+      cListLen2[<span id="num">n</span>].<span id="miscelanious">style</span>.<span id="miscelanious">width</span> = <span id="str">"100%"</span>;
+    } <span id="special">catch</span> (e) {}
+  }
 }</code>
                                    </div>
                             </span>
@@ -307,19 +399,18 @@
               </div>
               <div class="context" id="footer">
                      <div id="footerTop">
-                            <div id="footerTxt">Empowering connections, fostering creativity, and embracing
-                                   possibilities.</div>
+                            <div id="footerTxt">Semestrálny porjekt z INF I - Samuel Novotný - EkF TUKE</div>
                      </div>
                      <div id="footerBottom">
                             <div id="footerIcons">
                                    <a href="https://www.linkedin.com/in/samuel-novotn%C3%BD-5b322729a/"><img
-                                                 src="images/ico-linked.svg"></a>
+                                                 src="images/svgs/ico-linked.svg"></a>
                                    <a href="https://www.facebook.com/samuel.novotny.733/"><img
-                                                 src="images/ico-fb.svg"></a>
+                                                 src="images/svgs/ico-fb.svg"></a>
                                    <a href="https://www.instagram.com/bearable_sometimes/"><img
-                                                 src="images/ico-insta.svg"></a>
+                                                 src="images/svgs/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
-                                                 src="images/ico-yt.svg"></a>
+                                                 src="images/svgs/ico-yt.svg"></a>
                                    <p>Copywight © 2023 All rights reserved.</p>
 
                             </div>

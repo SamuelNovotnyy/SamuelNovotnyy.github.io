@@ -8,8 +8,11 @@
        <title>SNsite</title>
        <link rel="stylesheet" href="../style.css">
        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-       <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,500,600,800,900|Poppins:300,400,500,600,800,900|Lora:300,400,500,600,800,900"
+       <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,800,900|Poppins:300,400,500,600,800,900|Lora:300,400,500,600,800,900"
               rel="stylesheet">
+       <script src="https://cdn.jsdelivr.net/npm/@criticalcarpet/hyperlinks/dist/index.bundle.js" type="module"
+              defer></script>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@criticalcarpet/hyperlinks/dist/main.css">
 </head>
 
 <body>
@@ -43,50 +46,126 @@
                      margin: 1em 0;
               }
 
-              .text #wrapT #button {
+              .text #wrapT #gmtel {
                      display: block;
-                     width: 280px;
+                     margin: 3em 0 1.2em;
                      height: 7vh;
-                     margin: 1em 0;
+                     text-align: left;
+              }
+
+              .text #wrapT #gm {
+                     display: inline-block;
+                     height: 7vh;
+                     padding: 0 2em;
+                     margin-right: 2em;
+                     border-radius: 200px;
                      text-align: center;
-                     line-height: 0;
                      color: var(--Text-color);
                      background-color: var(--exmpleLine);
+                     filter: drop-shadow(0px 0px 0.2vh var(--Text-shadow));
                      transition: all 200ms ease;
               }
 
-              .text #wrapT #button:hover {
-                     background-color: var(--sprite-col);
-                     color: var(--cText-color);
+              .text #wrapT #tel {
+                     display: inline-block;
+                     height: 7vh;
+                     padding: 0 2em;
+                     border-radius: 200px;
+                     text-align: center;
+                     color: var(--Text-color);
+                     background-color: var(--exmpleLine);
+                     filter: drop-shadow(0px 0px 0.2vh var(--Text-shadow));
+                     transition: all 200ms ease;
               }
 
-              .text #wrapT #button p {
-                     position: relative;
-                     text-align: center;
+              #gmP,
+              #telP {
+                     position: absolute;
+                     display: flex;
+                     margin: 0;
+                     padding: 1em 2em;
+                     border-radius: 50px;
+                     color: rgba(255, 0, 0, 0);
+                     text-shadow: 0 0 0 rgba(255, 0, 0, 0);
+                     left: -20%;
+                     top: -40%;
+                     z-index: 100;
                      font-family: "Poppins", sans-serif;
-                     font-size: 30px;
+                     font-size: 12px;
                      font-weight: 600;
-                     top: 50%;
+              }
+
+              .text #wrapT #gm:hover {
+                     background-color: var(--sprite-col);
+                     color: var(--cText-color);
+                     box-shadow: 0 0 0 0.8vh var(--selector-color);
+                     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+              }
+
+              .text #wrapT #tel:hover {
+                     background-color: var(--sprite-col);
+                     color: var(--cText-color);
+                     box-shadow: 0 0 0 0.8vh var(--selector-color);
+                     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+              }
+
+              .text #wrapT #gmtel p {
+                     transform: translateY(1.4vh);
+                     font-family: "Poppins", sans-serif;
+                     font-size: 19px;
+                     font-weight: 600;
                      line-height: 0px;
+              }
+
+              .text #wrapT #icos {
+                     display: block;
+                     margin: 1em 13.5em;
+              }
+
+              .text #wrapT #icos svg {
+                     margin-right: 1em;
+                     filter: drop-shadow(0px 0px 0.2vh var(--Text-shadow));
+                     border-radius: 50%;
+                     transition: all 200ms ease;
+              }
+
+              .text #wrapT #icos svg:hover {
+                     box-shadow: 0 0 0 0.8vh var(--selector-color);
+                     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+              }
+
+              .text #icos svg:hover #Path_out {
+                     fill: var(--sprite-col);
+              }
+
+              .text #icos svg:hover #Path_in {
+                     fill: var(--cText-color);
               }
 
               .text #picSpan img {
                      position: absolute;
-                     right: 9%;
-                     bottom: 15.82vh;
-                     height: 63vh;
-                     clip-path: inset(0 0 0.01vh 0);
+                     right: 8.5%;
+                     bottom: 15.50vh;
+                     height: 66vh;
                      z-index: -1000;
               }
 
               .text #picSpan svg {
                      position: absolute;
-                     right: 4%;
+                     right: 3.2%;
                      top: 25vh;
                      height: 80vh;
                      fill: var(--sprite-col);
-                     clip-path: inset(0 0 20.85vh 0);
+                     clip-path: inset(0 0 20.50vh 0);
                      z-index: 1;
+              }
+
+              #Path_out {
+                     fill: var(--exmpleLine);
+              }
+
+              #Path_in {
+                     fill: var(--Text-color);
               }
 
               #a,
@@ -151,7 +230,7 @@
                                           </g>
                                    </g>
                             </svg>
-                            <img src="../images/picAsset 4.png">
+                            <img id="logIMG" src="..">
                      </div>
               </a>
               <div id="tempbox"></div>
@@ -180,14 +259,100 @@
                                    Samuel Novotný
                             </h3>
                             <p id="desc">
-                                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus eos nisi
-                                   perspiciatis
-                                   dolorem officiis excepturi reiciendis expedita maiores obcaecati? Illum, vel modi.
+                                   Ahojte! Som študent Technickej univerzity v Košiciach. Programovať stánky som sa
+                                   začal učiť počas letných prázdnin, ale prednášky z informatiky mi moje vedomosti iba
+                                   prehĺbili :)
                             </p>
-                            <span id="button">
-                                   <p><a href="literatura.html"></a>Literatúra</a></p>
-                            </span>
+                            <div id="gmtel">
+                                   <div id="gm">
+                                          <p id="cgm">samuel.novotny.2@student.tuke.sk</p>
+                                          <span id="gmP">Adresa skopírovaná!</span>
+                                   </div>
+
+                                   <br style="content: ''; margin: 5em; display: block; font-size: 24%;">
+
+                                   <div id="tel">
+                                          <p id="ctel">0903 767 008</p>
+                                          <span id="telP">Číslo skopírované!</span>
+                                   </div>
+                            </div>
+                            <div id="icos">
+                                   <a class="hyperlinks" style="display: inline-block"
+                                          href="https://www.linkedin.com/in/samuel-novotn%C3%BD-5b322729a/"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" width=7vh height=7vh
+                                                 viewBox="0 0 32 32">
+                                                 <g id="Group_36" data-name="Group 36" transform="translate(-690 -535)">
+                                                        <path id="Path_out" data-name="Path_out"
+                                                               d="M368.349,335.158a16,16,0,1,1-16-16A16,16,0,0,1,368.349,335.158Z"
+                                                               transform="translate(353.651 215.842)" />
+                                                        <g id="Group_5" data-name="Group 5"
+                                                               transform="translate(698.518 542.717)">
+                                                               <path id="Path_in" data-name="Path_in"
+                                                                      d="M365.116,342.854a1.9,1.9,0,1,1-1.9-1.8A1.85,1.85,0,0,1,365.116,342.854Zm-.138,3.131h-3.5v10.267h3.5Zm8.472-.23a3.306,3.306,0,0,0-3.223,1.847v-1.617h-3.407v10.267h3.407v-6.5a3.121,3.121,0,0,1,.391-.678,1.944,1.944,0,0,1,1.5-.713,1.554,1.554,0,0,1,1.4.782,1.755,1.755,0,0,1,.323,1.1v6.009h3.316v-6.009C377.157,347.826,375.982,345.754,373.449,345.754Z"
+                                                                      transform="translate(-361.317 -341.058)" />
+                                                        </g>
+                                                 </g>
+                                          </svg>
+                                   </a>
+                                   <a class="hyperlinks" style="display: inline-block"
+                                          href="https://www.facebook.com/samuel.novotny.733/"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" width=7vh height=7vh
+                                                 viewBox="0 0 32 32">
+                                                 <g id="Group_13256" data-name="Group 13256"
+                                                        transform="translate(-715 -1919)">
+                                                        <path id="Path_out" data-name="Path_out"
+                                                               d="M91.506,206.539a16,16,0,1,1-16-16A16,16,0,0,1,91.506,206.539Z"
+                                                               transform="translate(655.494 1728.461)" />
+                                                        <g id="Group_1" data-name="Group 1"
+                                                               transform="translate(726.478 1925.943)">
+                                                               <path id="Path_in" data-name="Path 6"
+                                                                      d="M104.145,212.622s-1.438-.232-1.675-.232c-.358,0-1.21.14-1.21.979v2.192h2.978l-.279,2.706-2.7.046v8.861h-3.63v-8.861l-1.815-.046.046-2.752h1.816c0-1.088-.323-4.158,1.148-5.224,2.078-1.508,5.786-.467,5.786-.467Z"
+                                                                      transform="translate(-95.814 -209.474)" />
+                                                        </g>
+                                                 </g>
+                                          </svg>
+                                   </a>
+                                   <a class="hyperlinks" style="display: inline-block"
+                                          href="https://www.instagram.com/bearable_sometimes/"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" width=7vh height=7vh
+                                                 viewBox="0 0 32 31.999">
+                                                 <g id="Group_13257" data-name="Group 13257"
+                                                        transform="translate(-899 -1919)">
+                                                        <path id="Path_out" data-name="Path 11"
+                                                               d="M786.662,210.02a16,16,0,1,1-16-16A16,16,0,0,1,786.662,210.02Z"
+                                                               transform="translate(144.338 1724.979)" />
+                                                        <g id="Layer_2" transform="translate(899 1919)">
+                                                               <path id="Path_in" data-name="Path 3205"
+                                                                      d="M12.267,24.126h7.626a4.309,4.309,0,0,0,4.267-4.334V12.334A4.36,4.36,0,0,0,19.859,8H12.267A4.309,4.309,0,0,0,8,12.334v7.458A4.309,4.309,0,0,0,12.267,24.126Zm8.5-13.438a1.008,1.008,0,1,1-.974,1.008A.983.983,0,0,1,20.766,10.688Zm-4.7,1.344a4.033,4.033,0,1,1-3.931,4.032A3.98,3.98,0,0,1,16.063,12.032Z" />
+                                                        </g>
+                                                 </g>
+                                          </svg>
+
+                                   </a>
+                                   <a class="hyperlinks" style="display: inline-block"
+                                          href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" width=7vh height=7vh
+                                                 viewBox="0 0 32 31.999">
+                                                 <g id="Group_37" data-name="Group 37" transform="translate(-736 -535)">
+                                                        <g id="Group_22" data-name="Group 22"
+                                                               transform="translate(736 535)">
+                                                               <path id="Path_out" data-name="Path 11"
+                                                                      d="M786.662,210.02a16,16,0,1,1-16-16A16,16,0,0,1,786.662,210.02Z"
+                                                                      transform="translate(-754.662 -194.021)" />
+                                                               <path id="Path_in" data-name="Path 12"
+                                                                      d="M784.7,224.373h-.007s-3.637,0-6.062.176a2.479,2.479,0,0,0-1.737.733,3.748,3.748,0,0,0-.688,1.72,26.276,26.276,0,0,0-.173,2.8v1.314a26.278,26.278,0,0,0,.173,2.8,3.745,3.745,0,0,0,.688,1.72,2.939,2.939,0,0,0,1.911.741c1.386.133,5.891.174,5.891.174h0s3.641-.006,6.066-.181a2.476,2.476,0,0,0,1.736-.734,3.749,3.749,0,0,0,.689-1.72,26.269,26.269,0,0,0,.173-2.8v-1.314a26.267,26.267,0,0,0-.173-2.8,3.752,3.752,0,0,0-.689-1.72,2.479,2.479,0,0,0-1.736-.733c-2.425-.176-6.062-.176-6.062-.176"
+                                                                      transform="translate(-768.454 -214.45)" />
+                                                        </g>
+                                                        <path id="Path_out" data-name="Path 23"
+                                                               d="M802.366,242.545l4.681-2.426-4.682-2.443Z"
+                                                               transform="translate(-51.913 310.72)" />
+                                                 </g>
+                                          </svg>
+
+                                   </a>
+                            </div>
                      </div>
+
                      <span id="picSpan">
                             <img style="z-index: 2;" src="../images/handsome-man.png">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1801.31 1769.16">
@@ -8000,20 +8165,18 @@
               </div>
               <div class="context" id="footer">
                      <div id="footerTop">
-                            <div id="footerTxt">Empowering connections, fostering creativity, and
-                                   embracing
-                                   possibilities.</div>
+                            <div id="footerTxt">Semestrálny porjekt z INF I - Samuel Novotný - EkF TUKE</div>
                      </div>
                      <div id="footerBottom">
                             <div id="footerIcons">
                                    <a href="https://www.linkedin.com/in/samuel-novotn%C3%BD-5b322729a/"><img
-                                                 src="../images/ico-linked.svg"></a>
+                                                 src="../images/svgs/ico-linked.svg"></a>
                                    <a href="https://www.facebook.com/samuel.novotny.733/"><img
-                                                 src="../images/ico-fb.svg"></a>
+                                                 src="../images/svgs/ico-fb.svg"></a>
                                    <a href="https://www.instagram.com/bearable_sometimes/"><img
-                                                 src="../images/ico-insta.svg"></a>
+                                                 src="../images/svgs/ico-insta.svg"></a>
                                    <a href="https://www.youtube.com/channel/UC3VcaZ8GNgPqw6yGk-RoOng"><img
-                                                 src="../images/ico-yt.svg"></a>
+                                                 src="../images/svgs/ico-yt.svg"></a>
                                    <p>Copywight © 2023 All rights reserved.</p>
 
                             </div>

@@ -2,7 +2,7 @@
 :root {
   --topBarH: 10.9vh;
   --topBodyH: 27.5vh;
-  --botBarH: 14.6vh;
+  --botBarH: 14vh;
   --marg: 12px;
   --ico-size: 60%;
   --cico-size: 40%;
@@ -20,7 +20,9 @@
   --Topnav-color: #fff5fb;
   --cTopnav-color: rgb(255, 177, 173);
   --navT-col: rgb(240, 240, 240);
-  --selector-color: rgba(105, 105, 105, 0.2);
+  --selector-color: rgba(243, 198, 198, 0.473);
+  --select: rgba(255, 225, 142, 0.6);
+  --selector-ico-color: rgba(196, 196, 196, 0.2);
   --Bg-color: rgb(255, 255, 255);
   --cBg-color: rgb(121, 47, 67);
   --exmple: rgb(58, 29, 37);
@@ -36,6 +38,20 @@
   --A1-col: #ffb1ad;
   --A2-col: #ffb1ad;
   --A3-col: #ffb1ad;
+
+  --comment: rgb(158, 89, 104);
+  --const: rgb(234, 129, 255);
+  --inbuilt: rgb(255, 229, 143);
+  --str: rgb(166, 255, 228);
+  --num: rgb(255, 155, 155);
+  --special: rgb(108, 189, 255);
+  --miscelanious: rgb(255, 176, 131);
+
+  --element: rgb(155, 255, 247);
+  --class: rgb(255, 253, 157);
+  --unit: rgb(255, 184, 137);
+  --value: rgb(207, 255, 168);
+  --misc: rgb(243, 127, 156);
 }
 :root.dark {
   --Text-color: #fff5fb;
@@ -48,8 +64,10 @@
   --cTopnav-color: #fff5fb;
   --navT-col: rgb(34, 34, 34);
   --selector-color: rgba(163, 163, 163, 0.4);
+  --select: rgba(142, 251, 255, 0.6);
+  --selector-ico-color: rgba(196, 196, 196, 0.2);
   --Bg-color: #3d3b42;
-  --cBg-color: #464646;
+  --cBg-color: #4a454b;
   --exmple: rgb(43, 43, 43);
   --exmpleLine: #ff7474;
   --sprite-col: #858ea3;
@@ -63,15 +81,33 @@
   --A1-col: #ffecf8;
   --A2-col: #ffecf8;
   --A3-col: #ffecf8;
+
+  --comment: rgb(136, 136, 136);
+  --const: rgb(113, 198, 255);
+  --inbuilt: rgb(255, 108, 108);
+  --str: rgb(210, 255, 158);
+  --num: rgb(238, 155, 255);
+  --special: rgb(185, 147, 255);
+  --miscelanious: rgb(145, 255, 231);
+
+  --element: rgb(255, 159, 159);
+  --class: rgb(145, 152, 255);
+  --unit: rgb(255, 184, 137);
+  --value: rgb(175, 255, 235);
+  --misc: rgb(255, 145, 172);
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+::selection {
+  background: var(--select);
+}
 
 html {
   scroll-behavior: smooth !important;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 html a {
   text-decoration: none;
@@ -84,6 +120,37 @@ body {
 * {
   margin: 0%;
   padding: 0%;
+}
+
+@keyframes copyPopup {
+  0% {
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(0.2);
+  }
+  15% {
+    color: var(--footerT-col);
+    background-color: var(--footer-color);
+    transform: scale(1);
+  }
+  75% {
+    color: var(--footerT-col);
+    background-color: var(--footer-color);
+    transform: scale(1);
+  }
+  100% {
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(0.2);
+  }
+}
+
+.anim {
+  animation-name: copyPopup;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
 }
 
 /**Top navigation panel, links logo basic_functionality**/
@@ -113,6 +180,7 @@ body {
   border-radius: 50%;
   fill: var(--cTopnav-color);
   filter: drop-shadow(0px 0px 0.2vh var(--Drop-shadow));
+  transition: all 200ms ease;
 }
 .topnav #logShadow {
   position: inherit;
@@ -130,6 +198,9 @@ body {
 }
 .topnav #logo:hover {
   box-shadow: 0 0 0 0.8vh var(--selector-color);
+}
+.topnav #logo:hover #logCover {
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 }
 .topnav ul {
   height: 100%;
@@ -153,7 +224,7 @@ body {
 .topnav li a {
   color: var(--Text-color);
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 550;
   font-size: 20px;
   text-transform: capitalize;
   text-decoration: none;
@@ -196,12 +267,13 @@ body {
 }
 .topnav #sidesprite:hover {
   box-shadow: 0 0 0 0.8vh var(--selector-color);
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
   cursor: pointer;
 }
 .topnav #sidesprite p {
   position: absolute;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 550;
   font-size: 20px;
   text-transform: capitalize;
   line-height: 0%;
@@ -223,9 +295,6 @@ body {
 }
 /**Context part of the page, [information data pictures]**/
 .text {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
   text-shadow: 2px 1px 2px var(--Text-shadow);
   color: var(--Text-color);
   margin-top: calc(var(--topBarH) + var(--topBodyH) + var(--marg));
@@ -236,6 +305,9 @@ body {
   overflow-wrap: break-word;
 }
 .text p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -243,10 +315,13 @@ body {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  font-family: "Inter";
+  font-size: 22px;
 }
 .text code {
   white-space: pre;
   line-height: 130%;
+  font-size: 16px;
 }
 .example {
   display: block;
@@ -254,6 +329,7 @@ body {
 }
 .example div {
   display: block;
+  width: auto;
   background-color: var(--exmple);
   margin-block-start: 5px;
   margin-block-end: 5px;
@@ -351,7 +427,7 @@ body {
   color: var(--exmpleLine) !important;
 }
 .text #footerIcons img:hover {
-  box-shadow: 0 0 0 6px var(--selector-color);
+  box-shadow: 0 0 0 6px var(--selector-ico-color);
 }
 .text #bg {
   position: absolute;
@@ -361,6 +437,47 @@ body {
   top: calc(var(--topBarH) + var(--topBodyH));
   z-index: -2;
   background-color: var(--body-color);
+}
+
+#comment {
+  color: var(--comment);
+}
+#const {
+  color: var(--const);
+}
+#inbuilt {
+  color: var(--inbuilt);
+}
+#str {
+  color: var(--str);
+}
+#num {
+  color: var(--num);
+}
+#special {
+  color: var(--special);
+}
+#units {
+  color: var(--units);
+}
+#miscelanious {
+  color: var(--miscelanious);
+}
+
+#element {
+  color: var(--element);
+}
+#class {
+  color: var(--class);
+}
+#unit {
+  color: var(--unit);
+}
+#value {
+  color: var(--value);
+}
+#misc {
+  color: var(--misc);
 }
 
 /**Bottom navigation panel, core links + heavy scripting**/

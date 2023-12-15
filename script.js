@@ -4,6 +4,14 @@
 
 const root = document.querySelector(":root");
 const gCS = window.getComputedStyle(root, null);
+const logIMG = document.getElementById("logIMG");
+
+const gm = document.getElementById("gm");
+const tel = document.getElementById("tel");
+const cgm = document.getElementById("cgm");
+const ctel = document.getElementById("ctel");
+const gmPOP = document.getElementById("gmP");
+const telPOP = document.getElementById("telP");
 
 const listLen1 = [
   document.getElementById("d"),
@@ -148,7 +156,18 @@ function toggleDM(init) {
   }
 
   document.documentElement.classList.remove("dark");
+  if (window.location.pathname.split("/").slice(-1) == "index.html") {
+    logIMG.setAttribute("src", "images/flowers/red.jpg");
+  } else {
+    logIMG.setAttribute("src", "../images/flowers/red.jpg");
+  }
+
   if (pageStyle == "dark") {
+    if (window.location.pathname.split("/").slice(-1) == "index.html") {
+      logIMG.setAttribute("src", "images/flowers/blu1.jpg");
+    } else {
+      logIMG.setAttribute("src", "../images/flowers/blu1.jpg");
+    }
     document.documentElement.classList.add("dark");
   }
 
@@ -188,3 +207,37 @@ for (let i = 0; i < listLen2.length; i++) {
     } catch (e) {}
   })();
 }
+
+gm.onclick = function () {
+  document.execCommand("copy");
+};
+
+gm.addEventListener("copy", function (event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", cgm.textContent);
+    console.log(event.clipboardData.getData("text"));
+
+    gmPOP.classList.add("anim");
+    setTimeout(() => {
+      gmPOP.classList.remove("anim");
+    }, 2000);
+  }
+});
+
+tel.onclick = function () {
+  document.execCommand("copy");
+};
+
+tel.addEventListener("copy", function (event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", ctel.textContent);
+    console.log(event.clipboardData.getData("text"));
+
+    telPOP.classList.add("anim");
+    setTimeout(() => {
+      telPOP.classList.remove("anim");
+    }, 2000);
+  }
+});
