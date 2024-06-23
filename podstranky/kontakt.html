@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sk">
+  
+  <head>
+    <title>Star Electronic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="../images/onebyone.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script.js"></script>
+
+  </head>
+  <body>
+    <header class="skeleton-head">
+      <div class="skeleton-top">
+        <a href="../landing.html">
+          <img src="../images/fulllogo.png" alt="logo">
+        </a>
+      </div>
+      <nav class="skeleton-tnav">
+        <div class="container">
+          <div class="info">
+            <a class="underline" href="podstranky/info.html">info</a>
+          </div>
+          <div class="prod">
+            <a class="underline" href="podstranky/produkty.html">produkty</a>
+          </div>
+          <div class="separator"></div>
+          <div class="kontakt">
+            <a class="underline" href="">kontakt</a>
+          </div>
+          <div class="lang">
+            <i class="fa-solid fa-earth-europe" id="lang-ico"></i>
+            <select onclick="toggleLanguage()">
+              <option value="slovak">SK</option>
+              <option value="english">EN</option>
+              <option value="chinese">CH</option>
+            </select>
+          </div>
+          <div class="theme">
+            <button onclick="toggleDarkMode()">
+              <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <main>
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, excepturi laudantium cupiditate fuga dicta aliquid harum adipisci reiciendis magni totam, dolorum asperiores neque? Rerum ab velit cumque voluptatibus delectus natus.
+      </div>
+
+      <div class="form-container">
+        <form class="form" action="/action_page.php">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="input name"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" placeholder="input second name"><br>
+          <label for="fname">Email:</label><br>
+          <input type="email" id="fname" name="fname" placeholder="input your email address"><br>
+          <label for="fname">Problem:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="input your problem"><br>
+          <label for="fname">Note:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="input a note"><br>
+          <br>
+          <input type="submit" value=" Odoslat ">
+        </form> 
+      </div>
+
+    </main>
+
+    <footer class="skeleton-foot">
+      &copy; Star electronic, s.r.o.
+      <nav class="skeleton-bnav">
+        <ul>
+          <li>
+            <a href="https://twitter.com">
+              <i class="fab fa-twitter"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <i class="fab fa-linkedin"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <i class="fab fa-facebook"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <i class="fab fa-youtube"></i> 
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </footer>
+
+  </body>
+</html>

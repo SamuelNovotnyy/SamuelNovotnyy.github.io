@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sk">
+  
+  <head>
+    <title>Star Electronic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/onebyone.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </head>
+  <body>
+    <header class="skeleton-head">
+      <div class="skeleton-top">
+        <div id="sidebar-bg">
+          <a id="menu-text" href="podstranky/kontakt.html">kontakt</a><br>
+          <a id="menu-text" href="podstranky/info.html">info</a><br>
+        </div>
+        <a href="">
+          <img src="images/fulllogo.png" alt="logo">
+        </a>
+        <span class="side-hover-group" onmouseover="menuEffect()" onmouseout="menuEffectOff()">
+          <div onclick="openSidebar()" class="menu-bar" id="menu-bar"></div>
+          <i onclick="openSidebar()" class="fa-solid fa-bars" id="menu-ico"></i>
+          <i onclick="closeSidebar()" class="fa-solid fa-xmark" id="menu-ico2"></i>
+        </span>
+      </div>
+      <nav class="skeleton-tnav">
+        <div class="container">
+          <div class="info">
+            <a class="underline" href="podstranky/info.html">info</a>
+          </div>
+          <div class="prod">
+            <a class="underline" href="podstranky/produkty.html">produkty</a>
+          </div>
+          <div class="separator"></div>
+          <div class="kontakt">
+            <a class="underline" href="podstranky/kontakt.html">kontakt</a>
+          </div>
+          <div class="lang">
+            <i class="fa-solid fa-earth-europe" id="lang-ico"></i>
+            <select onclick="toggleLanguage()">
+              <option value="slovak">SK</option>
+              <option value="english">EN</option>
+              <option value="chinese">CH</option>
+            </select>
+          </div>
+          <div class="theme">
+            <button onclick="toggleDarkMode()">
+              <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="carousel js-flickity" 
+        data-flickity='{ 
+          "wrapAround": true, 
+          "autoPlay": 3000, 
+          "selectedAttraction": 0.2, 
+          "friction": 0.8,
+          "imagesLoaded": true
+        }'> 
+          <img class="carousel-cell-image" src="http://www.starelectronic.eu/wp-content/uploads/2015/05/slider1-1080x350.jpg" alt="1" />
+
+          <img class="carousel-cell-image" src="http://www.starelectronic.eu/wp-content/uploads/2015/05/slider2-1080x350.jpg" alt="2" />
+
+          <img class="carousel-cell-image" src="http://www.starelectronic.eu/wp-content/uploads/2015/05/slider3-1080x350.jpg" alt="3" />
+    </div>
+    <div class="carousel-shd"></div>
+
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, excepturi laudantium cupiditate fuga dicta aliquid harum adipisci reiciendis magni totam, dolorum asperiores neque? Rerum ab velit cumque voluptatibus delectus natus.
+      </div>
+
+    </main>
+
+    <footer class="skeleton-foot">
+      &copy; Star electronic, s.r.o.
+      <nav class="skeleton-bnav">
+        <ul>
+          <li>
+            <a href="https://twitter.com">
+              <i class="fab fa-twitter"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <i class="fab fa-linkedin"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <i class="fab fa-facebook"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">
+              <i class="fab fa-youtube"></i> 
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </body>
+</html>

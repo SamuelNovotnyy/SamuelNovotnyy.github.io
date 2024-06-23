@@ -1,0 +1,16 @@
+@import 'typography.css';
+
+:root {
+          --light-box-col: #fff7f7;
+          --dark-box-col: #1d1d22;
+
+          --light-text: white;
+          --color-text: #e23030;
+          --dark-text: #2b1010;
+          --foot-text: rgb(119, 119, 119);
+}
+
+:root.dark-mode {
+          --light-box-col: #834a4a;
+          --dark-box-col: #2b2b88;
+}

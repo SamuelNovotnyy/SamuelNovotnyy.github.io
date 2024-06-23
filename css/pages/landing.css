@@ -1,0 +1,59 @@
+@import url(https://unpkg.com/flickity@2/dist/flickity.min.css);
+
+:root {
+          --carousel-height: 500px
+}
+
+.flickity-page-dots { 
+          bottom: 6px; 
+}
+.flickity-page-dots .dot { 
+          width: 10px; 
+          height: 10px; 
+          margin: 8px 23px; 
+          opacity: 1; 
+          background: white; 
+          transition: 0.2s ease-in; 
+} 
+.flickity-page-dots .dot.is-selected { 
+          width: 16px; 
+          height: 16px; 
+          margin: 5px 20px; 
+          opacity: 1; 
+} 
+.flickity-button { 
+          background: transparent; 
+} 
+.flickity-button:hover { 
+          background: transparent; 
+} 
+.flickity-button:hover .flickity-button-icon { 
+          transform: scaleY(0.7); 
+} 
+.flickity-prev-next-button { 
+          width: 40px; 
+          height: 40px; 
+} 
+.flickity-button-icon { 
+          fill: black; 
+          transition: 0.1s ease-in-out; 
+}
+.carousel-cell-image {
+          display: block;
+          height: var(--carousel-height);
+          min-width: 300px;
+}
+.carousel-shd {
+          position: absolute;
+          margin-top: calc(-1*var(--carousel-height));
+          height: var(--carousel-height);
+          width: 100%;
+          background: transparent;
+          box-shadow: 0px -25px 10px -27px rgba(0, 0, 0, 0.445) inset;
+          pointer-events: none;
+}
+
+.text {
+          padding: 5vw;
+          font-size: 60px;
+}
