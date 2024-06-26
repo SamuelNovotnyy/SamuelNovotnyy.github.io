@@ -1,10 +1,17 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
+@keyframes ico-anim {
+  0%, 100% {transform: translateX(0);}
+	30% {transform: translateX(-6px);}
+	60% {transform: translateX(6px);}
+}
+
 :root {
   --topnav-h: 50px;
 }
 body {
   padding-top: calc(var(--topnav-h) + 60px);
+  background: var(--bg-col);
 }
 
 .skeleton-head {
@@ -17,6 +24,7 @@ body {
   box-shadow: 0px -17px 10px 17px rgba(0, 0, 0, 0.45);
 }
 .skeleton-head .skeleton-top {
+  position: relative;
   background: var(--light-box-col);
   height: calc(var(--topnav-h) + 50px);
   padding-top: 10px;
@@ -52,7 +60,31 @@ body {
   z-index: 12;
   transform: scale(0);
 }
-.side-hover-group:hover > .menu-bar{
+.selectionLang {
+  transition: 200ms ease;
+  font-size: 33px;
+  color: var(--light-box-col);
+}
+.selectionLang select {
+  background: var(--color-text);
+  color: var(--light-box-col);
+}
+#themeButtons {
+  transition: 200ms ease;
+  font-size: 30px;
+  background: transparent;
+  color: var(--color-text);
+}
+#theme {
+  border-radius: 100%;
+  background: var(--light-box-col);
+  transform: scale(0.9);
+  padding: 3px;
+}
+.side-hover-group:hover > #menu-ico {
+  animation: ico-anim 400ms ease;
+}
+.side-hover-group:hover > .menu-bar {
   clip-path: polygon(0 0, calc(90px + 10vw - 10px) 0, calc(90px + 10vw) 50%, calc(90px + 10vw  - 10px) 100%, 0 100%);
 }
 #sidebar-bg {
@@ -65,8 +97,14 @@ body {
   z-index: 12;
   transition: 400ms ease;
   overflow: hidden;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% calc((var(--topnav-h) + 60px)/2), calc(100% - 10px) calc(var(--topnav-h) + 60px), calc(100% - 10px) 100%, 0 100%);
-  padding: calc(var(--topnav-h) + 60px + 20px) 0;
+  white-space: nowrap;
+  clip-path: polygon(
+    0 0, 
+    calc(100% - 10px) 0, 
+    100% calc((var(--topnav-h) + 60px)/2), 
+    calc(100% - 10px) calc(var(--topnav-h) + 60px), 
+    calc(100% - 10px) 100%, 0 100%);
+    padding: calc(var(--topnav-h) + 60px + 20px) 0;
 }
 #menu-text {
   transition: 300ms ease;
@@ -80,77 +118,24 @@ body {
   margin-left: auto;
   margin-right: 3vw;
   height: calc(var(--topnav-h) + 40px);
+  clip-path: inset(0);
   z-index: 11;
+  transition: opacity 400ms cubic-bezier(.8,0,.2,1),
+  margin-right 400ms ease,
+  clip-path 400ms ease;
+  filter: var(--logo-effect);
+}
+.skeleton-top #top-logo2 {
+  height: 76px; 
+  opacity: 0;
+  margin-right: calc(3vw + 135px);
 }
 
 .skeleton-tnav {
-  margin-top: -15px;
+  display: none;
 }
-.container { 
-  margin: 0 8vw; 
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr 1fr 0.8fr 0.2fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "info prod separator kontakt lang theme";
-}
-.container button {
-  background: transparent;
-  color: var(--color-text);
-  width: 1em;
-  height: 2em;
-}
-.container .theme i {
-  box-shadow: 0px 0px 0px 0px var(--color-text);
-  transition: 200ms ease-out;
-}
-.container .theme i:hover {
-  box-shadow: 0px 0px 0px 5px rgba(129, 129, 129, 0.288);
-}
-.container .lang i {
-  color: var(--color-text);
-}
-.container select {
-  background: var(--dark-box-col);
-  color: var(--color-text);
-  height: 2em;
-  margin-left: 10px;
-  box-shadow: 0px 0px 0px 0px var(--color-text);
-}
-.container i {
-  transform: scale(1.5);
-  border-radius: 100%;
-  background: var(--dark-box-col);
-}
-.info { grid-area: info; }
-.prod { grid-area: prod; }
-.separator { grid-area: separator; }
-.kontakt { grid-area: kontakt; }
-.lang { grid-area: lang; }
-.theme { grid-area: theme; }
-
 .underline {
-  display: inline-block;
-  position: relative;
-  color: var(--color-text);
-}
-.underline::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-text);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.underline:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  display: none;
 }
 
 .skeleton-foot {

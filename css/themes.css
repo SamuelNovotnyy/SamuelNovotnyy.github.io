@@ -1,16 +1,29 @@
 @import 'typography.css';
 
-:root {
+[data-theme="light"] {
           --light-box-col: #fff7f7;
-          --dark-box-col: #1d1d22;
+          --dark-box-col: #332d2d;
+          --bg-col: white;
 
-          --light-text: white;
+          --carousel-fg: transparent;
+
+          --text-col: rgb(0, 0, 0);
           --color-text: #e23030;
-          --dark-text: #2b1010;
           --foot-text: rgb(119, 119, 119);
+
+          --logo-effect: none;
 }
 
-:root.dark-mode {
-          --light-box-col: #834a4a;
-          --dark-box-col: #2b2b88;
+[data-theme="dark"] {
+          --light-box-col: #272727;
+          --dark-box-col: #cf2121;
+          --bg-col: black;
+
+          --carousel-fg: rgba(0, 0, 0, 0.24);
+
+          --text-col: rgb(255, 255, 255);
+          --color-text: #d1d1d1;
+          --foot-text: rgb(80, 80, 80);
+
+          --logo-effect: invert(100%) hue-rotate(180deg) saturate(8);
 }

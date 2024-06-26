@@ -1,0 +1,22 @@
+.text {
+          padding: 100px;
+          font-size: 30px;
+}
+
+.form-container {
+          text-align: center;
+}
+.form {
+          padding: 100px;
+          font-size: 30px;
+          display: inline-block;
+}
+.form input {
+          border: 2px solid;
+          margin-bottom: 40px;
+          padding: 10px 30px;
+}
+.form input::placeholder {
+          color: red;
+          font-size: 0.8em;
+}

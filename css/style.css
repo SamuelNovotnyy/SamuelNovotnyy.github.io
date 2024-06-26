@@ -6,11 +6,11 @@
 @import 'pages/skeleton.css' only screen and (min-width: 1000px) and (max-width: 2000px);
 @import 'pages/contact.css' only screen and (min-width: 1000px) and (max-width: 2000px);
 @import 'pages/info.css' only screen and (min-width: 1000px) and (max-width: 2000px);
-@import 'pages/landing.css' only screen and (min-width: 1000px) and (max-width: 2000px);
+@import 'pages/index.css' only screen and (min-width: 1000px) and (max-width: 2000px);
 @import 'pages/products.css' only screen and (min-width: 1000px) and (max-width: 2000px);
 
 @import 'pages/skeleton-m.css' only screen  and (max-width: 999px);
 @import 'pages/contact-m.css' only screen and (max-width: 999px);
 @import 'pages/info-m.css' only screen and (max-width: 999px);
-@import 'pages/landing-m.css' only screen and (max-width: 999px);
+@import 'pages/index-m.css' only screen and (max-width: 999px);
 @import 'pages/products-m.css' only screen and (max-width: 999px);
