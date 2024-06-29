@@ -1,16 +1,18 @@
 .infopage {
-          margin: 50px 100px;
+          margin: 50px 8vw;
+          color: var(--text1);
 }
 
 .infopage img {
           width: 100%;
+          filter: var(--logo-effect);
 }
 
 .info-header {
           padding-bottom: 0; 
-          font-size: 40px;
+          font-size: calc(20px + 2vw);
 }
 .info-text{
           padding-top: 20px;
-          font-size: 30px; 
+          font-size: calc(10px + 1vw);
 }
