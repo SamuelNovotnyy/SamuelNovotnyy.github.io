@@ -73,9 +73,7 @@ function updateThemeOnHtmlEl({ theme }) {
 function calculateSettingAsLangString({ localStorageLang }) {
   if (localStorageLang !== null) {
     return localStorageLang;
-  }
-
-  return "en";
+  } return "en";
 }
 
 function updateLangOnHtmlEl({ lang }) {
@@ -186,7 +184,7 @@ function selectStyleClose() {
 }
 
 async function fetchTranslationsFor(newLocale) {
-  const response = await fetch(`/star%20electornic/lang/${newLocale}.json`);
+  const response = await fetch(`lang/${newLocale}.json`);
   return await response.json();
 }
 async function setLocale(newLocale) {
