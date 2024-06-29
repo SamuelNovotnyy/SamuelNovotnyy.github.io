@@ -185,7 +185,13 @@ function selectStyleClose() {
 
 async function fetchTranslationsFor(newLocale) {
   const response = await fetch(`lang/${newLocale}.json`);
+  const responseMobile = await fetch(`../lang/${newLocale}.json`);
+
+  try {
   return await response.json();
+  } catch (err) {
+    return await responseMobile.json();
+  }
 }
 async function setLocale(newLocale) {
   if (newLocale === locale) return;
