@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <title>Star Electronic</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="icon" type="image/x-icon" href="images/onebyone.ico">
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,20 +15,27 @@
     <header class="skeleton-head">
       <div class="skeleton-top">
         <div id="sidebar-bg">
-          <a id="menu-text" href="podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a><br>
-          <a id="menu-text" href="podstranky/info.html" data-i18n-key="info-nav">info</a><br>
+          <div class="sidebar-text">
+            <a id="menu-text" href="podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a><br>
+            <a id="menu-text" href="podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a><br>
+            <a id="menu-text" href="podstranky/info.html" data-i18n-key="info-nav">o nás</a><br>
+            <a id="menu-text" href="" data-i18n-key="domov-nav">domov</a><br>
+          </div>
 
-          <button type="button" data-theme-toggle id="themeButtons">
-            <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
-            <i class="fa-solid fa-moon" id="theme"></i>
-          </button>
-          <div class="selectionLang">
-            <i class="fa-solid fa-earth-europe" id="lang-ico"></i>
-              <select id="inputselect" data-lang-toggle>
-                <option value="sk">SK</option>
-                <option value="en">EN</option>
-                <option value="ch">CH</option>
-              </select>
+          <div class="icon-container">
+            <div class="sidebar-icons">
+              <button type="button" data-theme-toggle id="themeButtons">
+                <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
+                <i class="fa-solid fa-moon" id="theme"></i>
+              </button>
+              <div class="selectionLang">
+                  <select id="inputselect" data-lang-toggle>
+                    <option value="sk">SK</option>
+                    <option value="en">EN</option>
+                    <option value="ch">CH</option>
+                  </select>
+              </div>
+            </div>
           </div>
         </div>
         <a href="" class="top-link">
@@ -45,25 +52,27 @@
         <div class="container">
           <div class="half1">
             <div class="cell1">
-              <a class="underline" href="podstranky/produkty.html" data-i18n-key="produkty-nav">product list</a>
+              <a class="underline" href="podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a>
             </div>
             <div class="cell2">
-              <a class="underline" href="podstranky/kontakt.html" data-i18n-key="kontakt-nav">contact</a>
+              <a class="underline" href="podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a>
             </div>
           </div>
           <div class="half2">
             <div class="cell3">
-              <a class="underline" href="podstranky/info.html" data-i18n-key="info-nav">about us</a>
+              <a class="underline" href="podstranky/info.html" data-i18n-key="info-nav">o nás</a>
             </div>
             <div class="cell4">
-              <i class="fa-solid fa-earth-europe" id="lang-ico"></i>
-              <select id="inputselect" data-lang-toggle>
+              <i class="fa-solid fa-earth-europe" id="lang-ico-pc"></i>
+            </div>
+            <div class="cell5">
+              <select id="inputselect-pc" data-lang-toggle>
                 <option value="sk">SK</option>
                 <option value="en">EN</option>
                 <option value="ch">CH</option>
               </select>
             </div>
-            <div class="cell45">
+            <div class="cell6">
               <button type="button" data-theme-toggle id="themeButtons">
                 <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
                 <i class="fa-solid fa-moon" id="theme"></i>

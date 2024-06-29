@@ -1,5 +1,6 @@
 /////////////////////////////declare variables/////////////////////////////
 
+const viewportHeight = window.innerHeight;
 const sidebarBg = document.getElementById("sidebar-bg");
 const sidebarText = document.querySelectorAll("[id='menu-text']");
 const sidebarIcon = document.getElementsByClassName("fa-solid fa-bars");
@@ -8,7 +9,7 @@ const topLogo = document.getElementById("top-logo");
 const topLogo2 = document.getElementById("top-logo2");
 const carouselShadow = document.getElementById("shg");
 const langSel = Array.from(document.querySelectorAll("[class='selectionLang']"));
-const langIco = Array.from(document.querySelectorAll("[id='lang-ico']"));
+const langIco = Array.from(document.querySelectorAll("[id='lang-ico-pc']"));
 const themeSel = $('#themeButtons');
 
 const button = Array.from(document.querySelectorAll("[data-theme-toggle]"));
@@ -19,11 +20,19 @@ const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 
 const selectLang = Array.from(document.querySelectorAll("[data-lang-toggle]"));
-const selection = Array.from(document.querySelectorAll("[id='inputselect']"));
+const selection = Array.from(document.querySelectorAll("[id='inputselect-pc']"));
 const localStorageLang = localStorage.getItem("lang");
 let currentLangSetting = calculateSettingAsLangString({ localStorageLang });
 let translations = {}
 let locale;
+
+const sidebarCS = getComputedStyle(sidebarBg);
+const innertext = document.querySelector('.sidebar-text');
+const sidebarPaddingTop = parseFloat(sidebarCS.paddingTop);
+const iconContainer = document.querySelector(".icon-container");
+let innertextCS = getComputedStyle(innertext)
+let textheight = parseFloat(innertextCS.height);
+let containerHeight = viewportHeight - sidebarPaddingTop - textheight;
 
 
 
@@ -49,6 +58,16 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 
 function updateThemeOnHtmlEl({ theme }) {
   document.querySelector("html").setAttribute("data-theme", theme);
+
+  for (let i = 0; i < moon.length; i++) {
+    if (theme === "dark") {
+      moon[i].style.display = "none";
+      sun[i].style.display = "inline-block";
+    } else {
+      moon[i].style.display = "inline-block";
+      sun[i].style.display = "none";
+    }
+  }
 }
 
 function calculateSettingAsLangString({ localStorageLang }) {
@@ -71,6 +90,21 @@ function calculateWidth() {
 }
 
 function openSidebar() {
+  resizeListener = () => {
+    let innertextCS = getComputedStyle(document.querySelector('.sidebar-text'))
+    let textheight = parseFloat(innertextCS.height);
+    let containerHeight = viewportHeight - sidebarPaddingTop - textheight;
+
+    iconContainer.style.height = containerHeight + "px";
+    sidebarBg.style.width = calculateWidth() + "px";
+    if (window.innerWidth > 999) {
+      closeSidebar();
+    }
+  };
+
+  window.addEventListener("resize", resizeListener);
+  iconContainer.style.height = containerHeight + "px";
+
   sidebarBg.style.width = calculateWidth() + "px";
   sidebarBg.style.padding = "calc(var(--topnav-h) + 60px + 20px) calc(6vw + 10px) 0 6vw";
 
@@ -91,16 +125,15 @@ function openSidebar() {
   themeSel[0].style.opacity = "1";    
 
   for (let i = 0; i < sidebarText.length; i++) {
-    sidebarText[i].style.color = "var(--light-box-col)";
+    sidebarText[i].style.color = "var(--topnav1)";
   }
 
   carouselShadow.classList.remove("side-hover-group");
-  addEventListener("resize", (event) => {
-    sidebarBg.style.width = calculateWidth() + "px";
-  });
 }
 
 function closeSidebar() {
+  window.removeEventListener("resize", resizeListener);
+  
   sidebarBg.style.width = "0";
   sidebarBg.style.padding = "calc(var(--topnav-h) + 60px + 20px) 0px";
 
@@ -139,14 +172,10 @@ function selectStyleOpen() {
   for (let i = 0; i < selection.length; i++) {
     selection[i].size= $('#inputselect option').length;
 
-    selection[i].style.width= "auto";
-    selection[i].style.height= "86px";
+    selection[i].style.height= "100px";
+    selection[i].style.marginTop= "-6px";
     selection[i].style.padding= "0 12px 0 0";
-    selection[i].style.outline= "1px solid var(--light-box-col)";
-  }
-  for (let i = 0; i < langIco.length; i++) {
-    langIco[i].style.marginTop= "-55px";
-    langIco[i].style.marginRight= "-1px";
+    selection[i].style.outline= "1px solid var(--topnav1)";
   }
 }
 
@@ -154,14 +183,10 @@ function selectStyleClose() {
   for (let i = 0; i < selection.length; i++) {
     selection[i].size=1;
 
-    selection[i].style.width= "auto";
-    selection[i].style.height= "2em";
+    selection[i].style.height= "auto";
+    selection[i].style.marginTop= "0px";
     selection[i].style.padding= "0";
     selection[i].style.outline= "none";
-  }
-  for (let i = 0; i < langIco.length; i++) {
-    langIco[i].style.marginTop= "0";
-    langIco[i].style.marginRight= "0";
   }
 }
 
@@ -200,7 +225,7 @@ updateLangOnHtmlEl({ lang: currentLangSetting });
 /////////////////////////////add event listeners/////////////////////////////
 
 for (let i = 0; i < selectLang.length; i++) {
-  selectLang[i].addEventListener("change", (event) => {
+  selectLang[i].addEventListener("change", () => {
     const newLang = selectLang[i].value;
 
     localStorage.setItem("lang", newLang);
@@ -212,44 +237,43 @@ for (let i = 0; i < selectLang.length; i++) {
 }
 
 for (let k = 0; k < button.length; k++) {
-  button[k].addEventListener("click", (event) => {
+  button[k].addEventListener("click", () => {
     const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
 
     localStorage.setItem("theme", newTheme);
     updateThemeOnHtmlEl({ theme: newTheme });
 
     currentThemeSetting = newTheme;
-
-    for (let i = 0; i < moon.length; i++) {
-      if (newTheme === "dark") {
-        moon[i].style.display = "none";
-        sun[i].style.display = "inline-block";
-      } else {
-        moon[i].style.display = "inline-block";
-        sun[i].style.display = "none";
-      }
-    }
   });
 }
 
 for (let i = 0; i < selection.length; i++) {
-  $(selection[i]).mouseover(function(event){
+  $(selection[i]).mouseover(function(){
             selectStyleOpen()
   });
             
-  $(selection[i]).mouseout(function(event){
+  $(selection[i]).mouseout(function(){
             selectStyleClose()
   });
 }
 
 for (let i = 0; i < langIco.length; i++) {
-  $(langIco[i]).mouseover(function(event) {
+  $(langIco[i]).mouseover(function() {
       selectStyleOpen();
   });
 
-  $(langIco[i]).mouseout(function(event) {
+  $(langIco[i]).mouseout(function() {
       selectStyleClose();
   });
 }
 
-document.addEventListener("mousemove", (event) => { pointer(event) });
+document.addEventListener("mousemove", (event) => { 
+  pointer(event);
+});
+innertext.addEventListener("change", (event) => {
+  let innertextCS = getComputedStyle(document.querySelector('.sidebar-text'))
+  let textheight = parseFloat(innertextCS.height);
+  let containerHeight = viewportHeight - sidebarPaddingTop - textheight;
+    
+  iconContainer.style.height = containerHeight + "px";
+})

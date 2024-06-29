@@ -1,0 +1,16 @@
+.infopage {
+          margin: 50px 100px;
+}
+
+.infopage img {
+          width: 100%;
+}
+
+.info-header {
+          padding-bottom: 0; 
+          font-size: 40px;
+}
+.info-text{
+          padding-top: 20px;
+          font-size: 30px; 
+}

@@ -1,29 +1,51 @@
 @import 'typography.css';
 
 [data-theme="light"] {
-          --light-box-col: #fff7f7;
-          --dark-box-col: #332d2d;
-          --bg-col: white;
-
-          --carousel-fg: transparent;
-
-          --text-col: rgb(0, 0, 0);
-          --color-text: #e23030;
-          --foot-text: rgb(119, 119, 119);
-
+          --topnav1: white;
+          --topnav2: rgb(29, 26, 28);
+          --topnav3: #e23030;
+          --topnav-text: #e23030;
           --logo-effect: none;
+
+          --footer-col: rgb(41, 41, 41);
+          --footer-text: rgb(119, 119, 119);
+
+
+          --body-col: #fff7f7;
+          --box1: #fff7f7;
+          --box2: #1b1a1a;
+          --text1: rgb(22, 22, 22);
+          --text2: rgb(248, 248, 248);
+          --text3: #e23030;
+          --highlight: pink;
+          --sel1: rgb(17, 0, 94);
+          --sel2: rgb(218, 197, 142);
+
+
+          --carousel-fg: transparent; 
 }
 
 [data-theme="dark"] {
-          --light-box-col: #272727;
-          --dark-box-col: #cf2121;
-          --bg-col: black;
+          --topnav1: rgb(32, 31, 31);
+          --topnav2: rgb(252, 252, 252);
+          --topnav3: rgb(255, 42, 35);
+          --topnav-text: #000000;
+          --logo-effect: invert(100%) hue-rotate(180deg) saturate(8) brightness(85%);
+
+          --footer-col: rgb(41, 41, 41);
+          --footer-text: rgb(119, 119, 119);
+
+
+          --body-col: #1d1d1d;
+          --box1: #000000;
+          --box2: #fdfdfd;
+          --text1: rgb(228, 228, 228);
+          --text2: rgb(26, 26, 26);
+          --text3: #e23030;
+          --highlight: rgb(222, 255, 192);
+          --sel1: rgb(218, 243, 255);
+          --sel2: rgb(53, 32, 107);
+
 
           --carousel-fg: rgba(0, 0, 0, 0.24);
-
-          --text-col: rgb(255, 255, 255);
-          --color-text: #d1d1d1;
-          --foot-text: rgb(80, 80, 80);
-
-          --logo-effect: invert(100%) hue-rotate(180deg) saturate(8);
 }

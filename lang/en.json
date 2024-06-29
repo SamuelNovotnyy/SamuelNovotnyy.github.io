@@ -1,5 +1,9 @@
 {
-          "produkty-nav": "product list",
-          "kontakt-nav": "contact us",
-          "info-nav": "about"
+          "produkty-nav": "products",
+          "kontakt-nav": "contact",
+          "info-nav": "about us",
+          "domov-nav": "home",
+
+          "o-spol-head": "About Our Company",
+          "o-spol-text": "Star Electronic is a developer and manufacturer of electronic devices, especially in GSM gateways. Our products offer a number of modifications to best suit different requirements. During its existence from 2006, our company managed to build a wide network of dealers in Slovakia and abroad, who are with the quality and reliability of products marked with our logo very satisfied. Through our partners, we provide connection to existing security equipment and installation of complete security systems. We also deal with sale of other electronic devices and equipment from our suppliers. We also provide development and production of small series electronic equipment according to individual customer requirements."
 }

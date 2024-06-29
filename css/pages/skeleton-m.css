@@ -11,12 +11,11 @@
 }
 body {
   padding-top: calc(var(--topnav-h) + 60px);
-  background: var(--bg-col);
+  background: var(--body-col);
 }
 
 .skeleton-head {
   position: fixed;
-  background: var(--dark-box-col);
   width: 100%;
   margin-top: calc(-1*(var(--topnav-h) + 60px));
   height: calc(var(--topnav-h) + 60px);
@@ -25,7 +24,7 @@ body {
 }
 .skeleton-head .skeleton-top {
   position: relative;
-  background: var(--light-box-col);
+  background: var(--topnav1);
   height: calc(var(--topnav-h) + 50px);
   padding-top: 10px;
 }
@@ -35,7 +34,7 @@ body {
   height: calc(var(--topnav-h) + 60px);
   width: calc(90px + 10vw);
   margin-top: -10px;
-  background: var(--color-text);
+  background: var(--topnav3);
   clip-path: polygon(0 0, calc(80px + 10vw - 10px) 0, calc(80px + 10vw) 50%, calc(80px + 10vw  - 10px) 100%, 0 100%);
   transition: 400ms ease;
   z-index: 11;
@@ -44,7 +43,7 @@ body {
   position: fixed;
   margin: calc(-10px + var(--topnav-h)/2) 20px;
   font-size: 60px;
-  color: var(--light-box-col);
+  color: var(--topnav1);
   transition: 200ms ease;
   transform-origin: center;
   z-index: 12;
@@ -54,32 +53,46 @@ body {
   position: fixed;
   margin: 10px 20px;
   font-size: 70px;
-  color: var(--light-box-col);
+  color: var(--topnav1);
   transition: 200ms ease;
   transform-origin: center;
   z-index: 12;
   transform: scale(0);
 }
 .selectionLang {
+  display: inline-block;
+  height: 8vh;
+  width: 50%;
+  background: var(--topnav1);
   transition: 200ms ease;
-  font-size: 33px;
-  color: var(--light-box-col);
+  font-size: calc(20px + 1vw);
+  font-weight: 600;
+  color: var(--topnav1);
+  border-radius: 10px;
 }
-.selectionLang select {
-  background: var(--color-text);
-  color: var(--light-box-col);
+.selectionLang select, option {
+  width: 100%;
+  height: 100%;
+  font-size: calc(20px + 1vw);
+  padding-left: 2vw;
+  background: var(--topnav1);
+  color: var(--topnav2);
+  transition: background 400ms ease, color 200ms ease;
+  border-radius: 10px;
 }
 #themeButtons {
+  height: 8vh;
+  width: 50%;
   transition: 200ms ease;
-  font-size: 30px;
-  background: transparent;
-  color: var(--color-text);
+  font-size: calc(20px + 1vw);
+  background: var(--topnav2);
+  color: var(--topnav-text);
+  border-radius: 10px;
 }
 #theme {
-  border-radius: 100%;
-  background: var(--light-box-col);
-  transform: scale(0.9);
-  padding: 3px;
+  background: transparent;
+  transform: scale(1.4);
+  color: var(--topnav1);
 }
 .side-hover-group:hover > #menu-ico {
   animation: ico-anim 400ms ease;
@@ -90,9 +103,9 @@ body {
 #sidebar-bg {
   display: block;
   position: fixed;
-  background: var(--color-text);
+  background: var(--topnav3);
   margin-top: -10px;
-  height: 100vh;
+  height: calc(100vh - var(--topnav-h) - 80px);
   width: 0px;
   z-index: 12;
   transition: 400ms ease;
@@ -104,12 +117,27 @@ body {
     100% calc((var(--topnav-h) + 60px)/2), 
     calc(100% - 10px) calc(var(--topnav-h) + 60px), 
     calc(100% - 10px) 100%, 0 100%);
-    padding: calc(var(--topnav-h) + 60px + 20px) 0;
+  padding: calc(var(--topnav-h) + 60px + 20px) 0;
 }
 #menu-text {
+  display: block;
+  margin-bottom: -10px;
   transition: 300ms ease;
   color: transparent;
-  font-size: 30px;
+  font-size: calc(20px + 1vw);
+}
+.icon-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 60%;
+}
+.sidebar-icons {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  bottom: 6vw;
+  padding-right: 8px;
 }
 .skeleton-top img {
   display: block;
@@ -139,9 +167,10 @@ body {
 }
 
 .skeleton-foot {
-  display: block;
-  background: var(--dark-box-col);
-  color: var(--foot-text);
+  position: relative;
+  margin-top: auto;
+  background: var(--footer-col);
+  color: var(--footer-text);
   height: 1em;
   text-align: center;
   margin-top: 40px;
@@ -151,18 +180,18 @@ body {
   display: block;
   margin-top: 2em;
   padding-top: 1em;
-  border-top: 1px solid var(--foot-text);
+  border-top: 1px solid var(--footer-text);
 }
 .skeleton-bnav li {
   display: inline-block;
   margin-inline: 20px;
-  fill: var(--foot-text);
+  fill: var(--footer-text);
 }
 .skeleton-bnav i {
-  color: var(--foot-text);
+  color: var(--footer-text);
   font-size: 30px;
   transition: 200ms ease;
 }
 .skeleton-bnav i:hover {
-  color: var(--color-text);
+  color: var(--highlight);
 }

@@ -62,7 +62,7 @@
 .text {
           padding: 5vw;
           font-size: 7vw;
-          color: var(--text-col);
+          color: var(--text1);
 }
 
 .skeleton-head nav {
