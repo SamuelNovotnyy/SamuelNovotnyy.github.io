@@ -1,6 +1,5 @@
 /////////////////////////////declare variables/////////////////////////////
 
-const viewportHeight = window.innerHeight;
 const sidebarBg = document.getElementById("sidebar-bg");
 const sidebarText = document.querySelectorAll("[id='menu-text']");
 const sidebarIcon = document.getElementsByClassName("fa-solid fa-bars");
@@ -30,6 +29,7 @@ const sidebarCS = getComputedStyle(sidebarBg);
 const innertext = document.querySelector('.sidebar-text');
 const sidebarPaddingTop = parseFloat(sidebarCS.paddingTop);
 const iconContainer = document.querySelector(".icon-container");
+let viewportHeight = window.innerHeight;
 let innertextCS = getComputedStyle(innertext)
 let textheight = parseFloat(innertextCS.height);
 let containerHeight = viewportHeight - sidebarPaddingTop - textheight;
@@ -91,19 +91,14 @@ function calculateWidth() {
 
 function openSidebar() {
   resizeListener = () => {
-    let innertextCS = getComputedStyle(document.querySelector('.sidebar-text'))
-    let textheight = parseFloat(innertextCS.height);
-    let containerHeight = viewportHeight - sidebarPaddingTop - textheight;
-
-    iconContainer.style.height = containerHeight + "px";
     sidebarBg.style.width = calculateWidth() + "px";
     if (window.innerWidth > 999) {
       closeSidebar();
     }
   };
-
   window.addEventListener("resize", resizeListener);
-  iconContainer.style.height = containerHeight + "px";
+
+  iconContainer.style.height = window.innerHeight - 130 - parseFloat(getComputedStyle(document.querySelector('.sidebar-text')).height) + "px";
 
   sidebarBg.style.width = calculateWidth() + "px";
   sidebarBg.style.padding = "calc(var(--topnav-h) + 60px + 20px) calc(6vw + 10px) 0 6vw";
@@ -270,10 +265,6 @@ for (let i = 0; i < langIco.length; i++) {
 document.addEventListener("mousemove", (event) => { 
   pointer(event);
 });
-innertext.addEventListener("change", (event) => {
-  let innertextCS = getComputedStyle(document.querySelector('.sidebar-text'))
-  let textheight = parseFloat(innertextCS.height);
-  let containerHeight = viewportHeight - sidebarPaddingTop - textheight;
-    
-  iconContainer.style.height = containerHeight + "px";
+innertext.addEventListener("change", () => {
+  iconContainer.style.height = window.innerHeight - 130 - parseFloat(getComputedStyle(document.querySelector('.sidebar-text')).height) + "px";
 })
