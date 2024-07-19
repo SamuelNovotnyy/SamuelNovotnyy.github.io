@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk" data-theme="light">
+<html lang="sk" data-theme="light" style="font-size: var(--rem)">
   <head>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,84 +12,92 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
-  <body onload="onPageLoad()">
-    <header class="skeleton-head">
-      <div class="skeleton-top">
-        <div id="sidebar-bg">
-          <div class="sidebar-text">
-            <a id="menu-text" href="podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a><br>
-            <a id="menu-text" href="podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a><br>
-            <a id="menu-text" href="podstranky/info.html" data-i18n-key="info-nav">o nás</a><br>
-            <a id="menu-text" href="" data-i18n-key="domov-nav">domov</a><br>
-          </div>
-
-          <div class="icon-container">
-            <div class="sidebar-icons">
-              <button type="button" data-theme-toggle id="themeButtons">
+  <body>
+    <header id="skeleton-head">
+      <nav class="align" id="skeleton-top-nav">
+        <a href="index.html" class="top-logo">
+          <img src="images/fulllogo.png" alt="logo">
+        </a>
+        <div class="container-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="underline" href="podstranky/produkty.html"><h3 data-i18n-key="produkty-nav">produkty</h3></a>
+            </li>
+            <li>
+              <a class="underline" href="podstranky/kontakt.html"><h3 data-i18n-key="kontakt-nav">kontakt</h3></a>
+            </li>
+            <li>
+              <a class="underline" href="podstranky/info.html"><h3 data-i18n-key="info-nav">o nás</h3></a>
+            </li>
+            <li>
+              <div class="container-lang">
+                <div id="inputselect-pc">
+                  <h3 class="selected-lang-display" data-i18n-key="lang">SK</h3>
+                  <i class="fa-solid fa-caret-down" style="font-size: 14px; margin-left: 3px; display: inline;"></i>
+                </div>
+              </div>
+              <div class="container-theme" data-theme-toggle id="themeButtons">
                 <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
                 <i class="fa-solid fa-moon" id="theme"></i>
-              </button>
-              <div class="selectionLang">
-                  <select id="inputselect" data-lang-toggle>
-                    <option value="sk">SK</option>
-                    <option value="en">EN</option>
-                    <option value="ch">CH</option>
-                  </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sub-menu-cont align">
+          <ul class="sub-lang-menu">
+            <li data-lang-code="sk">slovensky</li>
+            <li data-lang-code="en">english</li>
+            <li data-lang-code="ch">中国人</li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="skeleton-top-mobile" class="flex-between">
+        <a href="index.html">
+          <img src="images/fulllogo.png" alt="company-logo">
+        </a>
+        <div id="mobile-menu-icon-cont">
+          <i class="fa-solid fa-bars" id="bars"></i>
+          <i class="fa-solid fa-xmark hide-icon" id="cross" style="margin-top: calc(-1*(var(--topnav-h) - 4vh + 1rem));"></i>
+        </div>
+
+        <div id="skeleton-sidebar-cont" class="hidden">
+          <div style="width: 100%; height: 100%;">
+            <div id="skeleton-sidebar-menu">
+              <div class="sidebar-content">
+                <ul id="sidebar-page-list">
+                  <a href="podstranky/produkty.html"><li>
+                    <h3 data-i18n-key="produkty-nav">produkty</h3>
+                  </li></a>
+                  <a href="podstranky/kontakt.html"><li>
+                    <h3 data-i18n-key="kontakt-nav">kontakt</h3>
+                  </li></a>
+                  <a href="podstranky/info.html"><li>
+                    <h3 data-i18n-key="info-nav">info</h3>
+                  </li></a>
+                </ul>
+              </div>
+              <div class="sidebar-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat suscipit veniam voluptates vel obcaecati ad iure, eveniet at laudantium corrupti neque dolores. Eius, sapiente maxime ullam obcaecati dolores tempora deserunt.
+              </div>
+              <div class="sidebar-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat suscipit veniam voluptates vel obcaecati ad iure, eveniet at laudantium corrupti neque dolores. Eius, sapiente maxime ullam obcaecati dolores tempora deserunt.
               </div>
             </div>
           </div>
         </div>
-        <a href="" class="top-link">
-          <img src="images/fulllogo.png" alt="logo" id="top-logo">
-          <img src="images/topnavico.png" alt="logo" id="top-logo2">
-        </a>
-        <span class="side-hover-group" id="shg">
-          <div onclick="openSidebar()" class="menu-bar" id="menu-bar"></div>
-          <i onclick="openSidebar()" class="fa-solid fa-bars" id="menu-ico"></i>
-        </span>
-        <i onclick="closeSidebar()" class="fa-solid fa-xmark" id="menu-ico2"></i>
+  
       </div>
-      <nav class="skeleton-tnav">
-        <div class="container">
-          <div class="half1">
-            <div class="cell1">
-              <a class="underline" href="podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a>
-            </div>
-            <div class="cell2">
-              <a class="underline" href="podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a>
-            </div>
-          </div>
-          <div class="half2">
-            <div class="cell3">
-              <a class="underline" href="podstranky/info.html" data-i18n-key="info-nav">o nás</a>
-            </div>
-            <div class="cell4">
-              <i class="fa-solid fa-earth-europe" id="lang-ico-pc"></i>
-            </div>
-            <div class="cell5">
-              <select id="inputselect-pc" data-lang-toggle>
-                <option value="sk">SK</option>
-                <option value="en">EN</option>
-                <option value="ch">CH</option>
-              </select>
-            </div>
-            <div class="cell6">
-              <button type="button" data-theme-toggle id="themeButtons">
-                <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
-                <i class="fa-solid fa-moon" id="theme"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
     </header>
 
     <main>
-      <div class="carousel js-flickity"
+      <div id="flickity-carousel" class="carousel js-flickity"
         data-flickity='{ 
+          "draggable": true,
           "wrapAround": true, 
-          "autoPlay": 3000, 
-          "selectedAttraction": 0.2, 
+          "autoPlay": 4000, 
+          "pauseAutoPlayOnHover": false,
+          "selectedAttraction": 0.1, 
           "friction": 0.8
         }'> 
           <img class="carousel-cell-image" src="images/landing/slider1-1080x350.jpg" alt="1" />
@@ -100,26 +108,151 @@
       </div>
       <div class="carousel-shd"></div>
 
-      <div class="context1">
-        <h4>GSM brány</h4>
-        <span>
-          <img src="images/landing/8efbf0be40c85544c35914d07d7cc00d.webp">
-        </span>
-        <span>
-        Získajte diaľkovú kontrolu nad Vašim bytom, chatou, garážou, autom alebo iným chráneným objektom. <br>
-        GSM Brány sú pokročilé bezpečnostné riešenia využívajúce sieť GSM (Global System for Mobile Communications) na poskytovanie diaľkového ovládania a monitorovania rôznych vstupných bodov. Tieto brány môžu byť ovládané prostredníctvom mobilných telefónov, čo umožňuje používateľom otvárať a zatvárať brány, kontrolovať ich stav a prijímať upozornenia odkiaľkoľvek na svete. Ideálne pre rezidenčné, komerčné a priemyselné aplikácie, GSM Brány ponúkajú pohodlný, bezpečný a efektívny spôsob správy prístupu k nehnuteľnostiam.
-        </span>
+      <div class="align-cont" id="index-hero-container">
+        <div class="align" id="index-hero">
+          <h1 data-i18n-key="index-h1" id="hero-h1">GSM Riešenia</h1>
+          <a href="podstranky/produkty.html" style="display: contents;">
+            <h2 class="index-hero-text" id="hero-h2" data-i18n-key="index-h1-button">
+              kupuj teraz
+            </h2>
+          </a>
+          <div id="index-hero-mobile">
+            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime totam, ipsam saepe voluptatum suscipit eos praesentium</h5>
+            <a href="podstranky/produkty.html">
+              <h2 class="index-hero-text" id="mobile-hero-h2" data-i18n-key="index-h1-button">
+                kupuj teraz
+              </h2>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="context2">
-        <h4>GSM brány</h4>
-        <span>
-          Zabezpečujeme aj vývoj a výrobu malých sérií elekronických zariadení podľa individuálnych požiadaviek zákazníka. <br>
-          <a href="podstranky/info.html">O spol</a>
-        </span>
-        <span>
-          <img src="images/landing/8efbf0be40c85544c35914d07d7cc00d.webp">
-        </span>
+      <div class="align-cont col1">
+        <div class="align flex-between content" id="content1">
+          <div class="left-text">
+            <h4 data-i18n-key="index-1st-content-head">čo sú GSM Brány</h4>
+            <span data-i18n-key="index-1st-content">GSM Brány sú pokročilé bezpečnostné riešenia využívajúce sieť GSM (Global System for Mobile Communications) na poskytovanie diaľkového ovládania a monitorovania rôznych vstupných bodov. Tieto brány môžu byť ovládané prostredníctvom mobilných telefónov, čo umožňuje používateľom otvárať a zatvárať brány, kontrolovať ich stav a prijímať upozornenia odkiaľkoľvek na svete. Ideálne pre rezidenčné, komerčné a priemyselné aplikácie, GSM Brány ponúkajú pohodlný, bezpečný a efektívny spôsob správy prístupu k nehnuteľnostiam.</span>
+          </div>
+          <img src="images/landing/8efbf0be40c85544c35914d07d7cc00d.webp" class="content-img disable-img">
+          <img src="images/landing/vartai-3.webp" class="content-img">
+        </div>
+      </div>
+
+      <div class="align-cont col2">
+        <div class="align content" id="content2">
+          <div class="lone-heading">
+            <h4 data-i18n-key="index-2nd-content-head">Predajcovia</h4>
+          </div>
+          <div class="flex-between" id="index-predajcovia-text">
+            <div class="fill-text">
+              <h5>EXIM Alarm s.r.o.</h5>
+              <span>Solivarská 50
+                080 05 Prešov
+                Slovakia
+                Tel/Fax: 051 77 21 858
+                Mobil: 0918 699 199
+                eximpo@alarmtechnika.sk
+              </span>
+            </div>
+            <div class="fill-text">
+              <h5>EXIM Alarm s.r.o.</h5>
+              <span>Košická 6
+                821 08 Bratislava 2
+                Slovakia
+                Tel/Fax: 02 534 12 091
+                Mobil(1): 0918 699 299 
+                Mobil(2): 0918 699 399
+                eximba@alarmtechnika.sk</span>
+            </div>
+            <div class="fill-text">
+              <h5>EXIM Alarm s.r.o.</h5>
+              <span>Kukučínova 23
+                040 01 Košice
+                Slovakia
+                Tel/Fax: 055 622 55 37
+                Mobil: 0918 699 499
+                eximke@alarmtechnika.sk</span>
+            </div>
+            <div class="fill-text">
+              <h5>Fittich Ost, s.r.o.</h5>
+              <span>Južná trieda 74
+                040 01 Košice
+                Slovakia
+                Tel.: 055/677 0173
+                Fax: 055/677 1575
+                e-mail: ke@fittich.sk
+              </span>
+            </div>
+            <div class="fill-text">
+              <h5>DELMES, s.r.o.</h5>
+              <span>Tel.: +421 905 700 222
+                e-mail: delmes@delmes.sk</span>
+            </div>
+            <div class="fill-text">
+              <h5>HORVATEX</h5>
+              <span>Zlatohorská 28
+                841 03 Bratislava
+                Slovakia
+                Tel.: +421 903 44 1234
+                e-mail: horvatex@centrum.sk</span>
+            </div>
+            <div class="fill-text">
+              <h5>SOS electronic s.r.o.</h5>
+              <span>Pri Prachárni 16
+                040 11 Košice
+                Slovakia
+                Tel: +421 55 786 0416
+                e-mail: info@soselectronic.sk
+              </span>
+            </div>
+            <div class="fill-text">
+              <h5>Electrobeta s.r.o.</h5>
+              <span>Na vŕšku 3
+                949 01 Nitra
+                Slovakia
+                Tel: +421 37 651 99 76
+                e-mail: info@electrobeta.sk
+              </span>
+            </div>
+            <div class="fill-text">
+              <h5>Elkom - Milan Palacka</h5>
+              <span>M.R. Štefánika 17
+                940 01 Nové Zámky
+                Slovakia
+                Tel: +421 35 642 3158
+                e-mail: elkom@elkom-nz.sk</span>
+            </div>
+            <div class="fill-text">
+              <h5>FLAJZAR, s.r.o.</h5>
+              <span>Lidéřovice č.p. 151
+                696 61 Vnorovy
+                CZECH REPUBLIC
+                Tel:/FAX: +420 518 628 596
+                mobil: +420 776 586 866
+                e-mail: flajzar@flajzar.cz</span>
+            </div>
+            <div class="fill-text">
+              <h5>SOS electronic Kft.</h5>
+              <span>H-3527 Miskolc
+                Budai József u.1
+                Hungary
+                Tel: +36 (46) 501 380
+                e-mail: info@soselectronic.hu
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="align-cont col1" id="content-bottom-img">
+        <div class="align content" id="index-bottom-text">
+          <h4 class="lone-heading">Lorem ipsum</h4>
+          <div class="center-text">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fuga fugit, pariatur vero unde quis quas! Qui, fugit. Ea tempora sequi rerum iste laborum, suscipit vitae earum iure delectus. Et.</span><br>
+            <a href="podstranky/produkty.html">
+              <button id="cta-button-botton" data-i18n-key="index-bottom-button">Produkty</button>
+            </a>
+          </div>
       </div>
 
     </main>

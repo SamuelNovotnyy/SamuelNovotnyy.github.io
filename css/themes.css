@@ -11,41 +11,44 @@
           --footer-text: rgb(119, 119, 119);
 
 
-          --body-col: #fff7f7;
           --box1: #fff7f7;
-          --box2: #1b1a1a;
+          --box2: #4e4e4e;
           --text1: rgb(22, 22, 22);
           --text2: rgb(248, 248, 248);
-          --text3: #e23030;
-          --highlight: pink;
+          --text3: #000000;
+          --button: #e23030;
+          --highlight: rgb(236, 184, 193);
           --sel1: rgb(17, 0, 94);
           --sel2: rgb(218, 197, 142);
 
 
-          --carousel-fg: transparent; 
+          --carousel-fg: rgba(0, 0, 0, 0.11);
+          --index-bottom-img: rgba(255, 255, 255, 0.336);
 }
 
 [data-theme="dark"] {
-          --topnav1: rgb(32, 31, 31);
-          --topnav2: rgb(252, 252, 252);
-          --topnav3: rgb(255, 42, 35);
-          --topnav-text: #000000;
+          --topnav1: #141414;
+          --topnav2: #e4e4e4;
+          --topnav3: #d62d2d;
+          --topnav-text: #d62d2d;
           --logo-effect: invert(100%) hue-rotate(180deg) saturate(8) brightness(85%);
 
-          --footer-col: rgb(41, 41, 41);
-          --footer-text: rgb(119, 119, 119);
+          --footer-col: #292929;
+          --footer-text: #777777;
 
 
-          --body-col: #2e2e2e;
-          --box1: #000000;
-          --box2: #fdfdfd;
-          --text1: rgb(228, 228, 228);
-          --text2: rgb(26, 26, 26);
-          --text3: #e23030;
+          --box1: #303030;
+          --box2: #202020;
+          --text1: #e4e4e4;
+          --text2: #d1d1d1;
+          --text3: #c5c5c5;
+          --button: #d12121;
+          --img-tint: brightness(0.7);
           --highlight: rgb(222, 255, 192);
           --sel1: rgb(218, 243, 255);
           --sel2: rgb(53, 32, 107);
 
 
-          --carousel-fg: rgba(0, 0, 0, 0.24);
+          --carousel-fg: rgba(0, 0, 0, 0.342);
+          --index-bottom-img: rgba(0, 0, 0, 0.384);
 }

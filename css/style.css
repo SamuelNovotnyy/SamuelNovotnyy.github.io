@@ -1,16 +1,172 @@
+/*import base css*/
 @import 'reset.css';
-@import 'typography.css';
+@import '../normalize.css';
 @import 'themes.css';
+@import 'classes.css';
+@import 'typography.css';
 
 
-@import 'pages/skeleton.css' only screen and (min-width: 1000px) and (max-width: 2000px);
-@import 'pages/contact.css' only screen and (min-width: 1000px) and (max-width: 2000px);
-@import 'pages/info.css' only screen and (min-width: 1000px) and (max-width: 2000px);
-@import 'pages/index.css' only screen and (min-width: 1000px) and (max-width: 2000px);
-@import 'pages/products.css' only screen and (min-width: 1000px) and (max-width: 2000px);
+/*conditional import page style css*/
+@import 'pages/skeleton-m.css' only screen  and (max-width: 1279px);
+@import 'pages/skeleton.css' only screen and (min-width: 1280px);
 
-@import 'pages/skeleton-m.css' only screen  and (max-width: 999px);
-@import 'pages/contact-m.css' only screen and (max-width: 999px);
-@import 'pages/info-m.css' only screen and (max-width: 999px);
-@import 'pages/index-m.css' only screen and (max-width: 999px);
-@import 'pages/products-m.css' only screen and (max-width: 999px);
+@import 'pages/contact-m.css' only screen and (max-width: 779px);
+@import 'pages/info-m.css' only screen and (max-width: 779px);
+@import 'pages/index-m.css' only screen and (max-width: 779px);
+@import 'pages/products-m.css' only screen and (max-width: 779px);
+
+@import 'pages/contact.css' only screen and (min-width: 780px);
+@import 'pages/info.css' only screen and (min-width: 780px);
+@import 'pages/index.css' only screen and (min-width: 780px);
+@import 'pages/products.css' only screen and (min-width: 780px);
+
+
+/*dynamic css styles*/
+@media only screen and (max-width: 779px) {
+   /*root variable changes*/
+   :root {
+      --rem: 10px;
+
+      --carousel-height: 50vh;
+
+      --dealers-width: 220px;
+      --dealers-padding: 1rem 2.5rem;
+   }
+
+   /*class changes*/
+   .align {
+     width: 80vw;
+   }
+   .center-text {
+     max-width: 80vw;
+   }
+   .disable-img {
+     display: none;
+   }
+   .content {
+      padding: 2rem 3rem;
+   }
+   .content-img {
+      display: none;
+    }
+
+   /*id changes*/
+
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1023px) {
+   /*root variable changes*/
+   :root {
+      --rem: 14px;
+
+      --carousel-height: 500px;
+      --carousel-text-adjust: 40px;
+
+      --dealers-width: 220px;
+      --dealers-padding: 1rem 2.5rem;
+   }
+
+   /*class changes*/
+   h1,
+   .align {
+     width: 700px;
+   }
+   .center-text {
+     max-width: 700px;
+   }
+   .disable-img {
+     display: none;
+   }
+
+   /*id changes*/
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+   /*root variable changes*/
+   :root {
+      --rem: 14px;
+
+      --carousel-height: 600px;
+      --carousel-text-adjust: 50px;
+
+      --dealers-width: 220px;
+      --dealers-padding: .8rem 1.2rem;
+   }
+
+   /*class changes*/
+   h1,
+  .align {
+    width: 780px;
+  }
+  .center-text {
+    max-width: 780px;
+  }
+  .disable-img {
+    display: none;
+  }
+
+  /*id changes*/
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+   /*root variable changes*/
+   :root {
+      --rem: 15px;
+
+      --carousel-height: 700px;
+      --carousel-text-adjust: 100px;
+
+      --dealers-width: 205px;
+      --dealers-padding: 1rem 1.2rem;
+   }
+
+   /*class changes*/
+   h1,
+  .align {
+    width: 980px;
+  }
+  .center-text {
+    max-width: 980px;
+  }
+  .disable-img {
+    display: none;
+  }
+  .nav-list li {
+    margin-left: 40px;
+  }
+
+  /*id changes*/
+
+}
+
+@media only screen and (min-width: 1536px) {
+   /*root variable changes*/
+   :root {
+      --rem: 16px;
+
+      --carousel-height: 700px;
+      --carousel-text-adjust: 100px;
+
+      --dealers-width: 230px;
+      --dealers-padding: 1rem 2rem;
+   }
+
+   /*class changes*/
+   h1,
+  .align {
+    width: 1280px;
+  }
+  .center-text {
+    max-width: 1280px;
+  }
+  .disable-img {
+    display: block;
+  }
+  .nav-list li {
+    margin-left: 70px;
+  }
+
+  /*id changes*/
+
+}

@@ -1,18 +1,24 @@
-.infopage {
-          margin: 50px 8vw;
-          color: var(--text1);
+#hero-container {
+   background: var(--topnav1);
 }
-
-.infopage img {
-          width: 100%;
-          filter: var(--logo-effect);
+#sidepadding {
+   padding: 0 4rem;
 }
-
-.info-header {
-          padding-bottom: 0; 
-          font-size: calc(20px + 2vw);
+#hero-img {
+   width: 230px;
+   filter: var(--logo-effect);
 }
-.info-text{
-          padding-top: 20px;
-          font-size: calc(10px + 1vw);
+#hero-text {
+   margin-left: 6rem;
+   color: var(--text1);
+}
+#hero-text h2 {
+   font-family: 'Poppins', sans;
+   font-size: 4rem;
+   font-weight: 700;
+}
+#hero-text h5 {
+   font-size: 1.5rem;
+   font-weight: 400;
+   line-height: 1.2;
 }

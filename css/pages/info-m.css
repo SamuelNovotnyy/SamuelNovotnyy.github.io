@@ -16,3 +16,38 @@
           padding-top: 20px;
           font-size: calc(15px + 1vw);
 }
+
+.context1 {
+          display: block;
+          padding: 3vw;
+          color: var(--text1);
+          background: var(--box1);
+}
+.context1 span {
+          font-size: 15px;
+          display: inline-block;
+          width: 49%;
+}
+.context1 img {
+          width: 100%;
+}
+
+.context2 {
+          display: block;
+          padding: 3vw;
+          color: var(--text2);
+          background: var(--box2);
+}
+.context2 span {
+          font-size: 15px;
+          display: inline-block;
+          width: 49%;
+}
+.context2 a {
+          color: var(--text2);
+          font-size: 12px;
+}
+.context2 img {
+          width: 100%;
+          filter: invert();
+}

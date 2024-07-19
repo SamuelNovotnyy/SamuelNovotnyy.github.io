@@ -14,13 +14,51 @@
   </head>
   <body onload="onPageLoad()">
     <header class="skeleton-head">
+      <nav class="skeleton-tnav">
+        <a href="../index.html" class="top-logo">
+          <img src="../images/fulllogo.png" alt="logo">
+        </a>
+        <div class="container-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="underline" href="../podstranky/produkty.html"><h3 data-i18n-key="produkty-nav">produkty</h3></a>
+            </li>
+            <li>
+              <a class="underline" href="../podstranky/kontakt.html"><h3 data-i18n-key="kontakt-nav">kontakt</h3></a>
+            </li>
+            <li>
+              <a class="underline" href=""><h3 data-i18n-key="info-nav">o nás</h3></a>
+            </li>
+            <li>
+              <div class="container-lang">
+                <div id="inputselect-pc">
+                  <h3 class="selected-lang-display" data-i18n-key="lang">SK</h3>
+                  <i class="fa-solid fa-caret-down" style="font-size: 14px; margin-left: 3px; display: inline;"></i>
+                </div>
+              </div>
+              <div class="container-theme" data-theme-toggle id="themeButtons">
+                <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
+                <i class="fa-solid fa-moon" id="theme"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sub-menu-cont">
+          <ul class="sub-lang-menu">
+            <li data-lang-code="sk">slovensky</li>
+            <li data-lang-code="en">english</li>
+            <li data-lang-code="ch">中国人</li>
+          </ul>
+        </div>
+      </nav>
+
       <div class="skeleton-top">
         <div id="sidebar-bg">
           <div class="sidebar-text">
-            <a id="menu-text" href="produkty.html" data-i18n-key="produkty-nav">produkty</a><br>
-            <a id="menu-text" href="kontakt.html" data-i18n-key="kontakt-nav">kontakt</a><br>
+            <a id="menu-text" href="../podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a><br>
+            <a id="menu-text" href="../podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a><br>
             <a id="menu-text" href="" data-i18n-key="info-nav">o nás</a><br>
-            <a id="menu-text" href="../index.html" data-i18n-key="domov-nav">domov</a><br>
+            <a id="menu-text" href="" data-i18n-key="domov-nav">domov</a><br>
           </div>
 
           <div class="icon-container">
@@ -39,59 +77,49 @@
             </div>
           </div>
         </div>
-        <a href="../index.html" class="top-link">
-          <img src="../images/fulllogo.png" alt="logo" id="top-logo">
+        <a href="" class="top-link">
           <img src="../images/topnavico.png" alt="logo" id="top-logo2">
         </a>
         <span class="side-hover-group" id="shg">
           <div onclick="openSidebar()" class="menu-bar" id="menu-bar"></div>
           <i onclick="openSidebar()" class="fa-solid fa-bars" id="menu-ico"></i>
         </span>
-        <i onclick="closeSidebar()" class="fa-solid fa-xmark" id="menu-ico2"></i>
+        <i onclick="closeSidebar()" class="fa-solid fa-xmark" id="menu-ico2" style="display: none;"></i>
       </div>
-      <nav class="skeleton-tnav">
-        <div class="container">
-          <div class="half1">
-            <div class="cell1">
-              <a class="underline" href="produkty.html" data-i18n-key="produkty-nav">produkty</a>
-            </div>
-            <div class="cell2">
-              <a class="underline" href="kontakt.html" data-i18n-key="kontakt-nav">kontakt</a>
-            </div>
-          </div>
-          <div class="half2">
-            <div class="cell3">
-              <a class="underline" href="" data-i18n-key="info-nav">o nás</a>
-            </div>
-            <div class="cell4">
-              <i class="fa-solid fa-earth-europe" id="lang-ico-pc"></i>
-            </div>
-            <div class="cell5">
-              <select id="inputselect-pc" data-lang-toggle>
-                <option value="sk">SK</option>
-                <option value="en">EN</option>
-                <option value="ch">CH</option>
-              </select>
-            </div>
-            <div class="cell6">
-              <button type="button" data-theme-toggle id="themeButtons">
-                <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
-                <i class="fa-solid fa-moon" id="theme"></i>
-              </button>
+    </header>
+
+    <main>
+      <div class="align-cont" id="hero-container">
+        <div class="align content">
+          <div class="flex-between" id="sidepadding">
+            <img src="../images/about/Asset-5@2xd-1-2.jpg" id="hero-img">
+            <div id="hero-text">
+            <h2 data-i18n-key="info-head">about us</h2>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus ut molestias!</h5>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
 
-    <main class="infopage">
-      <h2 class="info-header" data-i18n-key="o-spol-head">
-        O spoločnosti
-      </h2>
-      <p class="info-text" data-i18n-key="o-spol-text">
-        Firma Star electronic, s.r.o. sa zaoberá vývojom a výrobou elektronických zariadení, hlavne GSM brán. Naše výrobky ponúkame vo viacerých modifikáciách aby čo najlepšie vyhovovali rôznym požiadavkám. Počas svojej existencie od roku 2006 sa našej firme podarilo vybudovať širokú sieť predajcov na Slovensku aj v zahraničí, ktorí sú s kvalitou a spoľahlivosťou výrobkov s našim logom veľmi spokojní. Prostredníctvom našich partnerov ponúkame aj pripojenie k už existujúcim zabezpečovacím zariadeniam, ako aj montáž kompletných zabezpečovacích systémov. Zaoberáme sa tiež sprostredkovaním predaja iných elektronických zariadení a prístrojov od našich dodávateľov. Zabezpečujeme aj vývoj a výrobu malých sérií elekronických zariadení podľa individúálnych požiadaviek zákazníka.
-      </p>
-      <img src="http://www.starelectronic.eu/wp-content/uploads/2015/05/collage.jpg">
+      <div class="align-cont col2">
+        <div class="align content" id="content2">
+          <h4 class="lone-heading">gsm blah blah</h4>
+          <div class="flex-between">
+            <div class=" fill-text">
+              <h5>smoll header</h5>
+              <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus perspiciatis optio inventore iusto? Vitae quo eveniet vero provident? Velit, labore fugit voluptatibus numquam quis eius fuga vel quos natus?</span>
+            </div>
+            <div class="flex-clumn fill-text">
+              <h5>smoll header</h5>
+              <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus perspiciatis optio inventore iusto? Vitae quo eveniet vero provident? Velit, labore fugit voluptatibus numquam quis eius fuga vel quos natus?</span>
+            </div>
+            <div class="flex-clumn fill-text">
+              <h5>smoll header</h5>
+              <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus perspiciatis optio inventore iusto? Vitae quo eveniet vero provident? Velit, labore fugit voluptatibus numquam quis eius fuga vel quos natus?</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </main>
 

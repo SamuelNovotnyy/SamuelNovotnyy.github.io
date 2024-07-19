@@ -1,174 +1,74 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
-@keyframes ico-anim {
-  0%, 100% {transform: translateX(0);}
-	30% {transform: translateX(-6px);}
-	60% {transform: translateX(6px);}
+#skeleton-top-nav {
+  display: none;
 }
 
 :root {
-  --topnav-h: 50px;
-}
-body {
-  padding-top: calc(var(--topnav-h) + 60px);
-  background: var(--body-col);
+  --rem: 10px;
+
+  --topnav-h: 10vh;
+
+  --pill-lang: 140px;
+  --pill-h: 40px;
+  --pill-theme: 100px;
+  --pill-ang: 4px;
+  --pill-round: 16px;
 }
 
-.skeleton-head {
-  position: fixed;
-  width: 100%;
-  margin-top: calc(-1*(var(--topnav-h) + 60px));
-  height: calc(var(--topnav-h) + 60px);
-  z-index: 10;
-  box-shadow: 0px -17px 10px 17px rgba(0, 0, 0, 0.45);
-}
-.skeleton-head .skeleton-top {
+#skeleton-head {
   position: relative;
   background: var(--topnav1);
-  height: calc(var(--topnav-h) + 50px);
-  padding-top: 10px;
+  width: 100%;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.404);
+  z-index: 99;
 }
-.skeleton-top .menu-bar {
-  display: block;
+
+#skeleton-top-mobile {
+  align-items: center;
+}
+#skeleton-top-mobile img {
+  height: var(--topnav-h);
+  padding: 0.5rem 1rem;
+}
+#mobile-menu-icon-cont i {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: calc(var(--topnav-h) - 3vh);
+  padding: 0.5rem 1.5rem;
+  font-size: calc(var(--topnav-h) - 4vh);
+  cursor: pointer;
+  transition: 200ms ease-out;
+}
+
+#skeleton-sidebar-cont {
   position: fixed;
-  height: calc(var(--topnav-h) + 60px);
-  width: calc(90px + 10vw);
-  margin-top: -10px;
-  background: var(--topnav3);
-  clip-path: polygon(0 0, calc(80px + 10vw - 10px) 0, calc(80px + 10vw) 50%, calc(80px + 10vw  - 10px) 100%, 0 100%);
-  transition: 400ms ease;
-  z-index: 11;
-}
-.skeleton-top #menu-ico {
-  position: fixed;
-  margin: calc(-10px + var(--topnav-h)/2) 20px;
-  font-size: 60px;
-  color: var(--topnav1);
-  transition: 200ms ease;
-  transform-origin: center;
-  z-index: 12;
-}
-.skeleton-top #menu-ico2 {
-  padding: 0 4px; 
-  position: fixed;
-  margin: 10px 20px;
-  font-size: 70px;
-  color: var(--topnav1);
-  transition: 200ms ease;
-  transform-origin: center;
-  z-index: 12;
-  transform: scale(0);
-}
-.selectionLang {
-  display: inline-block;
-  height: 8vh;
-  width: 50%;
+  box-sizing: border-box;
+  top: calc(var(--topnav-h) + 1rem);
+  width: 100vw;
+  height: calc(100vh - var(--topnav-h) - 1rem);
+  padding: 1rem 3rem;
   background: var(--topnav1);
-  transition: 200ms ease;
-  font-size: calc(20px + 1vw);
-  font-weight: 600;
-  color: var(--topnav1);
-  border-radius: 10px;
+  z-index: 999;
 }
-.selectionLang select, option {
+#skeleton-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
   width: 100%;
   height: 100%;
-  font-size: calc(20px + 1vw);
-  padding-left: 2vw;
-  background: var(--topnav1);
-  color: var(--topnav2);
-  transition: background 400ms ease, color 200ms ease;
-  border-radius: 10px;
 }
-#themeButtons {
-  height: 8vh;
-  width: 50%;
-  transition: 200ms ease;
-  font-size: calc(20px + 1vw);
-  background: var(--topnav2);
-  color: var(--topnav-text);
-  border-radius: 10px;
-}
-#theme {
-  background: transparent;
-  transform: scale(1.4);
-  color: var(--topnav1);
-}
-.side-hover-group:hover > #menu-ico {
-  animation: ico-anim 400ms ease;
-}
-.side-hover-group:hover > .menu-bar {
-  clip-path: polygon(0 0, calc(90px + 10vw - 10px) 0, calc(90px + 10vw) 50%, calc(90px + 10vw  - 10px) 100%, 0 100%);
-}
-#sidebar-bg {
-  display: block;
-  position: fixed;
-  background: var(--topnav3);
-  margin-top: -10px;
-  height: calc(100vh - var(--topnav-h) - 80px);
-  width: 0px;
-  z-index: 12;
-  transition: 400ms ease;
-  overflow: hidden;
-  white-space: nowrap;
-  clip-path: polygon(
-    0 0, 
-    calc(100% - 10px) 0, 
-    100% calc((var(--topnav-h) + 60px)/2), 
-    calc(100% - 10px) calc(var(--topnav-h) + 60px), 
-    calc(100% - 10px) 100%, 0 100%);
-  padding: calc(var(--topnav-h) + 60px + 20px) 0;
-}
-#menu-text {
-  display: block;
-  margin-bottom: -10px;
-  transition: 300ms ease;
-  color: transparent;
-  font-size: calc(20px + 1vw);
-}
-.icon-container {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 60%;
-}
-.sidebar-icons {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  bottom: 6vw;
-  padding-right: 8px;
-}
-.skeleton-top img {
-  display: block;
-  position: fixed;
-  right: 0;
-  margin-left: auto;
-  margin-right: 3vw;
-  height: calc(var(--topnav-h) + 40px);
-  clip-path: inset(0);
-  z-index: 11;
-  transition: opacity 400ms cubic-bezier(.8,0,.2,1),
-  margin-right 400ms ease,
-  clip-path 400ms ease;
-  filter: var(--logo-effect);
-}
-.skeleton-top #top-logo2 {
-  height: 76px; 
-  opacity: 0;
-  margin-right: calc(3vw + 135px);
+#sidebar-page-list {
+  list-style-type: disc;
 }
 
-.skeleton-tnav {
-  display: none;
-}
-.underline {
-  display: none;
-}
+
+
+
 
 .skeleton-foot {
-  position: relative;
-  margin-top: auto;
+  display: block;
   background: var(--footer-col);
   color: var(--footer-text);
   height: 1em;
