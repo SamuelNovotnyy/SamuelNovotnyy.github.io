@@ -1,0 +1,110 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+#skeleton-top-nav {
+  display: none;
+}
+
+:root {
+  --rem: 10px;
+
+  --topnav-h: 10vh;
+
+  --pill-lang: 140px;
+  --pill-h: 40px;
+  --pill-theme: 100px;
+  --pill-ang: 4px;
+  --pill-round: 16px;
+}
+
+#skeleton-head {
+  position: relative;
+  background: var(--topnav1);
+  width: 100%;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.404);
+  z-index: 99;
+}
+
+#skeleton-top-mobile {
+  align-items: center;
+}
+#skeleton-top-mobile img {
+  height: var(--topnav-h);
+  padding: 0.5rem 1rem;
+}
+#mobile-menu-icon-cont {
+  display: flex;
+  align-items: center;
+  height: var(--topnav-h);
+  width: 2rem;
+}
+#mobile-menu-icon-cont i {
+  position: relative;
+  inset: 0 -100%;
+  width: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  font-size: calc(var(--topnav-h) - 4vh);
+  cursor: pointer;
+  transition: 200ms ease-out;
+}
+#mobile-menu-icon-cont i::before {
+  padding: 1rem 2rem;
+  margin: -1rem -2rem;
+}
+
+#skeleton-sidebar-cont {
+  position: fixed;
+  box-sizing: border-box;
+  top: calc(var(--topnav-h) + 1rem);
+  width: 100vw;
+  height: calc(100vh - var(--topnav-h) - 1rem);
+  padding: 1rem 3rem;
+  background: var(--topnav1);
+  z-index: 999;
+}
+#skeleton-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+#sidebar-page-list {
+  list-style-type: disc;
+}
+
+
+
+
+
+.skeleton-foot {
+  display: block;
+  background: var(--footer-col);
+  color: var(--footer-text);
+  height: 1em;
+  text-align: center;
+  margin-top: 40px;
+  padding: 2em 10vw 130px 10vw;
+}
+.skeleton-foot .skeleton-bnav {
+  display: block;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--footer-text);
+}
+.skeleton-bnav li {
+  display: inline-block;
+  margin-inline: 20px;
+  fill: var(--footer-text);
+}
+.skeleton-bnav i {
+  color: var(--footer-text);
+  font-size: 30px;
+  transition: 200ms ease;
+}
+.skeleton-bnav i:hover {
+  color: var(--highlight);
+}

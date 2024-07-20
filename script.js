@@ -1,9 +1,10 @@
 // DOM element selectors
+const docBod = document.body
 const topLogo = document.getElementById("top-logo");
 const topLogo2 = document.getElementById("top-logo2");
 const carouselShadow = document.getElementById("shg");
 const langSel = document.querySelector(".selectionLang");
-const themeSel = $('#themeButtons');
+const themeSel = $("#themeButtons");
 
 // Theme-related elements
 const themeToggle = document.querySelector("[data-theme-toggle]");
@@ -14,11 +15,12 @@ const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 // Language-related elements
 const langContainer = document.querySelector(".container-lang");
 const subLangMenu = document.querySelector(".sub-lang-menu");
-const selectedLangDisplay = document.querySelector('.selected-lang-display');
+const selectedLangDisplay = document.querySelector(".selected-lang-display");
 
 // Sidebar-related elements
 const sidebar = document.querySelector("#skeleton-sidebar-cont");
 const sidebarToggleButton = document.querySelector("#mobile-menu-icon-cont");
+const icons = sidebarToggleButton.children;
 
 // Theme and language settings
 let currentThemeSetting = calculateSettingAsThemeString();
@@ -49,8 +51,10 @@ function updateLangOnHtmlEl(lang) {
 
 async function fetchTranslationsFor(newLocale) {
   const currentPath = window.location.pathname;
-  const isIndexPage = currentPath.endsWith('index.html') || currentPath === '/';
-  const langPath = isIndexPage ? `lang/${newLocale}.json` : `../lang/${newLocale}.json`;
+  const isIndexPage = currentPath.endsWith("index.html") || currentPath === "/";
+  const langPath = isIndexPage
+    ? `lang/${newLocale}.json`
+    : `../lang/${newLocale}.json`;
 
   const response = await fetch(langPath);
   return response.json();
@@ -73,6 +77,16 @@ function translateElement(element) {
   element.innerHTML = translations[key];
 }
 
+// Sidebar toggle
+function sidebarToggle() {
+  docBod.classList.toggle("noscroll");
+  sidebar.classList.toggle("hidden");
+  for (var i = 0; i < icons.length; i++) {
+    icons[i].classList.toggle("hide-icon");
+  }
+}
+
+
 // Event listeners
 themeToggle.addEventListener("click", () => {
   const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
@@ -82,47 +96,55 @@ themeToggle.addEventListener("click", () => {
 });
 
 // Language menu hover effects
-langContainer.addEventListener("mouseover", () => subLangMenu.style.display = "block");
-subLangMenu.addEventListener("mouseover", () => subLangMenu.style.display = "block");
-langContainer.addEventListener("mouseout", () => subLangMenu.style.display = "none");
-subLangMenu.addEventListener("mouseout", () => subLangMenu.style.display = "none");
+langContainer.addEventListener(
+  "mouseover",
+  () => (subLangMenu.style.display = "block")
+);
+subLangMenu.addEventListener(
+  "mouseover",
+  () => (subLangMenu.style.display = "block")
+);
+langContainer.addEventListener(
+  "mouseout",
+  () => (subLangMenu.style.display = "none")
+);
+subLangMenu.addEventListener(
+  "mouseout",
+  () => (subLangMenu.style.display = "none")
+);
 
-subLangMenu.addEventListener('click', async function(event) {
-  if (event.target.tagName === 'LI') {
+subLangMenu.addEventListener("click", async function (event) {
+  if (event.target.tagName === "LI") {
     // Get the language code from the li's data attribute
-    const newLang = event.target.getAttribute('data-lang-code');
-    
+    const newLang = event.target.getAttribute("data-lang-code");
+
     //initiate only on change
     if (newLang != localStorage.getItem("lang")) {
       // Close the menu by hiding it
-      subLangMenu.style.display = 'none';
+      subLangMenu.style.display = "none";
 
       // Update the language setting
       localStorage.setItem("lang", newLang);
       updateLangOnHtmlEl(newLang);
       currentLangSetting = newLang;
-      
+
       // Fetch new translations and update the page
       await setLocale(currentLangSetting);
 
       // Update any language selection dropdowns
-      document.querySelectorAll("[data-i18n-key]").forEach(toggle => {
-      toggle.value = newLang;
+      document.querySelectorAll("[data-i18n-key]").forEach((toggle) => {
+        toggle.value = newLang;
       });
     }
   }
 });
 
-sidebarToggleButton.addEventListener("click", () => {
-  const body = document.body;
-  const icons = sidebarToggleButton.children;
-
-  body.classList.toggle('noscroll');
-  sidebar.classList.toggle('hidden');
-  for (var i = 0; i < icons.length; i++) {
-    icons[i].classList.toggle('hide-icon');
-  }
-});
+// Sidebar toggle event listener for mobile devices
+for (i = 0; icons.length > 0; i++) {
+  icons[i].addEventListener("click", () => {
+    sidebarToggle()
+  });
+}
 
 // Initialize
 setLocale(currentLangSetting);
