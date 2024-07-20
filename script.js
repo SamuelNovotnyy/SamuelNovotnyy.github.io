@@ -7,15 +7,17 @@ const langSel = document.querySelector(".selectionLang");
 const themeSel = $("#themeButtons");
 
 // Theme-related elements
-const themeToggle = document.querySelector("[data-theme-toggle]");
-const sun = document.querySelector(".fa-solid.fa-sun");
-const moon = document.querySelector(".fa-solid.fa-moon");
+const themeToggle = document.querySelectorAll("[data-theme-toggle]");
+const sun = document.querySelectorAll(".fa-solid.fa-sun");
+const moon = document.querySelectorAll(".fa-solid.fa-moon");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 // Language-related elements
 const langContainer = document.querySelector(".container-lang");
 const subLangMenu = document.querySelector(".sub-lang-menu");
 const selectedLangDisplay = document.querySelector(".selected-lang-display");
+const selectLang = Array.from(document.querySelectorAll("[data-lang-toggle]"));
+const selection = Array.from(document.querySelectorAll("[id='inputselect']"));
 
 // Sidebar-related elements
 const sidebar = document.querySelector("#skeleton-sidebar-cont");
@@ -36,8 +38,10 @@ function calculateSettingAsThemeString() {
 
 function updateThemeOnHtmlEl(theme) {
   document.documentElement.setAttribute("data-theme", theme);
-  moon.style.display = theme === "dark" ? "none" : "inline-block";
-  sun.style.display = theme === "dark" ? "inline-block" : "none";
+  for (let i = 0; i < moon.length; i++) {
+    moon[i].style.display = theme === "dark" ? "none" : "inline-block";
+    sun[i].style.display = theme === "dark" ? "inline-block" : "none";
+  }
 }
 
 // Language functions
@@ -47,6 +51,7 @@ function calculateSettingAsLangString() {
 
 function updateLangOnHtmlEl(lang) {
   document.documentElement.setAttribute("lang", lang);
+  selectLang[0].value = lang;
 }
 
 async function fetchTranslationsFor(newLocale) {
@@ -80,7 +85,7 @@ function translateElement(element) {
 // Sidebar toggle
 function sidebarToggle() {
   docBod.classList.toggle("noscroll");
-  sidebar.classList.toggle("hidden");
+  sidebar.classList.toggle("hide-sidebar");
   for (var i = 0; i < icons.length; i++) {
     icons[i].classList.toggle("hide-icon");
   }
@@ -88,11 +93,23 @@ function sidebarToggle() {
 
 
 // Event listeners
-themeToggle.addEventListener("click", () => {
-  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", newTheme);
-  updateThemeOnHtmlEl(newTheme);
-  currentThemeSetting = newTheme;
+for (var i = 0; i < themeToggle.length; i++) {
+  themeToggle[i].addEventListener("click", () => {
+    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", newTheme);
+    updateThemeOnHtmlEl(newTheme);
+    currentThemeSetting = newTheme;
+  });
+}
+
+selectLang[0].addEventListener("change", () => {
+  let newLang = selectLang[0].value;
+
+  localStorage.setItem("lang", newLang);
+  updateLangOnHtmlEl(newLang);
+
+  currentLangSetting = newLang;
+  setLocale(currentLangSetting);
 });
 
 // Language menu hover effects
@@ -138,13 +155,6 @@ subLangMenu.addEventListener("click", async function (event) {
     }
   }
 });
-
-// Sidebar toggle event listener for mobile devices
-for (i = 0; icons.length > 0; i++) {
-  icons[i].addEventListener("click", () => {
-    sidebarToggle()
-  });
-}
 
 // Initialize
 setLocale(currentLangSetting);

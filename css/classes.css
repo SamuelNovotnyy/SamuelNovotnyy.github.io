@@ -4,6 +4,9 @@
 .hidden {
    display: none !important;
 }
+.hide-sidebar {
+   transform: scaleX(0);
+}
 .hide-icon {
    transform: scale(0);
    filter: opacity(0);
@@ -102,6 +105,18 @@
    box-sizing: border-box;
    border-top: 2px solid var(--topnav3);
    width: 100%;
-   padding: 2rem 3rem;
-   background: rgb(255, 226, 226);
+   padding: .5rem 0 3rem 0;
+   /*background: rgb(255, 226, 226);*/
+}
+.sidebar-text {
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   color: var(--topnav2);
+}
+.sidebar-text li {
+   margin-bottom: 1rem;
+}
+.sidebar-text h3 {
+   display: inline;
 }

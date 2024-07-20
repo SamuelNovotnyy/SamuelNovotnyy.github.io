@@ -57,11 +57,11 @@
           <img src="images/fulllogo.png" alt="company-logo">
         </a>
         <div id="mobile-menu-icon-cont">
-          <i class="fa-solid fa-bars" id="bars"></i>
-          <i class="fa-solid fa-xmark hide-icon" id="cross"></i>
+          <i class="fa-solid fa-bars" id="bars" onclick="sidebarToggle()"></i>
+          <i class="fa-solid fa-xmark hide-icon" id="cross" onclick="sidebarToggle()"></i>
         </div>
 
-        <div id="skeleton-sidebar-cont" class="hidden">
+        <div id="skeleton-sidebar-cont" class="hide-sidebar">
           <div style="width: 100%; height: 100%;">
             <div id="skeleton-sidebar-menu">
               <div class="sidebar-content">
@@ -77,11 +77,27 @@
                   </li></a>
                 </ul>
               </div>
-              <div class="sidebar-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat suscipit veniam voluptates vel obcaecati ad iure, eveniet at laudantium corrupti neque dolores. Eius, sapiente maxime ullam obcaecati dolores tempora deserunt.
+              <div class="sidebar-content sidebar-text">
+                <li><h3>Novinky</h3></li>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
               </div>
-              <div class="sidebar-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat suscipit veniam voluptates vel obcaecati ad iure, eveniet at laudantium corrupti neque dolores. Eius, sapiente maxime ullam obcaecati dolores tempora deserunt.
+              <div class="sidebar-content sidebar-text">
+                <li><h3>Novinky</h3></li>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+              </div>
+              <div id="mobile-sidebar-fill"></div>
+              <div>
+                <div id="container-theme-mobile" data-theme-toggle>
+                  <i class="fa-solid fa-sun mobile-theme-icon" id="moon-m" style="display: none;"></i>
+                  <i class="fa-solid fa-moon mobile-theme-icon" id="sun-m"></i>
+                </div>
+                <div id="container-lang-mobile" class="selectionLang">
+                  <select id="inputselect" data-lang-toggle>
+                    <option value="sk">slovensky</option>
+                    <option value="en">english</option>
+                    <option value="ch">中国人</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
