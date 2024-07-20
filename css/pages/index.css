@@ -18,7 +18,7 @@
 #index-hero-container {
   position: absolute;
   width: 100%;
-  z-index: 999;
+  z-index: 10;
   top: calc(
     var(--carousel-height) + var(--topnav-h) - 10rem -
       var(--carousel-text-adjust)

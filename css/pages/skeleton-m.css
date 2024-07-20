@@ -31,12 +31,21 @@
   height: var(--topnav-h);
   padding: 0.5rem 1rem;
 }
+#mobile-menu-icon-cont {
+  display: flex;
+  align-items: center;
+  height: var(--topnav-h);
+  width: 2rem;
+}
 #mobile-menu-icon-cont i {
+  position: relative;
+  inset: 0 -100%;
+  width: 0 !important;
   display: flex;
   justify-content: center;
   align-self: center;
-  width: calc(var(--topnav-h) - 3vh);
-  padding: 0.5rem 1.5rem;
+  width: fit-content;
+  height: fit-content;
   font-size: calc(var(--topnav-h) - 4vh);
   cursor: pointer;
   transition: 200ms ease-out;
