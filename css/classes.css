@@ -1,5 +1,7 @@
 .noscroll {
    overflow: hidden !important;
+   box-sizing: border-box;
+   padding-top: calc(var(--topnav-h) + 1rem);
 }
 .hidden {
    display: none !important;
@@ -10,6 +12,11 @@
 .hide-icon {
    transform: scale(0);
    filter: opacity(0);
+}
+.fixed {
+   position: fixed !important;
+   top: 0;
+   left: 0;
 }
 
 .align {

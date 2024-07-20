@@ -21,6 +21,7 @@ const selection = Array.from(document.querySelectorAll("[id='inputselect']"));
 
 // Sidebar-related elements
 const sidebar = document.querySelector("#skeleton-sidebar-cont");
+const topBar = document.querySelector("#skeleton-head")
 const sidebarToggleButton = document.querySelector("#mobile-menu-icon-cont");
 const icons = sidebarToggleButton.children;
 
@@ -86,6 +87,7 @@ function translateElement(element) {
 function sidebarToggle() {
   docBod.classList.toggle("noscroll");
   sidebar.classList.toggle("hide-sidebar");
+  topBar.classList.toggle("fixed");
   for (var i = 0; i < icons.length; i++) {
     icons[i].classList.toggle("hide-icon");
   }

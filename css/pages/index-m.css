@@ -72,7 +72,7 @@
   flex-direction: column;
 }
 #hero-h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   width: fit-content;
   color: var(--text1);
   text-align: center;
