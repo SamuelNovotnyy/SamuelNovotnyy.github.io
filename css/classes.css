@@ -1,22 +1,22 @@
 .noscroll {
-   overflow: hidden !important;
-   box-sizing: border-box;
-   padding-top: calc(var(--topnav-h) + 1rem);
+  overflow: hidden !important;
+  box-sizing: border-box;
+  padding-top: calc(var(--topnav-h) + 1rem);
 }
 .hidden {
-   display: none !important;
+  display: none !important;
 }
 .hide-sidebar {
-   transform: scaleX(0);
+  transform: scaleX(0);
 }
 .hide-icon {
-   transform: scale(0);
-   filter: opacity(0);
+  transform: scale(0);
+  filter: opacity(0);
 }
 .fixed {
-   position: fixed !important;
-   top: 0;
-   left: 0;
+  position: fixed !important;
+  top: 0;
+  left: 0;
 }
 
 .align {
@@ -107,23 +107,60 @@
 }
 
 .sidebar-content {
-   position: relative;
-   display: flex;
-   box-sizing: border-box;
-   border-top: 2px solid var(--topnav3);
-   width: 100%;
-   padding: .5rem 0 3rem 0;
-   /*background: rgb(255, 226, 226);*/
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  border-top: 2px solid var(--topnav3);
+  width: auto;
+  margin: 0 3rem;
+  padding: 0.5rem 0 3rem 0;
+  /*background: rgb(255, 226, 226);*/
 }
 .sidebar-text {
-   display: flex;
-   flex-direction: column;
-   align-items: left;
-   color: var(--topnav2);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: var(--topnav2);
 }
 .sidebar-text li {
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .sidebar-text h3 {
-   display: inline;
+  display: inline;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--topnav2);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: calc(var(--m-settings-h));
+  aspect-ratio: 1;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--topnav1);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+.slider-move:before {
+  transform: translateX(calc((var(--m-settings-h) + 6px) * 1.2));
+}
+.slider.round {
+  border-radius: 999px;
+}
+.slider.round:before {
+  border-radius: 50%;
 }

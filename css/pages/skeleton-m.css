@@ -14,6 +14,8 @@
   --pill-theme: 100px;
   --pill-ang: 4px;
   --pill-round: 16px;
+
+  --m-settings-h: 1.3rem;
 }
 
 #skeleton-head {
@@ -25,6 +27,7 @@
 }
 
 #skeleton-sidebar-cont {
+  overflow: hidden;
   transform-origin: right;
   transition: 200ms transform ease-in-out;
 }
@@ -67,7 +70,7 @@
   top: calc(var(--topnav-h) + 1rem);
   width: 100vw;
   height: calc(100vh - var(--topnav-h) - 1rem);
-  padding: 1rem 3rem;
+  padding: 1rem 0 0 0;
   background: var(--topnav1);
   z-index: 999;
 }
@@ -77,7 +80,6 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-bottom: calc(var(--topnav-h));
 }
 #sidebar-page-list {
   list-style-type: disc;
@@ -94,33 +96,66 @@
   box-sizing: border-box;
 }
 
-#container-theme-mobile {
+#mobile-settings-cont {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+  height: 32vh;
+  padding: 20px 3rem 0 3rem;
+  background: linear-gradient(0deg, var(--topnav2) 9%, rgb(68, 68, 68) 48%, rgb(95, 95, 95) 59%, rgb(133, 133, 133) 67%, var(--topnav1) 100%);
+}
+#container-theme-mobile {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--topnav3);
-  padding: 0.5rem 0;
-  font-size: 1.2rem;
+  padding: 1rem 1.6rem;
+  font-size: var(--m-settings-h);
+  line-height: 1;
 }
 #container-theme-mobile i {
+  margin: -2px 10px -2px 0;
+  font-size: calc(var(--m-settings-h) + 4px);
   color: var(--topnav2);
 }
+#container-theme-mobile h3 {
+  margin: 0;
+  display: inline;
+  font-size: var(--m-settings-h);
+  text-transform: capitalize;
+  color: var(--topnav2);
+}
+#mobile-theme-switch {
+  margin: -6px 0;
+  width: calc((var(--m-settings-h) + 6px) * 2.2);
+  height: calc(var(--m-settings-h) + 6px);
+  pointer-events: none;
+}
 #container-lang-mobile {
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  align-items: center;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--topnav2);
-  padding: 0.5rem 0;
+  padding: .7rem 1.6rem;
+}
+#container-lang-mobile i {
+  margin-right: 10px;
+  font-size: calc(var(--m-settings-h) + 4px);
+  color: var(--topnav3);
 }
 #container-lang-mobile select {
   padding: 0;
   margin: 0;
-  width: 80%;
+  flex-grow: 1;
   background: var(--topnav2);
   color: var(--topnav3);
-  font-size: 1rem;
+  font-size: var(--m-settings-h);
 }
 
 .skeleton-foot {

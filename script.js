@@ -39,6 +39,7 @@ function calculateSettingAsThemeString() {
 
 function updateThemeOnHtmlEl(theme) {
   document.documentElement.setAttribute("data-theme", theme);
+  sliderToggle(theme);
   for (let i = 0; i < moon.length; i++) {
     moon[i].style.display = theme === "dark" ? "none" : "inline-block";
     sun[i].style.display = theme === "dark" ? "inline-block" : "none";
@@ -90,6 +91,16 @@ function sidebarToggle() {
   topBar.classList.toggle("fixed");
   for (var i = 0; i < icons.length; i++) {
     icons[i].classList.toggle("hide-icon");
+  }
+}
+
+function sliderToggle(theme) {
+  const slider = $('#mobile-slider');
+
+  if (theme === "dark") {
+    slider[0].classList.add("slider-move");
+  } else {
+    slider[0].classList.remove("slider-move");
   }
 }
 

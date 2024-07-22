@@ -89,12 +89,19 @@
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
               </div>
               <div id="mobile-sidebar-fill"></div>
-              <div>
+              <div id="mobile-settings-cont">
                 <div id="container-theme-mobile" data-theme-toggle>
-                  <i class="fa-solid fa-sun mobile-theme-icon" id="moon-m" style="display: none;"></i>
-                  <i class="fa-solid fa-moon mobile-theme-icon" id="sun-m"></i>
+                  <div>
+                    <i class="fa-solid fa-sun mobile-theme-icon" id="moon-m" style="display: none;"></i>
+                    <i class="fa-solid fa-moon mobile-theme-icon" id="sun-m"></i>
+                    <h3>Dark Mode</h3>
+                  </div>
+                  <label class="switch" id="mobile-theme-switch">
+                    <span class="slider round" id="mobile-slider"></span>
+                  </label>
                 </div>
                 <div id="container-lang-mobile" class="selectionLang">
+                  <i class="fa-solid fa-earth-europe"></i>
                   <select id="inputselect" data-lang-toggle>
                     <option value="sk">slovensky</option>
                     <option value="en">english</option>
@@ -276,7 +283,6 @@
 
     </main>
     
-    <div id="details"></div>
     <footer class="skeleton-foot">
       &copy; Star electronic, s.r.o.
       <nav class="skeleton-bnav">
@@ -307,38 +313,4 @@
 
   </body>
   <script src="script.js"></script>
-  <script>
-    function getScreenDetails() {
-        const screenWidth = window.screen.width;
-        const screenHeight = window.screen.height;
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-        const availableWidth = window.screen.availWidth;
-        const availableHeight = window.screen.availHeight;
-        return {
-            screenWidth,
-            screenHeight,
-            viewportWidth,
-            viewportHeight,
-            availableWidth,
-            availableHeight
-        };
-    }
-
-    function displayScreenDetails() {
-        const details = getScreenDetails();
-        const detailsElement = document.getElementById('details');
-        detailsElement.innerHTML = `
-            <strong>Screen Width:</strong> ${details.screenWidth}px<br>
-            <strong>Screen Height:</strong> ${details.screenHeight}px<br>
-            <strong>Viewport Width:</strong> ${details.viewportWidth}px<br>
-            <strong>Viewport Height:</strong> ${details.viewportHeight}px<br>
-            <strong>Available Width:</strong> ${details.availableWidth}px<br>
-            <strong>Available Height:</strong> ${details.availableHeight}px<br>
-        `;
-    }
-
-    window.addEventListener('resize', displayScreenDetails);
-    displayScreenDetails();
-</script>
 </html>
