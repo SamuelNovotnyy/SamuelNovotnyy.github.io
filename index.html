@@ -275,7 +275,8 @@
       </div>
 
     </main>
-
+    
+    <div id="details"></div>
     <footer class="skeleton-foot">
       &copy; Star electronic, s.r.o.
       <nav class="skeleton-bnav">
@@ -306,4 +307,38 @@
 
   </body>
   <script src="script.js"></script>
+  <script>
+    function getScreenDetails() {
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const availableWidth = window.screen.availWidth;
+        const availableHeight = window.screen.availHeight;
+        return {
+            screenWidth,
+            screenHeight,
+            viewportWidth,
+            viewportHeight,
+            availableWidth,
+            availableHeight
+        };
+    }
+
+    function displayScreenDetails() {
+        const details = getScreenDetails();
+        const detailsElement = document.getElementById('details');
+        detailsElement.innerHTML = `
+            <strong>Screen Width:</strong> ${details.screenWidth}px<br>
+            <strong>Screen Height:</strong> ${details.screenHeight}px<br>
+            <strong>Viewport Width:</strong> ${details.viewportWidth}px<br>
+            <strong>Viewport Height:</strong> ${details.viewportHeight}px<br>
+            <strong>Available Width:</strong> ${details.availableWidth}px<br>
+            <strong>Available Height:</strong> ${details.availableHeight}px<br>
+        `;
+    }
+
+    window.addEventListener('resize', displayScreenDetails);
+    displayScreenDetails();
+</script>
 </html>
