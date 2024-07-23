@@ -39,7 +39,8 @@
 #skeleton-top-mobile img {
   box-sizing: border-box;
   height: var(--topnav-h);
-  padding: 0.8rem 1.4rem;
+  min-height: 80px;
+  padding: 0.5rem 1rem;
   filter: var(--logo-effect);
 }
 #mobile-menu-icon-cont {
@@ -70,9 +71,9 @@
 #skeleton-sidebar-cont {
   position: fixed;
   box-sizing: border-box;
-  top: var(--topnav-h);
+  top: max(80px, var(--topnav-h));
   width: 100vw;
-  height: calc(100vh - var(--topnav-h));
+  height: calc(100vh - max(80px, var(--topnav-h)));
   padding: 1rem 0 0 0;
   background: var(--topnav1);
   z-index: 999;

@@ -1,7 +1,7 @@
 .noscroll {
   overflow: hidden !important;
   box-sizing: border-box;
-  margin: var(--topnav-h) 0 0 0;
+  margin: max(80px, var(--topnav-h)) 0 0 0;
 }
 .hidden {
   display: none !important;

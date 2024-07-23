@@ -88,6 +88,7 @@ function translateElement(element) {
 function sidebarToggle() {
   docBod.classList.toggle("noscroll");
   sidebar.classList.toggle("hide-sidebar");
+  sidebar.classList.remove("noscroll");
   topBar.classList.toggle("fixed");
   for (var i = 0; i < icons.length; i++) {
     icons[i].classList.toggle("hide-icon");

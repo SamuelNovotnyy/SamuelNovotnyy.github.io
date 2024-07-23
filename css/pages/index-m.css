@@ -129,6 +129,7 @@
   background: var(--box2);
 }
 #index-predajcovia-text {
+  flex-direction: row;
   flex-wrap: wrap;
 }
 #index-predajcovia-text div {
