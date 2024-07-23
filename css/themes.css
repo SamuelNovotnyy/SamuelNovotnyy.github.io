@@ -4,7 +4,9 @@
           --topnav1: white;
           --topnav2: rgb(29, 26, 28);
           --topnav3: #e23030;
+          --topnavG: linear-gradient(var(--topnav1) 10%, rgba(235,214,214,1) 30%, rgba(232,187,187,1) 50%, rgba(225,133,133,1) 75%, rgba(214,45,45,1) 100%);
           --topnav-text: #e23030;
+          --topnav-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
           --logo-effect: none;
 
           --footer-col: rgb(41, 41, 41);
@@ -12,10 +14,12 @@
 
 
           --box1: #fff7f7;
-          --box2: #4e4e4e;
+          --box2: #a89797; /*  #666666; */
+          --box2-5: #817070;
           --text1: rgb(22, 22, 22);
           --text2: rgb(248, 248, 248);
           --text3: #000000;
+          --textPic: #ffffff;
           --button: #e23030;
           --highlight: rgb(236, 184, 193);
           --sel1: rgb(17, 0, 94);
@@ -23,14 +27,19 @@
 
 
           --carousel-fg: rgba(0, 0, 0, 0.11);
-          --index-bottom-img: rgba(255, 255, 255, 0.336);
+          --index-bottom-img: rgba(255, 255, 255, 0.3);
+
+
+          --darken: brightness(1);
 }
 
 [data-theme="dark"] {
           --topnav1: #141414;
           --topnav2: #e4e4e4;
           --topnav3: #d62d2d;
+          --topnavG: linear-gradient(rgba(20,20,20,1) 10%, rgba(42,23,23,1) 30%, rgba(69,26,26,1) 50%, rgba(124,33,33,1) 74%, rgba(214,45,45,1) 100%);
           --topnav-text: #d62d2d;
+          --topnav-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.6);
           --logo-effect: invert(100%) hue-rotate(180deg) saturate(8) brightness(85%);
 
           --footer-col: #292929;
@@ -39,9 +48,11 @@
 
           --box1: #303030;
           --box2: #202020;
+          --box2-5: #161515;
           --text1: #e4e4e4;
           --text2: #d1d1d1;
           --text3: #c5c5c5;
+          --textPic: #464646;
           --button: #d12121;
           --img-tint: brightness(0.7);
           --highlight: rgb(222, 255, 192);
@@ -49,6 +60,9 @@
           --sel2: rgb(53, 32, 107);
 
 
-          --carousel-fg: rgba(0, 0, 0, 0.342);
-          --index-bottom-img: rgba(0, 0, 0, 0.384);
+          --carousel-fg: rgba(0, 0, 0, 0.4);
+          --index-bottom-img: rgba(0, 0, 0, 0.6);
+
+
+          --darken: brightness(0.6);
 }

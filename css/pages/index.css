@@ -101,13 +101,12 @@
 }
 #index-predajcovia-text div {
   width: var(--dealers-width);
-  justify-self: space-evenly;
   padding: var(--dealers-padding);
   border-radius: 16px;
   transition: 200ms ease-in-out;
 }
 #index-predajcovia-text div:hover {
-  background: var(--footer-col);
+  background: var(--box2-5);
 }
 #index-predajcovia-text::after {
   content: "";
@@ -128,8 +127,8 @@
 #cta-button-botton {
   margin-top: 1rem;
   padding: 0.8rem 1.8rem;
-  border-radius: 20px;
-  color: var(--text1);
+  border-radius: 999px;
+  color: #eee;
   cursor: pointer;
   transition: 200ms ease;
 }
@@ -157,5 +156,12 @@
   pointer-events: none;
 }
 #index-bottom-text {
-  color: var(--text3);
+  color: var(--text1);
+  text-shadow: 0 0 3px var(--textPic), 0 0 5px var(--textPic),
+    0 0 10px var(--textPic), 0 0 10px var(--textPic), 0 0 10px var(--textPic),
+    0 0 10px var(--textPic);
+}
+
+#index-bottom-text h4 {
+  border: none;
 }

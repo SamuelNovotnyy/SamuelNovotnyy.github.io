@@ -1,100 +1,141 @@
 /*import base css*/
-@import 'reset.css';
-@import '../normalize.css';
-@import 'themes.css';
-@import 'classes.css';
-@import 'typography.css';
-
+@import "reset.css";
+@import "../normalize.css";
+@import "themes.css";
+@import "classes.css";
+@import "typography.css";
 
 /*conditional import page style css*/
-@import 'pages/skeleton-m.css' only screen  and (max-width: 1279px);
-@import 'pages/skeleton.css' only screen and (min-width: 1280px);
+@import "pages/skeleton-m.css" only screen and (max-width: 1279px);
+@import "pages/skeleton.css" only screen and (min-width: 1280px);
 
-@import 'pages/contact-m.css' only screen and (max-width: 779px);
-@import 'pages/info-m.css' only screen and (max-width: 779px);
-@import 'pages/index-m.css' only screen and (max-width: 779px);
-@import 'pages/products-m.css' only screen and (max-width: 779px);
+@import "pages/contact-m.css" only screen and (max-width: 779px);
+@import "pages/info-m.css" only screen and (max-width: 779px);
+@import "pages/index-m.css" only screen and (max-width: 779px);
+@import "pages/products-m.css" only screen and (max-width: 779px);
 
-@import 'pages/contact.css' only screen and (min-width: 780px);
-@import 'pages/info.css' only screen and (min-width: 780px);
-@import 'pages/index.css' only screen and (min-width: 780px);
-@import 'pages/products.css' only screen and (min-width: 780px);
-
+@import "pages/contact.css" only screen and (min-width: 780px);
+@import "pages/info.css" only screen and (min-width: 780px);
+@import "pages/index.css" only screen and (min-width: 780px);
+@import "pages/products.css" only screen and (min-width: 780px);
 
 /*dynamic css styles*/
 @media only screen and (max-width: 779px) {
-   /*root variable changes*/
-   :root {
-      --rem: 12px;
+  /*root variable changes*/
+  :root {
+    --rem: 12px;
 
-      --carousel-height: 50vh;
+    --carousel-height: 50vh;
 
-      --dealers-width: 220px;
-      --dealers-padding: 1rem 2.5rem;
-   }
+    --dealers-width: 160px;
+    --dealers-padding: 0.6rem 1.5rem;
+  }
 
-   /*class changes*/
-   .align {
-     width: 80vw;
-   }
-   .center-text {
-     max-width: 80vw;
-   }
-   .disable-img {
-     display: none;
-   }
-   .content {
-      padding: 2rem 3rem;
-   }
-   .content-img {
-      display: none;
-    }
+  /*DOM changes*/
+  body {
+    background: var(--topnav1);
+  }
 
-   /*id changes*/
+  /*class changes*/
+  .align {
+    width: 80vw;
+  }
+  .content {
+    margin: 2rem 0 4rem 0;
+  }
+  .center-text {
+    max-width: 80vw;
+  }
+  .disable-img {
+    display: none;
+  }
+  .content {
+    padding: 2rem 3rem;
+  }
+  .content-img {
+    display: none;
+  }
+  .flex-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .fill-text {
+    padding: 0 0 2.3rem 0;
+  }
+  .left-text {
+   margin: 0
+  }
+  .col1,
+  .col2 {
+    background: transparent;
+  }
 
+  /*id changes*/
 }
 
 @media only screen and (min-width: 780px) and (max-width: 1023px) {
-   /*root variable changes*/
-   :root {
-      --rem: 14px;
+  /*root variable changes*/
+  :root {
+    --rem: 14px;
 
-      --carousel-height: 500px;
-      --carousel-text-adjust: 40px;
+    --carousel-height: 500px;
+    --carousel-text-adjust: 40px;
 
-      --dealers-width: 220px;
-      --dealers-padding: 1rem 2.5rem;
-   }
+    --dealers-width: 180px;
+    --dealers-padding: 0.6rem 1.5rem;
+  }
 
-   /*class changes*/
-   h1,
-   .align {
-     width: 700px;
-   }
-   .center-text {
-     max-width: 700px;
-   }
-   .disable-img {
-     display: none;
-   }
+  /*DOM changes*/
+  body {
+    background: var(--footer-col);
+  }
 
-   /*id changes*/
+  /*class changes*/
+  h1,
+  .align {
+    width: 700px;
+  }
+  .content {
+    margin: 3rem 0 6rem 0;
+  }
+  .center-text {
+    max-width: 700px;
+  }
+  .disable-img {
+    display: none;
+  }
+  .flex-between {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /*id changes*/
+  #sidepadding {
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-   /*root variable changes*/
-   :root {
-      --rem: 14px;
+  /*root variable changes*/
+  :root {
+    --rem: 14px;
 
-      --carousel-height: 600px;
-      --carousel-text-adjust: 50px;
+    --carousel-height: 600px;
+    --carousel-text-adjust: 50px;
 
-      --dealers-width: 220px;
-      --dealers-padding: .8rem 1.2rem;
-   }
+    --dealers-width: 220px;
+    --dealers-padding: 0.8rem 1.2rem;
+  }
 
-   /*class changes*/
-   h1,
+  /*DOM changes*/
+  body {
+    background: var(--footer-col);
+  }
+
+  /*class changes*/
+  h1,
   .align {
     width: 780px;
   }
@@ -106,23 +147,30 @@
   }
 
   /*id changes*/
-
+  #sidepadding {
+    padding: 0 2rem;
+  }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-   /*root variable changes*/
-   :root {
-      --rem: 15px;
+  /*root variable changes*/
+  :root {
+    --rem: 15px;
 
-      --carousel-height: 700px;
-      --carousel-text-adjust: 100px;
+    --carousel-height: 700px;
+    --carousel-text-adjust: 100px;
 
-      --dealers-width: 205px;
-      --dealers-padding: 1rem 1.2rem;
-   }
+    --dealers-width: 205px;
+    --dealers-padding: 1rem 1.2rem;
+  }
 
-   /*class changes*/
-   h1,
+  /*DOM changes*/
+  body {
+    background: var(--footer-col);
+  }
+
+  /*class changes*/
+  h1,
   .align {
     width: 980px;
   }
@@ -137,23 +185,27 @@
   }
 
   /*id changes*/
-
 }
 
 @media only screen and (min-width: 1536px) {
-   /*root variable changes*/
-   :root {
-      --rem: 16px;
+  /*root variable changes*/
+  :root {
+    --rem: 16px;
 
-      --carousel-height: 700px;
-      --carousel-text-adjust: 100px;
+    --carousel-height: 700px;
+    --carousel-text-adjust: 100px;
 
-      --dealers-width: 230px;
-      --dealers-padding: 1rem 2rem;
-   }
+    --dealers-width: 230px;
+    --dealers-padding: 1rem 2rem;
+  }
 
-   /*class changes*/
-   h1,
+  /*DOM changes*/
+  body {
+    background: var(--footer-col);
+  }
+
+  /*class changes*/
+  h1,
   .align {
     width: 1280px;
   }
@@ -168,5 +220,4 @@
   }
 
   /*id changes*/
-
 }

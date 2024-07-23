@@ -96,7 +96,6 @@ function sidebarToggle() {
 
 function sliderToggle(theme) {
   const slider = $('#mobile-slider');
-
   if (theme === "dark") {
     slider[0].classList.add("slider-move");
   } else {

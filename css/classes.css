@@ -1,7 +1,7 @@
 .noscroll {
   overflow: hidden !important;
   box-sizing: border-box;
-  padding-top: calc(var(--topnav-h) + 1rem);
+  margin: var(--topnav-h) 0 0 0;
 }
 .hidden {
   display: none !important;
@@ -26,7 +26,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
 }
 
 .col1 {
@@ -48,6 +47,7 @@
 }
 
 .content {
+  box-sizing: border-box;
   margin: 4rem 0 8rem 0;
   padding: 2rem 0;
   border-radius: 20px;
@@ -80,6 +80,7 @@
   z-index: 1;
 
   text-align: justify;
+  padding: 0 0 1rem 0;
 }
 .center-text {
   position: relative;
@@ -95,15 +96,12 @@
 .lone-heading {
   position: relative;
   z-index: 1;
+  margin: 0 2rem 1.4rem 2rem;
+  padding: 0 0 0.5rem 0;
+  border-bottom: 2px solid var(--text2);
 
-  padding: 0 3rem;
   text-transform: capitalize;
   text-align: center;
-}
-.lone-heading h4 {
-  margin-bottom: 2.2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--text2);
 }
 
 .sidebar-content {

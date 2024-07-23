@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk" data-theme="light">
+<html lang="sk" data-theme="light" style="font-size: var(--rem)">
   <head>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../css/style.css">
 
   </head>
-  <body onload="onPageLoad()">
-    <header class="skeleton-head">
-      <nav class="skeleton-tnav">
+  <body>
+    <header id="skeleton-head">
+      <nav class="align" id="skeleton-top-nav">
         <a href="../index.html" class="top-logo">
           <img src="../images/fulllogo.png" alt="logo">
         </a>
@@ -27,7 +27,7 @@
               <a class="underline" href="../podstranky/kontakt.html"><h3 data-i18n-key="kontakt-nav">kontakt</h3></a>
             </li>
             <li>
-              <a class="underline" href=""><h3 data-i18n-key="info-nav">o nás</h3></a>
+              <a class="underline" href="../podstranky/info.html"><h3 data-i18n-key="info-nav">o nás</h3></a>
             </li>
             <li>
               <div class="container-lang">
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </div>
-        <div class="sub-menu-cont">
+        <div class="sub-menu-cont align">
           <ul class="sub-lang-menu">
             <li data-lang-code="sk">slovensky</li>
             <li data-lang-code="en">english</li>
@@ -52,70 +52,107 @@
         </div>
       </nav>
 
-      <div class="skeleton-top">
-        <div id="sidebar-bg">
-          <div class="sidebar-text">
-            <a id="menu-text" href="../podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a><br>
-            <a id="menu-text" href="../podstranky/kontakt.html" data-i18n-key="kontakt-nav">kontakt</a><br>
-            <a id="menu-text" href="" data-i18n-key="info-nav">o nás</a><br>
-            <a id="menu-text" href="" data-i18n-key="domov-nav">domov</a><br>
-          </div>
+      <div id="skeleton-top-mobile">
+        <a href="../index.html">
+          <img src="../images/fulllogo.png" alt="company-logo">
+        </a>
+        <div id="mobile-menu-icon-cont">
+          <i class="fa-solid fa-bars" id="bars" onclick="sidebarToggle()"></i>
+          <i class="fa-solid fa-xmark hide-icon" id="cross" onclick="sidebarToggle()"></i>
+        </div>
 
-          <div class="icon-container">
-            <div class="sidebar-icons">
-              <button type="button" data-theme-toggle id="themeButtons">
-                <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
-                <i class="fa-solid fa-moon" id="theme"></i>
-              </button>
-              <div class="selectionLang">
+        <div id="skeleton-sidebar-cont" class="hide-sidebar">
+          <div style="width: 100%; height: 100%;">
+            <div id="skeleton-sidebar-menu">
+              <div class="sidebar-content">
+                <ul id="sidebar-page-list">
+                  <a href="../podstranky/produkty.html"><li>
+                    <h3 data-i18n-key="produkty-nav">produkty</h3>
+                  </li></a>
+                  <a href="../podstranky/kontakt.html"><li>
+                    <h3 data-i18n-key="kontakt-nav">kontakt</h3>
+                  </li></a>
+                  <a href="../podstranky/info.html"><li>
+                    <h3 data-i18n-key="info-nav">info</h3>
+                  </li></a>
+                  <a href="../index.html"><li>
+                    <h3 data-i18n-key="domov-nav">domov</h3>
+                  </li></a>
+                </ul>
+              </div>
+              <div class="sidebar-content sidebar-text">
+                <li><h3 data-i18n-key="mobile-sidebar-news">Novinky</h3></li>
+                <span data-i18n-key="mobile-sidebar-news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+              </div>
+              <div class="sidebar-content sidebar-text">
+                <li><h3 data-i18n-key="mobile-sidebar-etc">Novinky</h3></li>
+                <span data-i18n-key="mobile-sidebar-etc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+              </div>
+              <div id="mobile-sidebar-fill"></div>
+              <div id="mobile-settings-cont">
+                <div id="container-lang-mobile" class="selectionLang">
+                  <i class="fa-solid fa-earth-europe"></i>
                   <select id="inputselect" data-lang-toggle>
-                    <option value="sk">SK</option>
-                    <option value="en">EN</option>
-                    <option value="ch">CH</option>
+                    <option value="sk">slovensky</option>
+                    <option value="en">english</option>
+                    <option value="ch">中国人</option>
                   </select>
+                </div>
+                <div id="container-theme-mobile" data-theme-toggle>
+                  <div>
+                    <i class="fa-solid fa-sun mobile-theme-icon" id="moon-m" style="display: none;"></i>
+                    <i class="fa-solid fa-moon mobile-theme-icon" id="sun-m"></i>
+                    <h3>Dark Mode</h3>
+                  </div>
+                  <label class="switch" id="mobile-theme-switch">
+                    <span class="slider round" id="mobile-slider"></span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <a href="" class="top-link">
-          <img src="../images/topnavico.png" alt="logo" id="top-logo2">
-        </a>
-        <span class="side-hover-group" id="shg">
-          <div onclick="openSidebar()" class="menu-bar" id="menu-bar"></div>
-          <i onclick="openSidebar()" class="fa-solid fa-bars" id="menu-ico"></i>
-        </span>
-        <i onclick="closeSidebar()" class="fa-solid fa-xmark" id="menu-ico2" style="display: none;"></i>
+  
       </div>
     </header>
 
     <main>
-      <div class="align-cont" id="hero-container">
+      <div class="align-cont" id="info-hero-container">
         <div class="align content">
           <div class="flex-between" id="sidepadding">
-            <img src="../images/about/Asset-5@2xd-1-2.jpg" id="hero-img">
+            <img src="../images/about/info-hero.png" id="hero-img">
             <div id="hero-text">
-            <h2 data-i18n-key="info-head">about us</h2>
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus ut molestias!</h5>
+              <h2 data-i18n-key="info-hero">about us</h2>
+              <h5 data-i18n-key="info-hero-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus ut molestias!</h5>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="align-cont" id="info-hero-container-mobile">
+        <div class="align content" id="info-hero-mobile">
+          <img src="../images/about/info-hero.png">
+          <div id="hero-text-mobile">
+            <h2 data-i18n-key="info-hero">about us</h2>
+            <h5 data-i18n-key="info-hero-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus ut molestias!</h5>
           </div>
         </div>
       </div>
 
       <div class="align-cont col2">
         <div class="align content" id="content2">
-          <h4 class="lone-heading">gsm blah blah</h4>
-          <div class="flex-between">
-            <div class=" fill-text">
-              <h5>smoll header</h5>
-              <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus perspiciatis optio inventore iusto? Vitae quo eveniet vero provident? Velit, labore fugit voluptatibus numquam quis eius fuga vel quos natus?</span>
+          <h4 class="lone-heading" data-i18n-key="info-content1-head">gsm blah blah</h4>
+          <div class="flex-between" id="info-content1">
+            <div class="fill-text">
+              <h5 data-i18n-key="info-content1-sh1">Our Journey and Expertise</h5>
+              <span data-i18n-key="info-content1-text1">Star Electronic is a developer and manufacturer of electronic devices, particularly specializing in GSM gateways. Established in 2006, we have dedicated ourselves to creating innovative and reliable products that meet the diverse needs of our customers. Our extensive experience in the industry has enabled us to refine our offerings, ensuring that each device is equipped with modifications to best suit different requirements.</span>
             </div>
-            <div class="flex-clumn fill-text">
-              <h5>smoll header</h5>
-              <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus perspiciatis optio inventore iusto? Vitae quo eveniet vero provident? Velit, labore fugit voluptatibus numquam quis eius fuga vel quos natus?</span>
+            <div class="fill-text">
+              <h5 data-i18n-key="info-content1-sh2">Expanding Our Reach</h5>
+              <span data-i18n-key="info-content1-text2">Throughout our existence, Star Electronic has successfully built a wide network of dealers in Slovakia and abroad. This expansive network is a testament to the quality and reliability of our products. Our partners and clients consistently express high levels of satisfaction with our products, which proudly bear the Star Electronic logo. We believe that maintaining strong relationships with our dealers and partners is crucial to our continued success and growth in the global market.</span>
             </div>
-            <div class="flex-clumn fill-text">
-              <h5>smoll header</h5>
-              <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus perspiciatis optio inventore iusto? Vitae quo eveniet vero provident? Velit, labore fugit voluptatibus numquam quis eius fuga vel quos natus?</span>
+            <div class="fill-text">
+              <h5 data-i18n-key="info-content1-sh3">Comprehensive Solutions</h5>
+              <span data-i18n-key="info-content1-text3">At Star Electronic, we go beyond manufacturing. Through our partners, we provide seamless integration with existing security equipment and offer the installation of complete security systems. Additionally, we deal with the sale of various electronic devices and equipment sourced from our trusted suppliers. We are also committed to meeting individual customer needs by offering the development and production of small series electronic equipment tailored to specific requirements. Our holistic approach ensures that we can cater to a wide array of customer demands, providing top-notch solutions and services.</span>
             </div>
           </div>
         </div>

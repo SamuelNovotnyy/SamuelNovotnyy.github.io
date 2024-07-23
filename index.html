@@ -52,7 +52,7 @@
         </div>
       </nav>
 
-      <div id="skeleton-top-mobile" class="flex-between">
+      <div id="skeleton-top-mobile">
         <a href="index.html">
           <img src="images/fulllogo.png" alt="company-logo">
         </a>
@@ -81,15 +81,23 @@
                 </ul>
               </div>
               <div class="sidebar-content sidebar-text">
-                <li><h3>Novinky</h3></li>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+                <li><h3 data-i18n-key="mobile-sidebar-news">Novinky</h3></li>
+                <span data-i18n-key="mobile-sidebar-news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
               </div>
               <div class="sidebar-content sidebar-text">
-                <li><h3>Novinky</h3></li>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+                <li><h3 data-i18n-key="mobile-sidebar-etc">Novinky</h3></li>
+                <span data-i18n-key="mobile-sidebar-etc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
               </div>
               <div id="mobile-sidebar-fill"></div>
               <div id="mobile-settings-cont">
+                <div id="container-lang-mobile" class="selectionLang">
+                  <i class="fa-solid fa-earth-europe"></i>
+                  <select id="inputselect" data-lang-toggle>
+                    <option value="sk">slovensky</option>
+                    <option value="en">english</option>
+                    <option value="ch">中国人</option>
+                  </select>
+                </div>
                 <div id="container-theme-mobile" data-theme-toggle>
                   <div>
                     <i class="fa-solid fa-sun mobile-theme-icon" id="moon-m" style="display: none;"></i>
@@ -99,14 +107,6 @@
                   <label class="switch" id="mobile-theme-switch">
                     <span class="slider round" id="mobile-slider"></span>
                   </label>
-                </div>
-                <div id="container-lang-mobile" class="selectionLang">
-                  <i class="fa-solid fa-earth-europe"></i>
-                  <select id="inputselect" data-lang-toggle>
-                    <option value="sk">slovensky</option>
-                    <option value="en">english</option>
-                    <option value="ch">中国人</option>
-                  </select>
                 </div>
               </div>
             </div>
@@ -119,6 +119,7 @@
     <main>
       <div id="flickity-carousel" class="carousel js-flickity"
         data-flickity='{ 
+          "imagesLoaded": true,
           "draggable": true,
           "wrapAround": true, 
           "autoPlay": 4000, 
@@ -166,9 +167,7 @@
 
       <div class="align-cont col2">
         <div class="align content" id="content2">
-          <div class="lone-heading">
-            <h4 data-i18n-key="index-2nd-content-head">Predajcovia</h4>
-          </div>
+          <h4 class="lone-heading" data-i18n-key="index-2nd-content-head">Predajcovia</h4>
           <div class="flex-between" id="index-predajcovia-text">
             <div class="fill-text">
               <h5>EXIM Alarm s.r.o.</h5>

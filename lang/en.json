@@ -5,6 +5,10 @@
   "kontakt-nav": "contact",
   "info-nav": "about us",
   "domov-nav": "home",
+  "mobile-sidebar-news": "news",
+  "mobile-sidebar-news-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
+  "mobile-sidebar-etc": "et cetera",
+  "mobile-sidebar-etc-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
 
   "index-h1": "GSM solutions",
   "index-h1-button": "browse",
@@ -13,6 +17,13 @@
   "index-2nd-content-head": "Dealers",
   "index-bottom-button": "Products",
 
-  "info-head": "About Us",
-  "info-text": "Star Electronic is a developer and manufacturer of electronic devices, especially in GSM gateways. Our products offer a number of modifications to best suit different requirements. During its existence from 2006, our company managed to build a wide network of dealers in Slovakia and abroad, who are with the quality and reliability of products marked with our logo very satisfied. Through our partners, we provide connection to existing security equipment and installation of complete security systems. We also deal with sale of other electronic devices and equipment from our suppliers. We also provide development and production of small series electronic equipment according to individual customer requirements."
+  "info-hero": "About Us",
+  "info-hero-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus ut molestias!",
+  "info-content1-head": "Who we are.",
+  "info-content1-sh1": "Our Journey and Expertise",
+  "info-content1-text1": "Star Electronic is a developer and manufacturer of electronic devices, particularly specializing in GSM gateways. Established in 2006, we have dedicated ourselves to creating innovative and reliable products that meet the diverse needs of our customers. Our extensive experience in the industry has enabled us to refine our offerings, ensuring that each device is equipped with modifications to best suit different requirements.",
+  "info-content1-sh2": "Expanding Our Reach",
+  "info-content1-text2": "Throughout our existence, Star Electronic has successfully built a wide network of dealers in Slovakia and abroad. This expansive network is a testament to the quality and reliability of our products. Our partners and clients consistently express high levels of satisfaction with our products, which proudly bear the Star Electronic logo. We believe that maintaining strong relationships with our dealers and partners is crucial to our continued success and growth in the global market.",
+  "info-content1-sh3": "Comprehensive Solutions",
+  "info-content1-text3": "At Star Electronic, we go beyond manufacturing. Through our partners, we provide seamless integration with existing security equipment and offer the installation of complete security systems. Additionally, we deal with the sale of various electronic devices and equipment sourced from our trusted suppliers. We are also committed to meeting individual customer needs by offering the development and production of small series electronic equipment tailored to specific requirements. Our holistic approach ensures that we can cater to a wide array of customer demands, providing top-notch solutions and services."
 }

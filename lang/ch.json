@@ -5,6 +5,10 @@
   "kontakt-nav": "联系我们",
   "info-nav": "关于我们",
   "domov-nav": "主页",
+  "mobile-sidebar-news": "新闻",
+  "mobile-sidebar-news-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
+  "mobile-sidebar-etc": "更",
+  "mobile-sidebar-etc-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
 
   "index-h1": "GSM 解决方案",
   "index-h1-button": "翻阅",
@@ -13,6 +17,13 @@
   "index-2nd-content-head": "经销商",
   "index-bottom-button": "产品",
 
-  "info-head": "关于我们公司",
-  "info-text": "Star Electronic 是一家电子设备开发商和制造商，尤其是 GSM 网关。我们的产品提供多种修改，以最好地满足不同的要求。自 2006 年成立以来，我们公司成功地在斯洛伐克和国外建立了广泛的经销商网络，他们对标有我们标志的产品的质量和可靠性非常满意。通过我们的合作伙伴，我们提供与现有安全设备的连接以及完整安全系统的安装。我们还销售来自我们供应商的其他电子设备和设备。我们还根据个别客户要求开发和生产小批量电子设备。"
+  "info-hero": "关于我们公司",
+  "info-hero-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus ut molestias!",
+  "info-content1-head": "我们是谁。",
+  "info-content1-sh1": "我们的历程和专业知识",
+  "info-content1-text1": "Star Electronic 是一家电子设备开发商和制造商，尤其专注于 GSM 网关。我们成立于 2006 年，致力于打造创新可靠的产品，满足客户的各种需求。我们在该行业的丰富经验使我们能够改进我们的产品，确保每台设备都经过修改，以最好地满足不同的要求。",
+  "info-content1-sh2": "扩大我们的覆盖范围",
+  "info-content1-text2": "自成立以来，Star Electronic 已成功在斯洛伐克和国外建立了广泛的经销商网络。这个庞大的网络证明了我们产品的质量和可靠性。我们的合作伙伴和客户始终对我们的产品表示高度满意，这些产品都带有 Star Electronic 的标志。我们相信，与经销商和合作伙伴保持牢固的关系对于我们在全球市场持续取得成功和增长至关重要。",
+  "info-content1-sh3": "全面的解决方案",
+  "info-content1-text3": "在 Star Electronic，我们不仅仅局限于制造。通过我们的合作伙伴，我们提供与现有安全设备的无缝集成，并提供完整安全系统的安装。此外，我们还销售来自我们值得信赖的供应商的各种电子设备和设备。我们还致力于通过开发和生产针对特定要求的小型电子设备来满足个人客户的需求。我们的整体方法确保我们能够满足广泛的客户需求，提供一流的解决方案和服务。"
 }

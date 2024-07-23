@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk" data-theme="light">
+<html lang="sk" data-theme="light" style="font-size: var(--rem)">
   <head>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../css/style.css">
 
   </head>
-  <body onload="onPageLoad()">
-    <header class="skeleton-head">
-      <nav class="skeleton-tnav">
+  <body>
+    <header id="skeleton-head">
+      <nav class="align" id="skeleton-top-nav">
         <a href="../index.html" class="top-logo">
           <img src="../images/fulllogo.png" alt="logo">
         </a>
@@ -24,7 +24,7 @@
               <a class="underline" href="../podstranky/produkty.html"><h3 data-i18n-key="produkty-nav">produkty</h3></a>
             </li>
             <li>
-              <a class="underline" href=""><h3 data-i18n-key="kontakt-nav">kontakt</h3></a>
+              <a class="underline" href="../podstranky/kontakt.html"><h3 data-i18n-key="kontakt-nav">kontakt</h3></a>
             </li>
             <li>
               <a class="underline" href="../podstranky/info.html"><h3 data-i18n-key="info-nav">o nás</h3></a>
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </div>
-        <div class="sub-menu-cont">
+        <div class="sub-menu-cont align">
           <ul class="sub-lang-menu">
             <li data-lang-code="sk">slovensky</li>
             <li data-lang-code="en">english</li>
@@ -52,39 +52,67 @@
         </div>
       </nav>
 
-      <div class="skeleton-top">
-        <div id="sidebar-bg">
-          <div class="sidebar-text">
-            <a id="menu-text" href="../podstranky/produkty.html" data-i18n-key="produkty-nav">produkty</a><br>
-            <a id="menu-text" href="" data-i18n-key="kontakt-nav">kontakt</a><br>
-            <a id="menu-text" href="../podstranky/info.html" data-i18n-key="info-nav">o nás</a><br>
-            <a id="menu-text" href="" data-i18n-key="domov-nav">domov</a><br>
-          </div>
+      <div id="skeleton-top-mobile">
+        <a href="../index.html">
+          <img src="../images/fulllogo.png" alt="company-logo">
+        </a>
+        <div id="mobile-menu-icon-cont">
+          <i class="fa-solid fa-bars" id="bars" onclick="sidebarToggle()"></i>
+          <i class="fa-solid fa-xmark hide-icon" id="cross" onclick="sidebarToggle()"></i>
+        </div>
 
-          <div class="icon-container">
-            <div class="sidebar-icons">
-              <button type="button" data-theme-toggle id="themeButtons">
-                <i class="fa-solid fa-sun" id="theme" style="display: none;"></i>
-                <i class="fa-solid fa-moon" id="theme"></i>
-              </button>
-              <div class="selectionLang">
+        <div id="skeleton-sidebar-cont" class="hide-sidebar">
+          <div style="width: 100%; height: 100%;">
+            <div id="skeleton-sidebar-menu">
+              <div class="sidebar-content">
+                <ul id="sidebar-page-list">
+                  <a href="../podstranky/produkty.html"><li>
+                    <h3 data-i18n-key="produkty-nav">produkty</h3>
+                  </li></a>
+                  <a href="../podstranky/kontakt.html"><li>
+                    <h3 data-i18n-key="kontakt-nav">kontakt</h3>
+                  </li></a>
+                  <a href="../podstranky/info.html"><li>
+                    <h3 data-i18n-key="info-nav">info</h3>
+                  </li></a>
+                  <a href="../index.html"><li>
+                    <h3 data-i18n-key="domov-nav">domov</h3>
+                  </li></a>
+                </ul>
+              </div>
+              <div class="sidebar-content sidebar-text">
+                <li><h3 data-i18n-key="mobile-sidebar-news">Novinky</h3></li>
+                <span data-i18n-key="mobile-sidebar-news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+              </div>
+              <div class="sidebar-content sidebar-text">
+                <li><h3 data-i18n-key="mobile-sidebar-etc">Novinky</h3></li>
+                <span data-i18n-key="mobile-sidebar-etc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.</span>
+              </div>
+              <div id="mobile-sidebar-fill"></div>
+              <div id="mobile-settings-cont">
+                <div id="container-lang-mobile" class="selectionLang">
+                  <i class="fa-solid fa-earth-europe"></i>
                   <select id="inputselect" data-lang-toggle>
-                    <option value="sk">SK</option>
-                    <option value="en">EN</option>
-                    <option value="ch">CH</option>
+                    <option value="sk">slovensky</option>
+                    <option value="en">english</option>
+                    <option value="ch">中国人</option>
                   </select>
+                </div>
+                <div id="container-theme-mobile" data-theme-toggle>
+                  <div>
+                    <i class="fa-solid fa-sun mobile-theme-icon" id="moon-m" style="display: none;"></i>
+                    <i class="fa-solid fa-moon mobile-theme-icon" id="sun-m"></i>
+                    <h3>Dark Mode</h3>
+                  </div>
+                  <label class="switch" id="mobile-theme-switch">
+                    <span class="slider round" id="mobile-slider"></span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <a href="" class="top-link">
-          <img src="../images/topnavico.png" alt="logo" id="top-logo2">
-        </a>
-        <span class="side-hover-group" id="shg">
-          <div onclick="openSidebar()" class="menu-bar" id="menu-bar"></div>
-          <i onclick="openSidebar()" class="fa-solid fa-bars" id="menu-ico"></i>
-        </span>
-        <i onclick="closeSidebar()" class="fa-solid fa-xmark" id="menu-ico2" style="display: none;"></i>
+  
       </div>
     </header>
 
