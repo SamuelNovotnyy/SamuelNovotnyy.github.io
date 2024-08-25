@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light" style="font-size: var(--rem)">
+  <head>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../script.js"></script>
+
+    <title>Star Electronic</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      charset="utf-8"
+    />
+    <link rel="icon" type="image/x-icon" href="../images/onebyone.ico" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="skeleton-header-container" class="flex-align bg1">
+        <nav class="content-align flex-between">
+          <div class="m" style="width: 40px; height: 40px">
+            <i
+              class="fa-solid fa-bars"
+              style="
+                display: block;
+                height: 40px;
+                font-size: 2rem;
+                color: var(--text1);
+              "
+            ></i>
+          </div>
+          <div id="skeleton-logo-container">
+            <a id="pc-skeleton-logo" href="../index.html"
+              ><img
+                src="../images/skeleton/fulllogo.png"
+                alt="company-logo"
+                title="homepage"
+            /></a>
+          </div>
+          <ul id="pc-skeleton-menu" class="pc">
+            <li class="menu-item">
+              <a href="form.html">
+                <h3 class="bg1 underline" data-i18n-key="form-nav">survey</h3>
+              </a>
+              <ul class="sub-menu bg3">
+                <li><iframe src="form.html"></iframe></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="contact.html">
+                <h3 class="bg1 underline" data-i18n-key="contact-nav">
+                  contact
+                </h3>
+              </a>
+              <ul class="sub-menu bg3">
+                <li><iframe src="contact.html"></iframe></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="info.html">
+                <h3 class="bg1 underline" data-i18n-key="info-nav">about us</h3>
+              </a>
+              <ul class="sub-menu bg3">
+                <li><iframe src="info.html"></iframe></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="pc-skeleton-right-side">
+            <div id="pc-skeleton-icons-contaier" data-theme-toggle>
+              <svg
+                id="moon"
+                class="theme-icon hidden"
+                viewBox="0 0 1101.03 1101.03"
+              >
+                <path
+                  d="M550.51,108.31c-244.22,0-442.21,197.98-442.21,442.2s197.99,442.2,442.21,442.2,442.2-197.98,442.2-442.2S794.73,108.31,550.51,108.31ZM534.35,332.18l50.69-128.52,50.69,128.52,128.52,50.69-128.52,50.69-50.69,128.52-50.69-128.52-128.52-50.69,128.52-50.69ZM550.51,946.74c-218.83,0-396.23-177.4-396.23-396.23,0-164.58,100.35-305.73,243.2-365.59-31.62,61.16-49.47,130.6-49.47,204.2,0,245.96,199.4,445.36,445.37,445.36,11.72,0,23.34-.45,34.84-1.35-71.5,70.27-169.55,113.61-277.71,113.61ZM845.26,584.55l-25.12,82.87-24.73-83.25-83.26-24.73,83.11-21.86,24.88-86.13,25.64,82.35,82.35,25.64-82.87,25.11Z"
+                />
+              </svg>
+              <svg
+                id="sun"
+                class="theme-icon hidden"
+                viewBox="0 0 1101.03 1101.03"
+              >
+                <path
+                  d="M736.43,550.51c0,102.68-83.23,185.92-185.91,185.92s-185.92-83.24-185.92-185.92,83.23-185.92,185.92-185.92,185.91,83.24,185.91,185.92Z"
+                />
+                <path
+                  d="M550.52,108.31c-244.23,0-442.21,197.98-442.21,442.2s197.98,442.21,442.21,442.21,442.2-197.98,442.2-442.21S794.74,108.31,550.52,108.31ZM830.69,830.69l-184.61-49.47-95.57,165.53-95.56-165.52-184.61,49.46,49.46-184.61-165.52-95.56,165.52-95.56-49.47-184.62,184.61,49.47,95.57-165.53,95.56,165.52,184.62-49.46-49.47,184.61,165.52,95.56-165.52,95.56,49.47,184.62Z"
+                />
+              </svg>
+            </div>
+            <select
+              data-lang-toggle
+              id="pc-skeleton-dark-mode-select"
+              name="dark-mode-select"
+              class="pc bg1"
+            >
+              <option value="sk">sk</option>
+              <option value="en">en</option>
+              <option value="ch">ch</option>
+            </select>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <body>
+      <div class="flex-align bg1 hero-container">
+        <div id="info-hero" class="content-align flex-between">
+          <div id="info-hero-img"></div>
+          <div id="info-hero-text">
+            <h1 data-i18n-key="info-hero">about our company</h1>
+            <h4 data-i18n-key="info-hero-subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus numquam id cumque vero error cupiditate rem</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-align bg2">
+        <h2 class="content-align flex-middle headline text-shadow2" data-i18n-key="info-content1-heading">
+          Discover the Future of Living
+        </h2>
+
+        <div id="info-content-company" class="content-align">
+          <div class="flex-between content-segments">
+            <div class="hover-popout">
+              <h5 data-i18n-key="info-content1-option1-title">Seamless Smart Home Integration</h5>
+              <p data-i18n-key="info-content1-option1-text">Discover the future of home automation with Star Electronic's cutting-edge smart home hardware. Our innovative products are designed to seamlessly integrate with your lifestyle, offering unparalleled convenience, security, and efficiency. Imagine controlling your home’s environment, security, and lighting with just a tap on your smartphone or a simple voice command.</p>
+            </div>
+            <div class="hover-popout">
+              <h5 data-i18n-key="info-content1-option2-title">Comfort and Energy Efficiency</h5>
+              <p data-i18n-key="info-content1-option2-text">Our smart thermostats learn your preferences, optimizing your home’s temperature for maximum comfort and energy savings. With our smart garage door openers, you can manage your garage remotely, ensuring it's never left open accidentally. Transform your living spaces with our smart lighting system, controlled from your mobile device, to create the perfect ambiance for any occasion.</p>
+            </div>
+            <div class="hover-popout">
+              <h5 data-i18n-key="info-content1-option3-title">Superior Security and Reliability</h5>
+              <p data-i18n-key="info-content1-option3-text">Safety is paramount with our high-definition smart outdoor cameras and motion sensors, offering real-time surveillance and instant alerts to keep your home secure. These devices are easy to install and integrate seamlessly with leading smart home platforms. At Star Electronic, we are committed to delivering top-quality products that exceed your expectations to enhance your home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    <footer>
+      <div id="pc-skeleton-footer-container" class="flex-align bg-foot">
+        <div class="content-align">
+          <div id="footer-bottom" class="flex-between">
+            Copyright © 2024 Star electronic, s.r.o. All rights reserved.
+            <ul>
+              <li><a href="form.html" data-i18n-key="footer-form">form</a></li>
+              <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><span data-i18n-key="footer-up">up</span><i class="fa-solid fa-circle-up"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light" style="font-size: var(--rem)">
+  <head>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/google-libphonenumber@latest/dist/libphonenumber.js"></script>
+    <script src="../script.js"></script>
+
+    <title>Star Electronic</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      charset="utf-8"
+    />
+    <link rel="icon" type="image/x-icon" href="../images/onebyone.ico" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="skeleton-header-container" class="flex-align bg1">
+        <nav class="content-align flex-between">
+          <div class="m" style="width: 40px; height: 40px">
+            <i
+              class="fa-solid fa-bars"
+              style="
+                display: block;
+                height: 40px;
+                font-size: 2rem;
+                color: var(--text1);
+              "
+            ></i>
+          </div>
+          <div id="skeleton-logo-container">
+            <a id="pc-skeleton-logo" href="../index.html"
+              ><img
+                src="../images/skeleton/fulllogo.png"
+                alt="company-logo"
+                title="homepage"
+            /></a>
+          </div>
+          <ul id="pc-skeleton-menu" class="pc">
+            <li class="menu-item">
+              <a href="form.html">
+                <h3 class="bg1 underline" data-i18n-key="form-nav">survey</h3>
+              </a>
+              <ul class="sub-menu bg3">
+                <li><iframe src="form.html"></iframe></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="contact.html">
+                <h3 class="bg1 underline" data-i18n-key="contact-nav">
+                  contact
+                </h3>
+              </a>
+              <ul class="sub-menu bg3">
+                <li><iframe src="contact.html"></iframe></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="info.html">
+                <h3 class="bg1 underline" data-i18n-key="info-nav">about us</h3>
+              </a>
+              <ul class="sub-menu bg3">
+                <li><iframe src="info.html"></iframe></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="pc-skeleton-right-side">
+            <div id="pc-skeleton-icons-contaier" data-theme-toggle>
+              <svg
+                id="moon"
+                class="theme-icon hidden"
+                viewBox="0 0 1101.03 1101.03"
+              >
+                <path
+                  d="M550.51,108.31c-244.22,0-442.21,197.98-442.21,442.2s197.99,442.2,442.21,442.2,442.2-197.98,442.2-442.2S794.73,108.31,550.51,108.31ZM534.35,332.18l50.69-128.52,50.69,128.52,128.52,50.69-128.52,50.69-50.69,128.52-50.69-128.52-128.52-50.69,128.52-50.69ZM550.51,946.74c-218.83,0-396.23-177.4-396.23-396.23,0-164.58,100.35-305.73,243.2-365.59-31.62,61.16-49.47,130.6-49.47,204.2,0,245.96,199.4,445.36,445.37,445.36,11.72,0,23.34-.45,34.84-1.35-71.5,70.27-169.55,113.61-277.71,113.61ZM845.26,584.55l-25.12,82.87-24.73-83.25-83.26-24.73,83.11-21.86,24.88-86.13,25.64,82.35,82.35,25.64-82.87,25.11Z"
+                />
+              </svg>
+              <svg
+                id="sun"
+                class="theme-icon hidden"
+                viewBox="0 0 1101.03 1101.03"
+              >
+                <path
+                  d="M736.43,550.51c0,102.68-83.23,185.92-185.91,185.92s-185.92-83.24-185.92-185.92,83.23-185.92,185.92-185.92,185.91,83.24,185.91,185.92Z"
+                />
+                <path
+                  d="M550.52,108.31c-244.23,0-442.21,197.98-442.21,442.2s197.98,442.21,442.21,442.21,442.2-197.98,442.2-442.21S794.74,108.31,550.52,108.31ZM830.69,830.69l-184.61-49.47-95.57,165.53-95.56-165.52-184.61,49.46,49.46-184.61-165.52-95.56,165.52-95.56-49.47-184.62,184.61,49.47,95.57-165.53,95.56,165.52,184.62-49.46-49.47,184.61,165.52,95.56-165.52,95.56,49.47,184.62Z"
+                />
+              </svg>
+            </div>
+            <select
+              data-lang-toggle
+              id="pc-skeleton-dark-mode-select"
+              name="dark-mode-select"
+              class="pc bg1"
+            >
+              <option value="sk">sk</option>
+              <option value="en">en</option>
+              <option value="ch">ch</option>
+            </select>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <body>
+      <div id="contact-hero-container" class="flex-align hero-container">
+        <div class="content-align align-middle">
+          <div class="">
+            <h1 data-i18n-key="contact-hero">Contact page</h1>
+            <h2 data-i18n-key="contact-hero-subtext">
+              everything you need for your questions and inquiries
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-align bg1">
+        <h2
+          class="content-align headline text-shadow2"
+          data-i18n-key="contact-content1-heading"
+        >
+          how you can contact us
+        </h2>
+
+        <div id="contact-options-container" class="content-align bg1 fadein">
+          <div class="click-option">
+            <h4 data-i18n-key="contact-content1-option1-name">phone in</h4>
+          </div>
+          <div class="click-option">
+            <h4 data-i18n-key="contact-content1-option2-name">by email</h4>
+          </div>
+          <div class="click-option">
+            <h4 data-i18n-key="contact-content1-option3-name">visit us</h4>
+          </div>
+        </div>
+        <div class="content-align flex-between content-option fadein">
+          <div
+            class="option-image indent-effect"
+            style="background-image: url(../images/contact/phone-contact.jpg)"
+          ></div>
+          <div class="option-text">
+            <h4 data-i18n-key="contact-content1-option1-h0">
+              We’re just a phone call away! Reach out for immediate assistance.
+            </h4>
+            <div>
+              <h5 data-i18n-key="contact-content1-option1-h1">phone number:</h5>
+              <p>
+                +421 905 354 765
+              </p>
+              <i class="fa-solid fa-clone"></i>
+            </div>
+            <div>
+              <h5 data-i18n-key="contact-content1-option1-h2">
+                working hours:
+              </h5>
+              <p data-i18n-key="contact-content1-option1-p2">
+                Monday - Friday, 9:00 AM - 6:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="content-align flex-between content-option fadein">
+          <div
+            class="option-image indent-effect-strong"
+            style="background-image: url(../images/contact/email-contact.webp)"
+          ></div>
+          <div class="option-text">
+            <h4 data-i18n-key="contact-content1-option2-h0">
+              Prefer to write? Drop us an email, and we’ll get back to you
+              shortly.
+            </h4>
+            <div>
+              <h5 data-i18n-key="contact-content1-option2-h1">Email Address</h5>
+              <p>
+                info@starelectronic.eu
+              </p>
+              <i class="fa-solid fa-clone"></i>
+            </div>
+            <div>
+              <h5 data-i18n-key="contact-content1-option2-h2">Response Time</h5>
+              <p data-i18n-key="contact-content1-option2-p2">
+                Within 24 hours, Monday - Friday
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="content-align flex-between content-option fadein">
+          <div
+            class="option-image indent-effect"
+            style="
+              background-image: url(../images/contact/personal-contact2.jpg);
+            "
+          ></div>
+          <div class="option-text">
+            <h4 data-i18n-key="contact-content1-option3-h0">
+              We’d love to meet you! Stop by our office to discuss your needs.
+            </h4>
+            <div>
+              <h5 data-i18n-key="contact-content1-option3-h1">Address:</h5>
+              <p>
+                123 Main Street, Suite 100, Anytown, USA
+              </p>
+              <i class="fa-solid fa-clone"></i>
+            </div>
+            <div>
+              <h5 data-i18n-key="contact-content1-option3-h2">
+                working hours:
+              </h5>
+              <p data-i18n-key="contact-content1-option3-p2">
+                Monday - Friday, 9:00 AM - 6:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-align bg4">
+        <h2
+          class="content-align flex-middle flex-middle headline text-shadow2"
+          data-i18n-key="contact-content2-heading"
+        >
+          inquiries
+        </h2>
+
+        <div class="content-align fadein">
+          <form id="contact-form" class="form" method="post">
+            <div class="form-side-group" style="grid-area: contact-form-1">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name*"
+                  required
+                  data-i18n="[placeholder]name-input-placeholder"
+                />
+                <div class="form-alert" style="display: none">
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="display: inline"
+                  ></i>
+                  <h5 style="display: inline"></h5>
+                </div>
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email*"
+                  required
+                  data-i18n="[placeholder]email-input-placeholder"
+                />
+                <div class="form-alert" style="display: none">
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="display: inline"
+                  ></i>
+                  <h5 style="display: inline"></h5>
+                </div>
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your number*"
+                  required
+                  data-i18n="[placeholder]phone-input-placeholder"
+                />
+                <div class="form-alert" style="display: none">
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="display: inline"
+                  ></i>
+                  <h5 style="display: inline"></h5>
+                </div>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Your company name"
+                  data-i18n="[placeholder]company-input-placeholder"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="placeholder"
+                  name="placeholder"
+                  placeholder="Placeholder"
+                />
+              </div>
+            </div>
+            <div class="form-side-group" style="grid-area: contact-form-2">
+              <div>
+                <div>
+                  <input
+                    class="form-submit bg3"
+                    type="submit"
+                    data-type="sub0"
+                    value="Submit"
+                  />
+                </div>
+                <div class="form-alert" data-type="sub2">
+                  <i
+                    class="fa-solid fa-circle-info"
+                    style="display: inline"
+                  ></i>
+                  <h5
+                    id="form-warning-filled"
+                    style="display: inline"
+                    data-i18n-key="form-submit-instructions"
+                  >
+                    All fields containing an asterisk * are required.
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="form-side-group" style="grid-area: contact-form-3">
+              <div>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  title="This field is required"
+                  placeholder="Your Message*"
+                  data-i18n="[placeholder]contact-message-input-placeholder"
+                ></textarea>
+                <div class="form-alert" style="display: none">
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="display: inline"
+                  ></i>
+                  <h5 style="display: inline"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="form-side-group" style="grid-area: contact-form-4">
+              <div>
+                <div
+                  id="recaptcha-container"
+                  style="margin-bottom: -0.1rem"
+                ></div>
+                <div class="form-alert" style="display: none">
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="display: inline"
+                  ></i>
+                  <h5 style="display: inline"></h5>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+
+    <footer>
+      <div id="pc-skeleton-footer-container" class="flex-align bg-foot">
+        <div class="content-align">
+          <div id="footer-bottom" class="flex-between">
+            Copyright © 2024 Star electronic, s.r.o. All rights reserved.
+            <ul>
+              <li><a href="form.html" data-i18n-key="footer-form">form</a></li>
+              <li onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                <span data-i18n-key="footer-up">up</span
+                ><i class="fa-solid fa-circle-up"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

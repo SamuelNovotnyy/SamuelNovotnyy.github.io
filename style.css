@@ -1,0 +1,106 @@
+/* import base css */
+@import "css/normalize.css";
+@import "css/reset.css";
+@import "css/themes.css";
+@import "css/classes.css";
+@import "css/typography.css";
+@import "css/skeleton.css";
+@import "css/all.min.css";
+
+/* import page style css */
+@import "css/page_styles/index.css";
+@import "css/page_styles/form.css";
+@import "css/page_styles/contact.css";
+@import "css/page_styles/info.css";
+
+/* dynamic css styles */
+@media only screen and (max-width: 779px) {
+  /*root variable changes*/
+  :root {
+    --rem: 12px;
+    --core-padding: 2px 10px;
+    --content-width: 400px;
+    --header-height: 64px;
+
+    --carousel-height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1023px) {
+  /* root variable changes */
+  :root {
+    --rem: 14px;
+    --core-padding: 2px 10px;
+    --content-width: 800px;
+    --header-height: 64px;
+
+    --carousel-height: 600px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* root variable changes */
+  :root {
+    --rem: 14px;
+    --core-padding: 2px 10px;
+    --content-width: 800px;
+    --header-height: 64px;
+
+    --carousel-height: 600px;
+
+    --input-radius: 0px;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+  /* root variable changes */
+  :root {
+    --rem: 15px;
+    --core-padding: 2px 10px;
+    --content-width: 1000px;
+    --header-height: 64px;
+
+    --carousel-height: 700px;
+
+    --input-radius: 0px;
+  }
+
+  /* DOM elements changes */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+  }
+
+  /* class changes */
+  .flex-align {
+    scroll-snap-align: start;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  /* root variable changes */
+  :root {
+    --rem: 16px;
+    --core-padding: 2px 10px;
+    --content-width: 1216px;
+    --header-height: 64px;
+
+    --carousel-height: 800px;
+
+    --input-radius: 0px;
+
+    --snap-threshold: 0px;
+    --snap-duration: 300ms;
+  }
+
+  /* DOM elements changes */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+  }
+
+  /* class changes  */
+  .flex-align {
+    scroll-snap-align: start;
+  }
+}
