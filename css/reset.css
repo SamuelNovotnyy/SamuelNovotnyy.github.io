@@ -1,0 +1,69 @@
+* {
+  --color-change-speed: 0ms;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: 100vw;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: middle;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  transition: background var(--color-change-speed) linear,
+    background-color var(--color-change-speed) linear,
+    color var(--color-change-speed) linear,
+    filter var(--color-change-speed) linear;
+  -moz-transition: background var(--color-change-speed) linear,
+    background-color var(--color-change-speed) linear,
+    color var(--color-change-speed) linear,
+    filter var(--color-change-speed) linear;
+  -webkit-transition: background var(--color-change-speed) linear,
+    background-color var(--color-change-speed) linear,
+    color var(--color-change-speed) linear,
+    filter var(--color-change-speed) linear;
+  -o-transition: background var(--color-change-speed) linear,
+    background-color var(--color-change-speed) linear,
+    color var(--color-change-speed) linear,
+    filter var(--color-change-speed) linear;
+}
+
+input:-internal-autofill-selected, input:-internal-autofill-selected {
+  background-color: inherit !important;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}

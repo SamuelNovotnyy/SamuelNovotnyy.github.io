@@ -1,0 +1,121 @@
+[data-theme="light"] {
+  /* signature color */
+  --vermillon: #d32828;
+
+   /* background */
+  --bg1: #f2f2f2;
+  --bg2: #515f6b; /* #a89797; */
+  --bg3: var(--vermillon);
+  --bg4: #8a7272;
+  --bg5: #111111;
+
+  /* gradient */
+  --g1: linear-gradient(130deg, rgba(115,158,165,1) 0%, rgba(36,49,51,1) 100%);
+  --g2: linear-gradient(320deg, hsl(0, 37%, 54%) 0%, hsl(8, 17%, 17%) 100%);
+  --g3: linear-gradient(6deg, rgba(255,255,255,1) 0%, rgba(211,204,214,1) 64%, rgba(127,104,138,1) 100%);
+  --g4: radial-gradient(circle 75vw at 20% -25vh, rgba(81,95,107,1) 0%, rgba(71,83,93,1) 45%, rgba(41,48,55,1) 100%);
+
+  /* text */
+  --text1: rgb(22, 22, 22);
+  --text2: rgb(248, 248, 248);
+  --text3: #ffffff;
+  --text4: #ffffff;
+  --text5: #ffffff;
+
+  /* index-hero-bg */
+  --index-hero-bg: var(--vermillon); /* #6d1d36;*/
+  --index-hero-bg2: rgb(172, 31, 31);
+  --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
+
+  /* button */
+  --button-bg: var(--vermillon);
+  --button-bg-hover: orange;
+  --button-border: #ffffff0e;
+  --button-text: #eeeeee;
+
+  /* contact option */
+  --option-border: 4px solid rgba(0, 0, 0, 0.3);
+
+  /* form input */
+  --input-bg: #fcfcfc;
+  --input-text: #111111;
+  --placeholder: rgba(0, 0, 0, 0.5);
+  --input-border: rgba(0, 0, 255, 0);
+  --input-file-display-bg: rgb(216, 216, 216);
+
+  /* interactive colors */
+  --highlight: rgba(0, 0, 0, 0.1);
+  --selection-bg: rgb(218, 197, 142);
+  --selection-text: rgb(17, 0, 94);
+  --warning-text: rgb(255 108 108);
+  --warning-bg: black;
+
+  /* applicable effects */
+  --darken: brightness(1);
+  --logo-effect: none;
+  --text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3), 0px 0px 5px rgba(255, 255, 255, 0.3);
+  --outside-shadow: 2px 2px 2px rgba(0,0,0,0.05), 12px 12px 12px rgba(0,0,0,0.1), -2px -2px 2px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.2);
+  --inset-shadow: inset 2px 2px 2px rgba(0,0,0,0.05), inset 12px 12px 12px rgba(0,0,0,0.1), inset -2px -2px 2px rgba(255, 255, 255, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.2);
+  --inset-shadow-strong: inset 2px 2px 2px rgba(0,0,0,0.2), inset 12px 12px 12px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] {
+  /* signature color optical correction for dark-mode */
+  --vermillon: #ce3030;
+
+   /* background */
+  --bg1: #0f0f0f;
+  --bg2: #584c4c; /*  #666666; */
+  --bg3: var(--vermillon);
+  --bg4: #222;
+  --bg5: #f2f2f2;
+
+  /* gradient */
+  --g1: linear-gradient(130deg, rgba(115,158,165,1) 0%, rgba(36,49,51,1) 100%);
+  --g2: linear-gradient(320deg, hsl(0, 37%, 54%) 0%, hsl(8, 17%, 17%) 100%);
+  --g3: linear-gradient(6deg, rgba(255,255,255,1) 0%, rgba(211,204,214,1) 64%, rgba(127,104,138,1) 100%);
+  --g4: radial-gradient(circle 75vw at 20% -25vh, rgba(81,95,107,1) 0%, rgba(71,83,93,1) 45%, rgba(41,48,55,1) 100%);
+
+  /* text */
+  --text1: rgb(255, 255, 255);
+  --text2: rgb(248, 248, 248);
+  --text3: #ffffff;
+  --text4: #ffffff;
+  --text5: #000000;
+
+  /* index-hero-bg */
+  --index-hero-bg: rgb(46, 46, 46); /* #3f1421;*/
+  --index-hero-bg2: #222222;
+  --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) 100%);
+
+  /* button */
+  --button-bg: var(--vermillon);
+  --button-bg-hover: rgb(255, 130, 47);
+  --button-border: #ffffff0e;
+  --button-text: #eeeeee;
+
+  /* contact option */
+  --option-border: 4px solid rgba(255, 255, 255, 0.2);
+
+  /* form input */
+  --input-bg: #111111;
+  --input-text: #f2f2f2;
+  --placeholder: rgba(255, 255, 255, 0.7);
+  --input-border: rgba(0, 0, 255, 0);
+  --input-file-display-bg: rgb(14, 14, 14);
+
+  /* interactive colors */
+  --highlight: rgba(255, 255, 255, 0.1);
+  --selection-bg: rgb(218, 197, 142);
+  --selection-text: rgb(17, 0, 94);
+  --warning-text: #db4545;
+  --warning-bg: white;
+
+  /* applicable effects */
+  --darken: brightness(0.8);
+  --logo-effect: invert(100%) hue-rotate(180deg) saturate(8) brightness(90%);
+  --text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.3);
+  --outside-shadow: 2px 2px 2px rgba(0,0,0,0.1), 12px 12px 12px rgba(0,0,0,0.2), -2px -2px 2px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.1);
+  --inset-shadow: inset 2px 2px 2px rgba(0,0,0,0.2), inset 12px 12px 12px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255, 255, 255, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+  --inset-shadow-strong: inset 2px 2px 2px rgba(0,0,0,0.5), inset 12px 12px 12px rgba(0,0,0,0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+}

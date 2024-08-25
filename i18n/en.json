@@ -1,0 +1,135 @@
+{
+  "lang": "en",
+
+
+
+  "form-nav": "survey",
+  "contact-nav": "contact",
+  "info-nav": "about us",
+  "domov-nav": "home",
+  "skeleton-hero-option1": "video",
+  "skeleton-hero-option2": "static",
+  "skeleton-hero-option3": "slider",
+  "mobile-sidebar-news": "news",
+  "mobile-sidebar-news-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
+  "mobile-sidebar-etc": "et cetera",
+  "mobile-sidebar-etc-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
+  "footer-form": "form",
+  "footer-up": "up",
+
+
+
+  "name-input-placeholder": "Your name*",
+  "email-input-placeholder": "Your email*",
+  "phone-input-placeholder": "Your number*",
+  "company-input-placeholder": "Your company",
+
+
+
+  "index-hero": "smart home",
+  "index-hero-subtext": "we help you make your house a home",
+  "index-hero-button": "take our survey",
+
+  "index-content1-heading": "appliances you can connect",
+
+  "index-content1-choice1-title": "air condition",
+  "index-content1-choice1-text": "Control your air conditioning remotely with our smart thermostat, allowing you to adjust the temperature from anywhere using your smartphone or voice commands.",
+  "index-content1-choice1-text-l": "Control your air conditioning remotely with our state-of-the-art smart thermostat. This device allows you to adjust the temperature of your home from anywhere, whether you're at work, on vacation, or just lounging on the couch. Simply use our user-friendly mobile app or give a voice command to your smart home assistant. The smart thermostat can also learn your preferences over time, automatically adjusting settings for optimal comfort and energy efficiency. Installation is straightforward, and the device seamlessly integrates with existing HVAC systems, making it easy for you to stay cool in summer and warm in winter.",
+  
+  "index-content1-choice2-title": "security camera",
+  "index-content1-choice2-text": "Monitor your property with our smart outdoor cameras, giving you real-time video feeds and alerts on your phone, ensuring your home is safe and secure at all times.",
+  "index-content1-choice2-text-l": "Monitor your property with our advanced smart outdoor cameras, which offer high-definition video feeds and motion detection alerts directly to your smartphone. These cameras are weather-resistant and equipped with night vision, ensuring your home is protected day and night. You can view live footage, review recorded clips, and receive instant notifications if any movement is detected, all through our intuitive mobile app. Installing the cameras is straightforward: mount them in strategic locations around your property, connect them to your Wi-Fi, and follow the app's prompts to complete the setup.",
+
+  "index-content1-choice3-title": "motion sensors",
+  "index-content1-choice3-text": "Enhance home security with our motion sensors, which can trigger alerts, activate lighting, or interact with other smart devices to keep your home safe and responsive.",
+  "index-content1-choice3-text-l": "Enhance your home security with our reliable smart motion sensors. These sensors detect movement within their range and send instant notifications to your smartphone, alerting you to any unusual activity. They can be placed in various locations around your home, such as entryways, hallways, or near valuable items. The motion sensors are designed to integrate seamlessly with your smart home system, allowing for automation triggers such as turning on lights or activating cameras when movement is detected. Setup is simple: mount the sensors using the included adhesive or screws, connect them to your home network, and configure them through our app for immediate use.",
+
+  "index-content1-choice4-title": "room lamp",
+  "index-content1-choice4-text": "Manage your lamps with our smart lighting system, enabling you to turn lights on or off, dim them, and set schedules using your phone or voice-activated smart home hub.",
+  "index-content1-choice4-text-l": "Manage your lamps with our comprehensive smart lighting system. This system allows you to turn lights on or off, dim them, and set custom schedules to suit your daily routines, all from your smartphone or through voice commands. You can create scenes for different occasions, such as a cozy movie night or a bright morning wake-up. The smart bulbs are easy to install, simply screw them into your existing light fixtures and connect them to your home Wi-Fi. Pairing them with our app or a compatible smart home hub takes just a few minutes, providing you with flexible and dynamic lighting control.",
+
+  "index-content1-choice5-title": "garage door",
+  "index-content1-choice5-text": "Effortlessly open and close your garage door with our smart garage door opener, providing you secure and convenient access via your mobile device or smart home assistant.",
+  "index-content1-choice5-text-l": "Effortlessly open and close your garage door with our innovative smart garage door opener. This device provides secure and convenient access to your garage through your smartphone or a voice command to your smart home assistant. You can check the status of your garage door in real-time and receive alerts if it's left open, adding an extra layer of security to your home. The setup is simple and typically involves connecting the smart opener to your existing garage door system and linking it to your home Wi-Fi network. Our detailed instructions guide you through the process, ensuring a smooth installation and immediate functionality.",
+  "index-choice-expand-button": "expand",
+  "index-choice-expand-button-e": "collapse",
+
+  "index-form_contact-heading-f": "form",
+  "index-form_contact-text-f": "we have prepared a form for you to take and send us your request.",
+  "index-form_contact-button-f": "fill out your order",
+  "index-form_contact-heading-c": "contact",
+  "index-form_contact-text-c": "If you are looking to contact us, please take a look at our options, or send us an inquiry message.",
+  "index-form_contact-button-c": "Contact us",
+
+
+
+  "form-hero": "Entry Questionnaire",
+
+  "form-1-entry-main": "Describe the property in which you want to install smart home devices (e.g. a two-story brick house with an attic and basement)",
+  "form-1-entry-secondary": "Please provide detailed information about the structure and layout of your property, as this will help us understand the specific requirements for installing smart home devices. Consider mentioning the number of floors, the presence of special features like attics or basements, and any other relevant details that might impact the installation.",
+  "form-1-input-placeholder": "Your answer*",
+  
+  "form-2-entry-main": "Do you have Wi-Fi connection in this property?",
+  "form-2-entry-secondary": "A reliable Wi-Fi connection is essential for the seamless operation of smart home devices. Please confirm whether you have Wi-Fi available at the property, as this will determine the compatibility and effectiveness of the devices you wish to install.",
+
+  "form-3-entry-main": "If yes, does the Wi-Fi signal reach every corner of the property?",
+  "form-3-entry-secondary": "Smart home devices require a strong and consistent Wi-Fi signal throughout the property to function optimally. If there are areas with weak or no signal, it may affect the performance of these devices. Please indicate whether your Wi-Fi signal is strong enough to cover the entire property or if there are any known dead zones.",
+
+  "form-4-entry-main": "Which devices would you like to integrate into smart home control via your mobile phone, or automate their functions?",
+  "form-4-entry-secondary": "Specify the devices you wish to control or automate through your smart home system. This could include appliances like air conditioners, lighting systems, security cameras, or even more specific functions like pool heating or garage door control. Understanding your preferences will help us design a system tailored to your needs.",
+  "form-4-input-placeholder": "Your answer*",
+
+  "form-5-entry-main": "Upload a photo or video of your property",
+  "form-5-entry-secondary": "Visuals of your property will give us a better understanding of the space and layout, allowing us to provide more accurate advice on the placement and installation of smart home devices. Please upload clear images or videos that showcase the key areas where you plan to implement smart technology.",
+
+  "form-yes-r": "Yes*",
+  "form-no-r": "No*",
+  "form-yes": "Yes",
+  "form-no": "No",
+
+  "form-file-upload-button": "Upload",
+
+
+
+  "contact-hero": "contact page",
+  "contact-hero-subtext": "everything you need for your questions and inquiries",
+
+  "contact-content1-heading": "how you can contact us",
+
+  "contact-content1-option1-name": "phone in",
+  "contact-content1-option1-h0": "We’re just a phone call away! Reach out for immediate assistance.",
+  "contact-content1-option1-h1": "phone number:",
+  "contact-content1-option1-h2": "working hours:",
+  "contact-content1-option1-p2": "Monday - Friday, 9:00 AM - 6:00 PM",
+
+  "contact-content1-option2-name": "by email",
+  "contact-content1-option2-h0": "Prefer to write? Drop us an email, and we’ll get back to you shortly.",
+  "contact-content1-option2-h1": "Email Address:",
+  "contact-content1-option2-h2": "Response Time:",
+  "contact-content1-option2-p2": "Within 24 hours, Monday - Friday",
+
+  "contact-content1-option3-name": "visit us",
+  "contact-content1-option3-h0": "We’d love to meet you! Stop by our office to discuss your needs.",
+  "contact-content1-option3-h1": "address:",
+  "contact-content1-option3-h2": "working hours:",
+  "contact-content1-option3-p2": "Monday - Friday, 9:00 AM - 6:00 PM",
+
+  "contact-content2-heading": "inquiries",
+  "contact-message-input-placeholder": "Your Message*",
+
+
+
+  "info-hero": "About our company",
+  "info-hero-subtext": "Empowering Your Home with Advanced Technology and Innovation.",
+
+  "info-content1-heading": "Discover the Future of Living",
+
+  "info-content1-option1-title": "Development and Manufacturing",
+  "info-content1-option1-text": "Star electronic, s.r.o. specializes in the development and manufacturing of electronic devices for smart homes. Our products come in various modifications to best meet the diverse needs of our customers. We have successfully built a wide network of distributors both in Slovakia and abroad.",
+
+  "info-content1-option2-title": "System Installation and Integration",
+  "info-content1-option2-text": "Through our partners, we offer installation and integration of smart devices with existing security systems. Our solutions ensure convenience, security, and efficiency in every home. Our customers value the high quality and reliability of our products.",
+
+  "info-content1-option3-title": "Custom Manufacturing and Sales",
+  "info-content1-option3-text": "We also facilitate the sale of other electronic devices from our suppliers and offer the development and production of small series devices according to individual requirements. Our goal is to continuously expand our offerings and provide technologically advanced solutions for our customers."
+}

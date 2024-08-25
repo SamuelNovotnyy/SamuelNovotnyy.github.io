@@ -1,0 +1,130 @@
+{
+  "lang": "sk",
+
+  "form-nav": "dotazník",
+  "contact-nav": "kontakt",
+  "info-nav": "o spoločnosti",
+  "domov-nav": "domov",
+  "skeleton-hero-option1": "video",
+  "skeleton-hero-option2": "hero",
+  "skeleton-hero-option3": "slider",
+  "mobile-sidebar-news": "novinky",
+  "mobile-sidebar-news-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, mínus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia sapiente! Un, laudantium itaque dolorem facere sed quidem.",
+  "mobile-sidebar-etc": "a tak ďalej",
+  "mobile-sidebar-etc-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, mínus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia sapiente! Un, laudantium itaque dolorem facere sed quidem.",
+  "footer-form": "dotazník",
+  "footer-up": "hore",
+
+
+
+  "name-input-placeholder": "Vaše meno*",
+  "email-input-placeholder": "Váš e-mail*",
+  "phone-input-placeholder": "Vaše číslo*",
+  "company-input-placeholder": "Vaša spoločnosť",
+
+
+
+  "index-hero": "smart home",
+  "index-hero-subtext": "urobíme z vášho domu domov",
+  "index-hero-button": "vyplniť dotazník",
+
+  "index-content1-heading": "zariadenia, ktoré môžete pripojiť",
+
+  "index-content1-choice1-title": "klimatizácia",
+  "index-content1-choice1-text": "Ovládajte svoju klimatizáciu na diaľku pomocou nášho inteligentného termostatu, ktorý vám umožní nastaviť teplotu odkiaľkoľvek pomocou smartfónu alebo hlasových príkazov.",
+  "index-content1-choice1-text-l": "Ovládajte svoju klimatizáciu na diaľku pomocou nášho najmodernejšieho inteligentného termostatu. Toto zariadenie vám umožňuje nastaviť teplotu vášho domova odkiaľkoľvek, či už ste v práci , na dovolenke, alebo len tak leňošiť na gauči Jednoducho použite našu užívateľsky prívetivú mobilnú aplikáciu alebo dajte hlasový príkaz svojmu inteligentnému domácemu asistentovi Inštalácia je jednoduchá a zariadenie sa bez problémov integruje s existujúcimi systémami HVAC, vďaka čomu budete v lete v pohode a v zime v teple.",
+
+  "index-content1-choice2-title": "bezpečnostná kamera",
+  "index-content1-choice2-text": "Monitorujte svoj majetok pomocou našich inteligentných vonkajších kamier, ktoré vám poskytujú video v reálnom čase a upozornenia na telefóne, čím zaisťujú, že váš domov bude vždy v bezpečí.",
+  "index-content1-choice2-text-l": "Monitorujte svoj majetok pomocou našich pokročilých inteligentných vonkajších kamier, ktoré ponúkajú video vo vysokom rozlíšení a upozornenia na detekciu pohybu priamo do vášho smartfónu. Tieto kamery sú odolné voči poveternostným vplyvom a vybavené nočným videním , vďaka čomu je váš domov chránený vo dne aj v noci Môžete si prezerať živé zábery, prezerať si zaznamenané klipy a dostávať okamžité upozornenia, ak zaznamenáte akýkoľvek pohyb, a to všetko prostredníctvom našej intuitívnej mobilnej aplikácie: namontujte ich na strategické miesta majetku, pripojte ich k sieti Wi-Fi a dokončite nastavenie podľa pokynov aplikácie.",
+
+  "index-content1-choice3-title": "snímače pohybu",
+  "index-content1-choice3-text": "Zlepšite bezpečnosť domácnosti pomocou našich pohybových senzorov, ktoré môžu spúšťať upozornenia, aktivovať osvetlenie alebo interagovať s inými inteligentnými zariadeniami, aby bol váš domov bezpečný a pohotový.",
+  "index-content1-choice3-text-l": "Zlepšite bezpečnosť svojho domova pomocou našich spoľahlivých inteligentných snímačov pohybu. Tieto snímače detegujú pohyb vo svojom dosahu a odosielajú okamžité upozornenia na váš smartfón, pričom vás upozornia na akúkoľvek nezvyčajnú aktivitu. Môžu byť umiestnené na rôznych miestach vo vašom dome, ako sú vchody, chodby alebo v blízkosti cenných predmetov, snímače pohybu sú navrhnuté tak, aby sa bezproblémovo integrovali do vášho inteligentného domáceho systému, čo umožňuje spúšťanie automatizácie, ako je zapnutie svetiel alebo aktivácia kamier, keď je detekovaný pohyb je jednoduché: namontujte senzory pomocou priloženého lepidla alebo skrutiek, pripojte ich k domácej sieti a nakonfigurujte ich prostredníctvom našej aplikácie na okamžité použitie.",
+
+  "index-content1-choice4-title": "izbová lampa",
+  "index-content1-choice4-text": "Spravujte svoje lampy pomocou nášho systému inteligentného osvetlenia, ktorý vám umožní zapínať a vypínať svetlá, stmievať ich a nastavovať plány pomocou telefónu alebo hlasom aktivovaného inteligentného domáceho rozbočovača.",
+  "index-content1-choice4-text-l": "Spravujte svoje lampy pomocou nášho komplexného systému inteligentného osvetlenia. Tento systém vám umožňuje zapínať alebo vypínať svetlá, stmievať ich a nastavovať vlastné plány, ktoré budú vyhovovať vašim každodenným rutinám. pomocou smartfónu alebo pomocou hlasových príkazov Môžete vytvárať scény pre rôzne príležitosti, ako je napríklad príjemný filmový večer alebo jasné ranné prebudenie Ich spárovanie s našou aplikáciou alebo kompatibilným inteligentným domácim hubom trvá len niekoľko minút a poskytuje vám flexibilné a dynamické ovládanie osvetlenia.",
+
+  "index-content1-choice5-title": "garážová brána",
+  "index-content1-choice5-text": "Bez námahy otvorte a zatvorte svoju garážovú bránu pomocou nášho inteligentného otvárača garážových brán, ktorý vám poskytne bezpečný a pohodlný prístup prostredníctvom mobilného zariadenia alebo inteligentného domáceho asistenta.",
+  "index-content1-choice5-text-l": "Bez námahy otvárajte a zatvárajte svoju garážovú bránu pomocou nášho inovatívneho inteligentného otvárača garážových brán. Toto zariadenie poskytuje bezpečný a pohodlný prístup do vašej garáže prostredníctvom smartfónu alebo hlasového príkazu vášmu inteligentnému domácemu asistentovi Môžete skontrolovať stav vašej garážovej brány v reálnom čase a dostávať upozornenia, ak zostane otvorená, čím pridáte ďalšiu úroveň zabezpečenia do vášho domu a nastavenie je jednoduché a zvyčajne zahŕňa pripojenie inteligentného otvárača k vášmu existujúcemu systému garážových brán jeho prepojenie s vašou domácou sieťou Wi-Fi Naše podrobné pokyny vás prevedú celým procesom a zabezpečia bezproblémovú inštaláciu a okamžitú funkčnosť.",
+
+  "index-choice-expand-button": "viac",
+  "index-choice-expand-button-e": "menej",
+
+  "index-form_contact-heading-f": "dotazník",
+  "index-form_contact-text-f": "pripravili sme pre vás dotazník, ktorým môžete vyplniť vašu zákazku",
+  "index-form_contact-button-f": "vyplniť objednávku",
+  "index-form_contact-heading-c": "kontakt",
+  "index-form_contact-text-c": "Ak nás chcete kontaktovať, pozrite si naše možnosti alebo nám pošlite správu.",
+  "index-form_contact-button-c": "Kontaktujte nás",
+
+
+
+  "form-hero": "Vstupný dotazník",
+
+  "form-1-entry-main": "Popíšte nehnuteľnosť, v ktorej chcete nainštalovať zariadenia inteligentnej domácnosti (napr. dvojposchodový tehlový dom s podkrovím a suterénom)",
+  "form-1-entry-secondary": "Uveďte podrobné informácie o štruktúre a usporiadaní vašej nehnuteľnosti, pretože nám to pomôže pochopiť špecifické požiadavky na inštaláciu zariadení inteligentnej domácnosti. Zvážte zmienku o počte poschodí, prítomnosti špeciálnych prvky ako podkrovia alebo pivnice a akékoľvek ďalšie relevantné detaily, ktoré by mohli ovplyvniť inštaláciu.",
+  "form-1-input-placeholder": "Vaša odpoveď*",
+
+  "form-2-entry-main": "Máte v tomto zariadení Wi-Fi pripojenie?",
+  "form-2-entry-secondary": "Pre bezproblémovú prevádzku zariadení inteligentnej domácnosti je nevyhnutné spoľahlivé pripojenie Wi-Fi. Potvrďte, či máte v zariadení k dispozícii Wi-Fi, pretože to určí kompatibilitu a účinnosť zariadenia, ktoré chcete nainštalovať.",
+
+  "form-3-entry-main": "Ak áno, dosahuje signál Wi-Fi každý kút nehnuteľnosti?",
+  "form-3-entry-secondary": "Zariadenia inteligentnej domácnosti vyžadujú na optimálne fungovanie silný a konzistentný signál Wi-Fi v celom objekte. Ak existujú oblasti so slabým alebo žiadnym signálom, môže to ovplyvniť výkon týchto zariadení. Prosím uveďte, či je váš signál Wi-Fi dostatočne silný na to, aby pokryl celý objekt, alebo či existujú nejaké známe mŕtve zóny.",
+
+  "form-4-entry-main": "Ktoré zariadenia by ste chceli integrovať do ovládania inteligentnej domácnosti prostredníctvom mobilného telefónu alebo zautomatizovať ich funkcie?",
+  "form-4-entry-secondary": "Zadajte zariadenia, ktoré chcete ovládať alebo automatizovať prostredníctvom systému inteligentnej domácnosti. Môže to zahŕňať zariadenia ako klimatizácie, osvetľovacie systémy, bezpečnostné kamery alebo ešte špecifickejšie funkcie, ako je ohrev bazéna alebo garáže ovládanie dverí Pochopenie vašich preferencií nám pomôže navrhnúť systém prispôsobený vašim potrebám.",
+  "form-4-input-placeholder": "Vaša odpoveď*",
+
+  "form-5-entry-main": "Nahrajte fotografiu alebo video svojho majetku",
+  "form-5-entry-secondary": "Vizuály vašej nehnuteľnosti nám umožnia lepšie porozumieť priestoru a usporiadaniu, čo nám umožní poskytnúť presnejšie rady týkajúce sa umiestnenia a inštalácie zariadení inteligentnej domácnosti. Nahrajte prosím jasné obrázky alebo videá ktoré predstavujú kľúčové oblasti, v ktorých plánujete implementovať inteligentné technológie.",
+
+  "form-yes-r": "Áno*",
+  "form-no-r": "Nie*",
+  "form-yes": "Áno",
+  "form-no": "Nie",
+
+  "form-file-upload-button": "Nahrať",
+
+  "contact-hero": "kontaktná stránka",
+  "contact-hero-subtext": "všetko, čo potrebujete pre svoje otázky a otázky",
+
+  "contact-content1-heading": "ako nás môžete kontaktovať",
+
+  "contact-content1-option1-name": "zavolať",
+  "contact-content1-option1-h0": "Už len jeden telefónny hovor! Požiadajte o okamžitú pomoc.",
+  "contact-content1-option1-h1": "telefónne číslo:",
+  "contact-content1-option1-h2": "pracovný čas:",
+  "contact-content1-option1-p2": "Pondelok až piatok, 9:00 - 18:00",
+
+  "contact-content1-option2-name": "e-mailom",
+  "contact-content1-option2-h0": "Chcete písať? Napíšte nám e-mail a my sa vám čoskoro ozveme.",
+  "contact-content1-option2-h1": "E-mailová adresa:",
+  "contact-content1-option2-h2": "Čas odozvy:",
+  "contact-content1-option2-p2": "Do 24 hodín, pondelok až piatok",
+
+  "contact-content1-option3-name": "navštívte nás",
+  "contact-content1-option3-h0": "Radi sa s vami stretneme! Zastavte sa v našej kancelárii a prekonzultujte svoje potreby.",
+  "contact-content1-option3-h1": "address:",
+  "contact-content1-option3-h2": "pracovný čas:",
+  "contact-content1-option3-p2": "Pondelok až piatok, 9:00 - 18:00",
+
+  "contact-content2-heading": "dopyty",
+  "contact-message-input-placeholder": "Vaša správa*",
+
+  "info-hero": "O našej spoločnosti",
+  "info-hero-subtext": "Poskytneme vašej domácnosti pokročilou technológiou a inováciou.",
+
+  "info-content1-heading": "Objavte budúcnosť už dnes",
+
+  "info-content1-option1-title": "Vývoj a výroba elektroniky",
+  "info-content1-option1-text": "Firma Star electronic, s.r.o. sa špecializuje na vývoj a výrobu elektronických zariadení pre inteligentné domácnosti. Naše produkty sú dostupné v rôznych modifikáciách, aby čo najlepšie vyhovovali rozmanitým potrebám zákazníkov. S našimi produktmi sme úspešne vybudovali širokú sieť predajcov nielen na Slovensku, ale aj v zahraničí.",
+
+  "info-content1-option2-title": "Montáž a pripojenie systémov",
+  "info-content1-option2-text": "Prostredníctvom našich partnerov ponúkame montáž a pripojenie inteligentných zariadení k už existujúcim zabezpečovacím systémom. Naše riešenia zaručujú pohodlie, bezpečnosť a efektivitu v každej domácnosti. Naši zákazníci oceňujú vysokú kvalitu a spoľahlivosť našich produktov.",
+
+  "info-content1-option3-title": "Zákazková výroba a predaj",
+  "info-content1-option3-text": "Zabezpečujeme aj predaj ďalších elektronických zariadení od našich dodávateľov a ponúkame vývoj a výrobu malých sérií zariadení podľa individuálnych požiadaviek. Našim cieľom je neustále rozširovať ponuku a poskytovať technologicky pokročilé riešenia pre našich zákazníkov."
+}
