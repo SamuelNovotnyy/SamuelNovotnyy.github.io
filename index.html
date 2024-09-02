@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sk" data-theme="light" style="font-size: var(--rem)">
   <head>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="flickity/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="script.js"></script>
@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="images/onebyone.ico" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+      href="flickity/flickity.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -23,21 +23,81 @@
     <header>
       <div id="skeleton-header-container" class="flex-align bg1">
         <nav class="content-align flex-between">
-          <div class="m" style="width: 40px; height: 40px">
-            <i
-              class="fa-solid fa-bars"
-              style="
-                display: block;
-                height: 40px;
-                font-size: 2rem;
-                color: var(--text1);
-              "
-            ></i>
+          <div id="m-skeleton-sidemenu-container" class="m">
+            <i id="sidebar-toggle-icon" class="fa-solid fa-bars"></i>
+            <div id="bg-darken-all"></div>
+            <div id="sidebar">
+              <div id="sidebar-header">
+                <h2 data-i18n-key="menu-nav">menu</h2>
+                <div class="sidebar-close">
+                  <i id="sidebar-toggle-icon" class="fa-solid fa-xmark"></i>
+                </div>
+              </div>
+              <div id="sidebar-content">
+                <ul>
+                  <li id="sidebar-cotent-list-form-button">
+                    <a href="pages/form.html">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <h4 data-i18n-key="form-nav">form</h4>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages/contact.html">
+                      <h6 data-i18n-key="contact-nav">contact us</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages/info.html">
+                      <h6 data-i18n-key="info-nav">about us</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html">
+                      <h6 data-i18n-key="home-nav">home</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <h6 data-i18n-key="mobile-sidebar-news">news:</h6><br><br>
+                    <p data-i18n-key="mobile-sidebar-news-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae velit perferendis veniam corrupti, ad quod itaque quam rem enim nemo quos? Delectus suscipit temporibus repellat, esse in alias libero!</p>
+                  </li>
+                  <li>
+                    <h6 data-i18n-key="mobile-sidebar-etc">placeholder:</h6><br><br>
+                    <p data-i18n-key="mobile-sidebar-etc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae velit perferendis veniam corrupti, ad quod itaque quam rem enim nemo quos? Delectus suscipit temporibus repellat, esse in alias libero!</p>
+                  </li>
+                  <li>
+                    <h6 data-i18n-key="lang-nav">language: </h6>
+                    <select
+                      data-lang-toggle
+                      id="m-skeleton-lang-select"
+                      class="m bg1"
+                    >
+                      <option value="sk">slovensky</option>
+                      <option value="en">english</option>
+                      <option value="ch">chinese</option>
+                    </select>
+                  </li>
+                  <li>
+                    <h6 data-i18n-key="theme-nav">theme: </h6>
+                    <select
+                      id="m-skeleton-theme-select"
+                      class="m bg1"
+                    >
+                      <option value="light" data-i18n-key="theme-option-light">light</option>
+                      <option value="dark" data-i18n-key="theme-option-dark">dark</option>
+                      <option value="neo" data-i18n-key="theme-option-neo">neo</option>
+                      <option value="metro" data-i18n-key="theme-option-metro">metro</option>
+                      <option value="code" data-i18n-key="theme-option-code">code</option>
+                    </select>
+                  </li>
+                  <li id="sidebar-scroll-correction"></li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div id="skeleton-logo-container">
             <a id="pc-skeleton-logo" href="index.html"
               ><img
-                src="images/skeleton/fulllogo.png"
+                src="images/skeleton/fulllogo.webp"
                 alt="company-logo"
                 title="homepage"
             /></a>
@@ -48,7 +108,7 @@
                 <h3 class="bg1 underline" data-i18n-key="form-nav">survey</h3>
               </a>
               <ul class="sub-menu bg3">
-                <li><iframe src="pages/form.html"></iframe></li>
+                <li><iframe class="pc" src="pages/form.html"></iframe></li>
               </ul>
             </li>
             <li class="menu-item">
@@ -58,7 +118,7 @@
                 </h3>
               </a>
               <ul class="sub-menu bg3">
-                <li><iframe src="pages/contact.html"></iframe></li>
+                <li><iframe class="pc" src="pages/contact.html"></iframe></li>
               </ul>
             </li>
             <li class="menu-item">
@@ -66,12 +126,15 @@
                 <h3 class="bg1 underline" data-i18n-key="info-nav">about us</h3>
               </a>
               <ul class="sub-menu bg3">
-                <li><iframe src="pages/info.html"></iframe></li>
+                <li><iframe class="pc" src="pages/info.html"></iframe></li>
               </ul>
             </li>
           </ul>
-          <div id="pc-skeleton-right-side">
-            <div id="pc-skeleton-icons-contaier" data-theme-toggle>
+          <div id="skeleton-right-side">
+            <div id="m-skeleton-search" class="m">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="pc-skeleton-icons-contaier" class="pc" data-theme-toggle>
               <svg
                 id="moon"
                 class="theme-icon hidden"
@@ -94,10 +157,8 @@
                 />
               </svg>
             </div>
-            <select
+            <select id="pc-skeleton-lang-select"
               data-lang-toggle
-              id="pc-skeleton-dark-mode-select"
-              name="dark-mode-select"
               class="pc bg1"
             >
               <option value="sk">sk</option>
@@ -125,7 +186,7 @@
     </header>
 
     <main>
-      <div id="index-hero-all-container" class="indent-effect">
+      <div id="index-hero-all-container" class="pc indent-effect">
         <div id="index-hero-left" class="bg2">
           <div id="pc-index-hero-text" class="pc">
             <h1 data-i18n-key="index-hero">smart home</h1>
@@ -149,341 +210,66 @@
           </div>
 
           <div id="pc-index-photo-container" class="darken hidden">
-            <img src="images/landing/hero1.png" />
-            <img src="images/landing/hero2.jpeg" />
+            <img src="images/landing/hero1.webp" />
+            <img src="images/landing/hero2.webp" />
           </div>
 
           <div id="pc-index-hero-carousel" class="carousel hidden">
             <div
               class="carousel-cell darken"
               style="
-                background-image: url('images/landing/carousel/carousel1.jpg');
+                background-image: url('images/landing/carousel/carousel1.webp');
               "
             ></div>
             <div
               class="carousel-cell darken"
               style="
-                background-image: url('images/landing/carousel/carousel2.jpg');
+                background-image: url('images/landing/carousel/carousel2.webp');
               "
             ></div>
             <div
               class="carousel-cell darken"
               style="
-                background-image: url('images/landing/carousel/carousel3.jpg');
+                background-image: url('images/landing/carousel/carousel3.webp');
               "
             ></div>
             <div
               class="carousel-cell darken"
               style="
-                background-image: url('images/landing/carousel/carousel5.jpg');
+                background-image: url('images/landing/carousel/carousel5.webp');
               "
             ></div>
             <div
               class="carousel-cell darken"
               style="
-                background-image: url('images/landing/carousel/carousel7.jpeg');
+                background-image: url('images/landing/carousel/carousel7.webp');
               "
             ></div>
           </div>
         </div>
       </div>
 
-      <div class="flex-align bg2 bg-transparent hidden">
-        <div class="dynamic-background g1"></div>
-        <div id="circles" class="dynamic-content">
-          <div class="g1"></div>
-          <div class="g1"></div>
+      <div id="index-hero-mobile" class="bg1 m">
+        <div id="hero-mobile-img" class="darken indent-effect">
+          <img src="images/landing/hero-mobile.webp">
         </div>
-
-        <h2 class="content-align flex-middle headline text-shadow">
-          Discover the Future of Living
-        </h2>
-        <div class="content-align content-box round bg1 fadein outside-effect">
-          <h4>
-            Transform Your Home with Our State-of-the-Art Smart Home Hardware
-          </h4>
-          <p>
-            Discover the future of home automation with Star Electronic's
-            cutting-edge smart home hardware. Our range of innovative products
-            is designed to seamlessly integrate with your lifestyle, providing
-            unparalleled convenience, security, and efficiency. Imagine
-            controlling your home’s environment, security, and lighting with
-            just a tap on your smartphone or a simple voice command.
-            <br /><br />
-
-            Our smart thermostats learn your preferences, optimizing your home’s
-            temperature for maximum comfort and energy savings. With our smart
-            garage door openers, you can open or close your garage from
-            anywhere, ensuring you never worry about leaving it open again.
-            Transform your living spaces with our smart lighting system,
-            allowing you to create the perfect ambiance for any occasion,
-            effortlessly controlled from your mobile device.<br /><br />
-
-            Safety is paramount with our high-definition smart outdoor cameras
-            and motion sensors, providing real-time surveillance and instant
-            alerts to keep your home secure. These devices are easy to install
-            and integrate seamlessly with leading smart home platforms, ensuring
-            a hassle-free setup and reliable performance.
-            <br /><br />
-            At Star Electronic, we are committed to delivering top-quality
-            products that exceed your expectations. Our hardware is designed
-            with the latest technology, ensuring durability and superior
-            functionality. Join the smart home revolution today and experience
-            the perfect blend of innovation, security, and convenience with Star
-            Electronic. Enhance your home, simplify your life, and embrace the
-            future of living with our exceptional smart home solutions.
-          </p>
+        
+        <div id="m-index-hero-text">
+          <h1 data-i18n-key="index-hero">smart home</h1>
+          <h2 data-i18n-key="index-hero-subtext">
+            we help you make your house a home
+          </h2>
+          <button
+            id="m-index-hero-button"
+            onclick="location.href='pages/form.html'"
+            data-i18n-key="index-hero-button"
+          >
+            survey
+          </button>
         </div>
       </div>
 
-      <div class="flex-align bg1">
-        <div class="dynamic-background g2 hidden"></div>
-        <div id="lines" class="dynamic-content hidden">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1920 3000.61"
-          >
-            <defs>
-              <linearGradient
-                id="g2"
-                gradientTransform="rotate(319, 0.5, 0.5)"
-                x1="50%"
-                y1="0%"
-                x2="50%"
-                y2="100%"
-                id="ffflux-gradient"
-              >
-                <stop
-                  stop-color="hsl(0, 37%, 54%)"
-                  stop-opacity="1"
-                  offset="0%"
-                ></stop>
-                <stop
-                  stop-color="hsl(8, 17%, 17%)"
-                  stop-opacity="1"
-                  offset="100%"
-                ></stop>
-              </linearGradient>
-
-              <style>
-                .cls-1 {
-                  fill: url(#g2);
-                  stroke-width: 0px;
-                }
-              </style>
-            </defs>
-            <path
-              class="cls-1"
-              d="M1390.33,242.11c14.13,0,25.86-10.22,28.22-23.67h309.81l41.69,38.78h-86.21c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h101l75.5-75.5h59.65v-10h-63.79l-73.55,73.55-50.35-46.83h-313.74c-6.14-33.84-56.63-29.71-56.89,5,0,15.83,12.83,28.67,28.67,28.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M50.33,482.78c10.19,0,18.44-8.26,18.44-18.44.2-21.16-30.81-25.17-36.18-5H0v10h32.59c2.18,7.75,9.29,13.44,17.74,13.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M536.33,408.56c-8.45,0-15.56,5.69-17.74,13.44h-84.63l-38.11-38.11,51.84-51.84c17.94,13.36,45.79-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-51.84,51.84-87.04-87.04H0v10h297.6l132.22,132.22h88.78c5.38,20.17,36.39,16.15,36.18-5,0-10.19-8.26-18.44-18.44-18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M1485.44,90.33c8.45,0,15.56-5.69,17.74-13.44h41.55l37.94-37.94h116.39l35.1-35.1-7.07-7.07-32.17,32.17h-116.39l-37.94,37.94h-37.41c-5.38-20.17-36.39-16.16-36.18,5,0,10.19,8.26,18.44,18.44,18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M1797.75,76.78c8.51,0,15.66-5.77,17.78-13.61l8.54.09,25.97,25.97h-234.78l-15.64,15.64c-24.02-19.76-63.65-.74-62.62,30.8,6.28,69.54,107.17,34.96,69.69-23.73l12.72-12.71h229.64l-51.89,51.89h-21.93c-6.13-33.84-56.63-29.72-56.89,5,.26,34.72,50.76,38.83,56.89,5h26.07l61.89-61.89h56.82v-10h-55.82l-35.92-35.92-12.81-.13c-5.53-20.02-36.35-15.89-36.14,5.17,0,10.19,8.26,18.44,18.44,18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M79.81,207.11h104.95l22.67,15.87c-26.11,58.74,69.22,82.24,73.35,18.02,1.23-34.72-45.56-52.22-67.62-26.21l-25.25-17.68h-97l30.63-27.58c27.25,25.96,76.77,4.38,75.46-33.86-6.93-79.87-123.12-42.24-82.15,26.43l-38.88,35.01H12.07l40.87-40.87v-49.6c34.2-5.68,30.43-56.68-4.56-56.97-34.46.23-38.91,50.24-5.44,56.81v45.62l-55.02,55.02h91.88Z"
-            />
-            <path
-              class="cls-1"
-              d="M83.89,342.22c6.13,33.84,56.63,29.72,56.89-5-.26-34.72-50.76-38.83-56.89-5H0v10h54.22v49.92l41.14,42.37c-35.14,58.8,64.83,90.99,70.53,22.6,1.07-32.17-39.99-50.96-63.71-29.94l-31.13-32.06h233.55c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H64.22v-42.89h19.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M226.65,566.22l-50.63-51.56h91.68c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H88.26L-3.54,596.47l3.54,3.54v5s111.59.33,111.59.33l268.52,268.52,83.21-83.21c11.73,6.99,27.84-2.3,27.46-16.08-2.08-30.87-47.83-18.86-34.53,9.01l-76.14,76.14-99.93-99.93h77.33l39.51-39.51c17.94,13.36,45.8-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-36.58,36.58h-83.19l-84.89-84.89h77.74c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5h-87.74l-58.09-58.09-1.46-1.46-103.71-.3,80.37-80.37h69.61l60.44,61.56h182.57l18.85-21.29c27.79,11.44,38.03-33.21,8.01-35.04-14.26-.43-23.48,16.78-15.5,28.41l-15.86,17.92h-173.87Z"
-            />
-            <path
-              class="cls-1"
-              d="M380.11,273.85l83.21-83.21c11.73,6.99,27.84-2.3,27.46-16.08-2.08-30.87-47.83-18.86-34.53,9.01l-76.14,76.14-99.93-99.93h77.33l39.51-39.51c17.94,13.36,45.8-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-36.58,36.58h-83.19l-84.89-84.89h77.74c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5h-87.74L117.2-3.2l-1.46-1.46L.01-5-.01,5l111.6.33,268.52,268.52Z"
-            />
-            <path
-              class="cls-1"
-              d="M1838.44,343.53v-24.41c33.84-6.13,29.72-56.63-5-56.89-34.72.26-38.83,50.76-5,56.89v21.7h-121.94l-44.11,45.71c-27.87-12.73-39.35,32.69-8.73,34.69,13.92.39,23.2-16.03,15.91-27.74l41.17-42.67h120.81l74.47,61.19h-85.32c-6.67-55.85-89.77-51.62-90.39,5,.62,56.62,83.73,60.84,90.39,5h113.24l-95.52-78.47Z"
-            />
-            <path
-              class="cls-1"
-              d="M1920,595.61h-94.38l-71.89-71.89h-71.74c-5.51-34.34-56.7-30.69-57,4.39.22,34.36,50.04,38.93,56.78,5.61h67.82l61.89,61.89h-290.36l-66.71-66.71c6.99-11.73-2.3-27.84-16.08-27.46-30.87,2.08-18.86,47.83,9.01,34.53l69.64,69.64h201.28l-23.33,23.33h-116.39l-37.94,37.94h-37.41c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h41.55l37.94-37.94h116.39l33.33-33.33h187.6v-10Z"
-            />
-            <path
-              class="cls-1"
-              d="M1920,467.39h-251.87l-94.63-94.63c13.36-17.94-.83-45.8-23.49-45.09-50.2,4.14-26.94,77.54,16.42,52.16l49.62,49.62h-74.08c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h84.08l36.47,36.47,1.46,1.46h256.02v-10Z"
-            />
-            <path
-              class="cls-1"
-              d="M1390.33,842.11c14.13,0,25.86-10.22,28.22-23.67h309.81l41.69,38.78h-86.21c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h101l75.5-75.5h59.65v-10h-63.79l-73.55,73.55-50.35-46.83h-313.74c-6.14-33.84-56.63-29.72-56.89,5,0,15.83,12.83,28.67,28.67,28.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M1550.01,927.68c-50.21,4.15-26.93,77.54,16.42,52.16l49.62,49.62h-74.08c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h84.08l36.47,36.47,1.46,1.46h256.02v-10h-251.87l-94.63-94.63c13.37-17.94-.84-45.79-23.49-45.09Z"
-            />
-            <path
-              class="cls-1"
-              d="M50.33,1082.78c10.19,0,18.44-8.26,18.44-18.44.2-21.16-30.81-25.17-36.18-5H0v10h32.59c2.18,7.75,9.29,13.44,17.74,13.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M536.33,1008.56c-8.45,0-15.56,5.69-17.74,13.44h-84.63l-38.11-38.11,51.84-51.84c17.94,13.36,45.79-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-51.84,51.84-87.04-87.04H0v10h297.6l132.22,132.22h88.78c5.38,20.17,36.39,16.15,36.18-5,0-10.19-8.26-18.44-18.44-18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M79.81,807.11h104.95l22.67,15.87c-26.11,58.74,69.22,82.24,73.35,18.02,1.23-34.72-45.56-52.22-67.62-26.21l-25.25-17.68h-97l30.63-27.58c27.25,25.96,76.77,4.38,75.46-33.86-6.93-79.87-123.12-42.24-82.15,26.43l-38.88,35.01H12.07l40.87-40.87v-49.6c34.2-5.68,30.43-56.68-4.56-56.97-34.46.23-38.91,50.24-5.44,56.81v45.62l-55.02,55.02h91.88Z"
-            />
-            <path
-              class="cls-1"
-              d="M83.89,942.22c6.13,33.84,56.63,29.72,56.89-5-.26-34.72-50.76-38.83-56.89-5H0v10h54.22v49.92l41.14,42.37c-35.14,58.8,64.83,90.99,70.53,22.6,1.07-32.17-39.99-50.96-63.71-29.94l-31.13-32.06h233.55c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H64.22v-42.89h19.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M226.65,1166.22l-50.63-51.56h91.68c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H88.26L-3.54,1196.47l3.54,3.54v5s111.59.33,111.59.33l268.52,268.52,83.21-83.21c11.73,6.99,27.84-2.3,27.46-16.08-2.08-30.87-47.83-18.86-34.53,9.01l-76.14,76.14-99.93-99.93h77.33l39.51-39.51c17.94,13.36,45.8-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-36.58,36.58h-83.19l-84.89-84.89h77.74c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5h-87.74l-58.09-58.09-1.46-1.46-103.71-.3,80.37-80.37h69.61l60.44,61.56h182.57l18.85-21.29c27.79,11.44,38.03-33.21,8.01-35.04-14.26-.43-23.48,16.78-15.5,28.41l-15.86,17.92h-173.87Z"
-            />
-            <path
-              class="cls-1"
-              d="M1775.22,751.11c-6.13-33.84-56.63-29.72-56.89,5,.26,34.72,50.76,38.83,56.89,5h26.07l61.89-61.89h56.82v-10h-55.82l-35.92-35.92-12.81-.13c-5.53-20.02-36.35-15.89-36.14,5.17-.19,21.25,31.01,25.15,36.23,4.83l8.54.09,25.97,25.97h-234.78l-15.64,15.64c-24.02-19.76-63.65-.75-62.62,30.8,6.28,69.54,107.17,34.96,69.69-23.73l12.72-12.71h229.64l-51.89,51.89h-21.93Z"
-            />
-            <path
-              class="cls-1"
-              d="M1838.44,919.11c33.84-6.13,29.72-56.63-5-56.89-34.72.26-38.83,50.76-5,56.89v21.7h-121.94l-44.11,45.71c-27.87-12.73-39.35,32.69-8.73,34.69,13.92.39,23.2-16.03,15.91-27.74l41.17-42.67h120.81l74.47,61.19h-85.32c-6.67-55.85-89.77-51.62-90.39,5,.62,56.62,83.73,60.84,90.39,5h113.24l-95.52-78.47v-24.41Z"
-            />
-            <path
-              class="cls-1"
-              d="M1920,1195.61h-94.38l-71.89-71.89h-71.74c-5.51-34.34-56.7-30.69-57,4.39.22,34.36,50.04,38.93,56.78,5.61h67.82l61.89,61.89h-290.36l-66.71-66.71c6.99-11.73-2.3-27.84-16.08-27.46-30.87,2.08-18.86,47.83,9.01,34.53l69.64,69.64h201.28l-23.33,23.33h-116.39l-37.94,37.94h-37.41c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h41.55l37.94-37.94h116.39l33.33-33.33h187.6v-10Z"
-            />
-            <path
-              class="cls-1"
-              d="M1390.33,1442.11c14.13,0,25.86-10.22,28.22-23.67h309.81l41.69,38.78h-86.21c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h101l75.5-75.5h59.65v-10h-63.79l-73.55,73.55-50.35-46.83h-313.74c-6.14-33.84-56.63-29.72-56.89,5,0,15.83,12.83,28.67,28.67,28.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M1550.01,1527.68c-50.21,4.15-26.93,77.54,16.42,52.16l49.62,49.62h-74.08c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h84.08l36.47,36.47,1.46,1.46h256.02v-10h-251.87l-94.63-94.63c13.37-17.94-.84-45.79-23.49-45.09Z"
-            />
-            <path
-              class="cls-1"
-              d="M50.33,1682.78c10.19,0,18.44-8.26,18.44-18.44.2-21.16-30.81-25.17-36.18-5H0v10h32.59c2.18,7.75,9.29,13.44,17.74,13.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M536.33,1608.56c-8.45,0-15.56,5.69-17.74,13.44h-84.63l-38.11-38.11,51.84-51.84c17.94,13.36,45.79-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-51.84,51.84-87.04-87.04H0v10h297.6l132.22,132.22h88.78c5.38,20.17,36.39,16.15,36.18-5,0-10.19-8.26-18.44-18.44-18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M79.81,1407.11h104.95l22.67,15.87c-26.11,58.74,69.22,82.24,73.35,18.02,1.23-34.72-45.56-52.22-67.62-26.21l-25.25-17.68h-97l30.63-27.58c27.25,25.96,76.77,4.38,75.46-33.86-6.93-79.87-123.12-42.24-82.15,26.43l-38.88,35.01H12.07l40.87-40.87v-49.6c34.2-5.68,30.43-56.68-4.56-56.97-34.46.23-38.91,50.24-5.44,56.81v45.62l-55.02,55.02h91.88Z"
-            />
-            <path
-              class="cls-1"
-              d="M83.89,1542.22c6.13,33.84,56.63,29.72,56.89-5-.26-34.72-50.76-38.83-56.89-5H0v10h54.22v49.92l41.14,42.37c-35.14,58.8,64.83,90.99,70.53,22.6,1.07-32.17-39.99-50.96-63.71-29.94l-31.13-32.06h233.55c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H64.22v-42.89h19.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M226.65,1766.22l-50.63-51.56h91.68c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H88.26L-3.54,1796.47l3.54,3.54v5s111.59.33,111.59.33l268.52,268.52,83.21-83.21c11.73,6.99,27.84-2.3,27.46-16.08-2.08-30.87-47.83-18.86-34.53,9.01l-76.14,76.14-99.93-99.93h77.33l39.51-39.51c17.94,13.36,45.8-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-36.58,36.58h-83.19l-84.89-84.89h77.74c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5h-87.74l-58.09-58.09-1.46-1.46-103.71-.3,80.37-80.37h69.61l60.44,61.56h182.57l18.85-21.29c27.79,11.44,38.03-33.21,8.01-35.04-14.26-.43-23.48,16.78-15.5,28.41l-15.86,17.92h-173.87Z"
-            />
-            <path
-              class="cls-1"
-              d="M1775.22,1351.11c-6.13-33.84-56.63-29.72-56.89,5,.26,34.72,50.76,38.83,56.89,5h26.07l61.89-61.89h56.82v-10h-55.82l-35.92-35.92-12.81-.13c-5.53-20.02-36.35-15.89-36.14,5.17-.19,21.25,31.01,25.15,36.23,4.83l8.54.09,25.97,25.97h-234.78l-15.64,15.64c-24.02-19.76-63.65-.75-62.62,30.8,6.28,69.54,107.17,34.96,69.69-23.73l12.72-12.71h229.64l-51.89,51.89h-21.93Z"
-            />
-            <path
-              class="cls-1"
-              d="M1838.44,1519.11c33.84-6.13,29.72-56.63-5-56.89-34.72.26-38.83,50.76-5,56.89v21.7h-121.94l-44.11,45.71c-27.87-12.73-39.35,32.69-8.73,34.69,13.92.39,23.2-16.03,15.91-27.74l41.17-42.67h120.81l74.47,61.19h-85.32c-6.67-55.85-89.77-51.62-90.39,5,.62,56.62,83.73,60.84,90.39,5h113.24l-95.52-78.47v-24.41Z"
-            />
-            <path
-              class="cls-1"
-              d="M1920,1795.61h-94.38l-71.89-71.89h-71.74c-5.51-34.34-56.7-30.69-57,4.39.22,34.36,50.04,38.93,56.78,5.61h67.82l61.89,61.89h-290.36l-66.71-66.71c6.99-11.73-2.3-27.84-16.08-27.46-30.87,2.08-18.86,47.83,9.01,34.53l69.64,69.64h201.28l-23.33,23.33h-116.39l-37.94,37.94h-37.41c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h41.55l37.94-37.94h116.39l33.33-33.33h187.6v-10Z"
-            />
-            <path
-              class="cls-1"
-              d="M1390.33,2042.11c14.13,0,25.86-10.22,28.22-23.67h309.81l41.69,38.78h-86.21c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h101l75.5-75.5h59.65v-10h-63.79l-73.55,73.55-50.35-46.83h-313.74c-6.14-33.84-56.63-29.72-56.89,5,0,15.83,12.83,28.67,28.67,28.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M1550.01,2127.68c-50.21,4.15-26.93,77.54,16.42,52.16l49.62,49.62h-74.08c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h84.08l36.47,36.47,1.46,1.46h256.02v-10h-251.87l-94.63-94.63c13.37-17.94-.84-45.79-23.49-45.09Z"
-            />
-            <path
-              class="cls-1"
-              d="M50.33,2282.78c10.19,0,18.44-8.26,18.44-18.44.2-21.16-30.81-25.17-36.18-5H0v10h32.59c2.18,7.75,9.29,13.44,17.74,13.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M536.33,2208.56c-8.45,0-15.56,5.69-17.74,13.44h-84.63l-38.11-38.11,51.84-51.84c17.94,13.36,45.79-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-51.84,51.84-87.04-87.04H0v10h297.6l132.22,132.22h88.78c5.38,20.17,36.39,16.15,36.18-5,0-10.19-8.26-18.44-18.44-18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M79.81,2007.11h104.95l22.67,15.87c-26.11,58.74,69.22,82.24,73.35,18.02,1.23-34.72-45.56-52.22-67.62-26.21l-25.25-17.68h-97l30.63-27.58c27.25,25.96,76.77,4.38,75.46-33.86-6.93-79.87-123.12-42.24-82.15,26.43l-38.88,35.01H12.07l40.87-40.87v-49.6c34.2-5.68,30.43-56.68-4.56-56.97-34.46.23-38.91,50.24-5.44,56.81v45.62l-55.02,55.02h91.88Z"
-            />
-            <path
-              class="cls-1"
-              d="M83.89,2142.22c6.13,33.84,56.63,29.72,56.89-5-.26-34.72-50.76-38.83-56.89-5H0v10h54.22v49.92l41.14,42.37c-35.14,58.8,64.83,90.99,70.53,22.6,1.07-32.17-39.99-50.96-63.71-29.94l-31.13-32.06h233.55c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H64.22v-42.89h19.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M226.65,2366.22l-50.63-51.56h91.68c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H88.26l-91.8,91.8,3.54,3.54v5s111.59.33,111.59.33l268.52,268.52,83.21-83.21c11.73,6.99,27.84-2.3,27.46-16.08-2.08-30.87-47.83-18.86-34.53,9.01l-76.14,76.14-99.93-99.93h77.33l39.51-39.51c17.94,13.36,45.8-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-36.58,36.58h-83.19l-84.89-84.89h77.74c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5h-87.74l-58.09-58.09-1.46-1.46-103.71-.3,80.37-80.37h69.61l60.44,61.56h182.57l18.85-21.29c27.79,11.44,38.03-33.21,8.01-35.04-14.26-.43-23.48,16.78-15.5,28.41l-15.86,17.92h-173.87Z"
-            />
-            <path
-              class="cls-1"
-              d="M1775.22,1951.11c-6.13-33.84-56.63-29.72-56.89,5,.26,34.72,50.76,38.83,56.89,5h26.07l61.89-61.89h56.82v-10h-55.82l-35.92-35.92-12.81-.13c-5.53-20.02-36.35-15.89-36.14,5.17-.19,21.25,31.01,25.15,36.23,4.83l8.54.09,25.97,25.97h-234.78l-15.64,15.64c-24.02-19.76-63.65-.75-62.62,30.8,6.28,69.54,107.17,34.96,69.69-23.73l12.72-12.71h229.64l-51.89,51.89h-21.93Z"
-            />
-            <path
-              class="cls-1"
-              d="M1838.44,2119.11c33.84-6.13,29.72-56.63-5-56.89-34.72.26-38.83,50.76-5,56.89v21.7h-121.94l-44.11,45.71c-27.87-12.73-39.35,32.69-8.73,34.69,13.92.39,23.2-16.03,15.91-27.74l41.17-42.67h120.81l74.47,61.19h-85.32c-6.67-55.85-89.77-51.62-90.39,5,.62,56.62,83.73,60.84,90.39,5h113.24l-95.52-78.47v-24.41Z"
-            />
-            <path
-              class="cls-1"
-              d="M1920,2395.61h-94.38l-71.89-71.89h-71.74c-5.51-34.34-56.7-30.69-57,4.39.22,34.36,50.04,38.93,56.78,5.61h67.82l61.89,61.89h-290.36l-66.71-66.71c6.99-11.73-2.3-27.84-16.08-27.46-30.87,2.08-18.86,47.83,9.01,34.53l69.64,69.64h201.28l-23.33,23.33h-116.39l-37.94,37.94h-37.41c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h41.55l37.94-37.94h116.39l33.33-33.33h187.6v-10Z"
-            />
-            <path
-              class="cls-1"
-              d="M32.59,2859.33H0v10h32.59c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5Z"
-            />
-            <path
-              class="cls-1"
-              d="M431.89,2919.89c-14.26-.43-23.48,16.78-15.5,28.41l-15.86,17.92h-173.87l-50.63-51.56h91.68c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H88.26l-91.8,91.8,7.07,7.07,88.87-88.87h69.61l60.44,61.56h182.57l18.85-21.29c27.79,11.44,38.03-33.22,8.01-35.04Z"
-            />
-            <path
-              class="cls-1"
-              d="M536.33,2808.56c-8.45,0-15.56,5.69-17.74,13.44h-84.63l-38.11-38.11,51.84-51.84c17.94,13.36,45.79-.83,45.09-23.49-4.14-50.2-77.54-26.94-52.16,16.42l-51.84,51.84-87.04-87.04H0v10h297.6l132.22,132.22h88.78c5.38,20.17,36.39,16.15,36.18-5,0-10.19-8.26-18.44-18.44-18.44Z"
-            />
-            <path
-              class="cls-1"
-              d="M79.81,2607.11h104.95l22.67,15.87c-26.11,58.74,69.22,82.24,73.35,18.02,1.23-34.72-45.56-52.22-67.62-26.21l-25.25-17.68h-97l30.63-27.58c27.25,25.96,76.77,4.38,75.46-33.86-6.93-79.87-123.12-42.24-82.15,26.43l-38.88,35.01H12.07l40.87-40.87v-49.6c34.2-5.68,30.43-56.68-4.56-56.97-34.46.23-38.91,50.24-5.44,56.81v45.62l-55.02,55.02h91.88Z"
-            />
-            <path
-              class="cls-1"
-              d="M83.89,2742.22c6.13,33.84,56.63,29.72,56.89-5-.26-34.72-50.76-38.83-56.89-5H0v10h54.22v49.92l41.14,42.37c-35.14,58.8,64.83,90.99,70.53,22.6,1.07-32.17-39.99-50.96-63.71-29.93l-31.13-32.06h233.55c5.38,20.17,36.39,16.16,36.18-5,.2-21.16-30.81-25.17-36.18-5H64.22v-42.89h19.67Z"
-            />
-            <path
-              class="cls-1"
-              d="M1775.22,2551.11c-6.13-33.84-56.63-29.72-56.89,5,.26,34.72,50.76,38.83,56.89,5h26.07l61.89-61.89h56.82v-10h-55.82l-35.92-35.92-12.81-.13c-5.53-20.02-36.35-15.89-36.14,5.17-.19,21.25,31.01,25.15,36.23,4.83l8.54.09,25.97,25.97h-234.78l-15.64,15.64c-24.02-19.76-63.65-.75-62.62,30.8,6.29,69.54,107.17,34.96,69.69-23.73l12.72-12.71h229.64l-51.89,51.89h-21.93Z"
-            />
-            <path
-              class="cls-1"
-              d="M1838.44,2719.11c33.84-6.13,29.72-56.63-5-56.89-34.72.26-38.83,50.76-5,56.89v21.7h-121.94l-44.11,45.71c-27.87-12.73-39.35,32.69-8.73,34.69,13.92.39,23.2-16.03,15.91-27.74l41.17-42.67h120.81l74.47,61.19h-85.32c-6.67-55.85-89.77-51.62-90.39,5,.62,56.62,83.73,60.85,90.39,5h113.24l-95.52-78.47v-24.41Z"
-            />
-            <path
-              class="cls-1"
-              d="M1753.74,2923.72h-71.74c-5.51-34.33-56.7-30.69-57,4.39.22,34.36,50.04,38.93,56.78,5.61h67.82l61.89,61.89h-290.36l-66.71-66.71c6.99-11.73-2.3-27.84-16.08-27.46-30.87,2.08-18.86,47.83,9.01,34.53l69.64,69.64h403.02v-10h-94.38l-71.89-71.89Z"
-            />
-            <path
-              class="cls-1"
-              d="M1573.5,2772.76c13.36-17.94-.83-45.8-23.49-45.09-50.2,4.14-26.94,77.54,16.42,52.16l49.62,49.62h-74.08c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h84.08l36.47,36.47,1.46,1.46h256.02v-10h-251.87l-94.63-94.63Z"
-            />
-            <path
-              class="cls-1"
-              d="M1728.37,2618.44l41.69,38.78h-86.21c-5.38-20.17-36.39-16.16-36.18,5-.2,21.16,30.81,25.17,36.18,5h101l75.5-75.5h59.65v-10h-63.79l-73.55,73.55-50.35-46.83h-313.74c-6.13-33.84-56.63-29.72-56.89,5,.26,34.72,50.76,38.83,56.89,5h309.81Z"
-            />
-          </svg>
-        </div>
-
+      <div class="flex-align bg1m">
         <h2
           class="content-align headline"
           data-i18n-key="index-content1-heading"
@@ -497,7 +283,7 @@
                 <div
                   class="appliance-img darken"
                   style="
-                    background-image: url(images/landing/appliances/how-types-of-air-conditioning-systems-work-1824734-hero-740003052ebb4bebb5dd9b42e441c118.jpg);
+                    background-image: url(images/landing/appliances/how-types-of-air-conditioning-systems-work-1824734-hero-740003052ebb4bebb5dd9b42e441c118.webp);
                   "
                 ></div>
                 <div class="appliance-text">
@@ -528,7 +314,7 @@
                     seamlessly integrates with existing HVAC systems, making it
                     easy for you to stay cool in summer and warm in winter.
                   </p>
-                  <button data-i18n-key="index-choice-expand-button">
+                  <button data-i18n-key="index-choice-expand-button" class="pc">
                     expand
                   </button>
                 </div>
@@ -540,7 +326,7 @@
                 <div
                   class="appliance-img darken"
                   style="
-                    background-image: url(images/landing/appliances/cctv3.avif);
+                    background-image: url(images/landing/appliances/cctv3.webp);
                   "
                 ></div>
                 <div class="appliance-text">
@@ -571,7 +357,7 @@
                     your property, connect them to your Wi-Fi, and follow the
                     app's prompts to complete the setup.
                   </p>
-                  <button data-i18n-key="index-choice-expand-button">
+                  <button data-i18n-key="index-choice-expand-button" class="pc">
                     expand
                   </button>
                 </div>
@@ -615,7 +401,7 @@
                     screws, connect them to your home network, and configure
                     them through our app for immediate use.
                   </p>
-                  <button data-i18n-key="index-choice-expand-button">
+                  <button data-i18n-key="index-choice-expand-button" class="pc">
                     expand
                   </button>
                 </div>
@@ -627,7 +413,7 @@
                 <div
                   class="appliance-img darken"
                   style="
-                    background-image: url(images/landing/appliances/lamp.jpg);
+                    background-image: url(images/landing/appliances/lamp.webp);
                   "
                 ></div>
                 <div class="appliance-text">
@@ -658,7 +444,7 @@
                     minutes, providing you with flexible and dynamic lighting
                     control.
                   </p>
-                  <button data-i18n-key="index-choice-expand-button">
+                  <button data-i18n-key="index-choice-expand-button" class="pc">
                     expand
                   </button>
                 </div>
@@ -670,7 +456,7 @@
                 <div
                   class="appliance-img darken"
                   style="
-                    background-image: url(images/landing/appliances/garage-door2.jpg);
+                    background-image: url(images/landing/appliances/garage-door2.webp);
                   "
                 ></div>
                 <div class="appliance-text">
@@ -701,7 +487,7 @@
                     detailed instructions guide you through the process,
                     ensuring a smooth installation and immediate functionality.
                   </p>
-                  <button data-i18n-key="index-choice-expand-button">
+                  <button data-i18n-key="index-choice-expand-button" class="pc">
                     expand
                   </button>
                 </div>
@@ -711,64 +497,7 @@
         </div>
       </div>
 
-      <div class="flex-align bg1 bg-transparent hidden">
-        <div class="dynamic-background g3"></div>
-        <div id="boxes" class="dynamic-content">
-          <div id="db1" class="g3"></div>
-          <div id="db2" class="g3"></div>
-          <div id="db3" class="g3"></div>
-          <div id="db4" class="g3"></div>
-        </div>
-
-        <h2 class="content-align flex-middleflex-middle headline text-shadow2">
-          Everything you need in one place
-        </h2>
-        <div
-          class="content-align content-box center-text round bg5 fadein outside-effect"
-        >
-          <h4>We have prepared a form for you to take and explore our stock</h4>
-          <div>
-            <iframe
-              id="pc-index-form-iframe"
-              src="pages/form.html"
-              frameborder="0"
-            ></iframe>
-          </div>
-          <button onclick="location.href='pages/form.html'">
-            Fill out your order!
-          </button>
-        </div>
-      </div>
-
-      <div id="index-content2" class="flex-align bg3 hidden">
-        <img src="" class="darken" />
-        <div class="content-align">
-          <h2 class="headline">entry questionnaire</h2>
-
-          <h4>We have prepared a form for you to take and explore our stock</h4>
-          <button onclick="location.href='pages/form.html'">
-            Fill out your order!
-          </button>
-        </div>
-      </div>
-
-      <div class="flex-align bg1 hidden">
-        <div class="content-align">
-          <h2 class="headline">contact information</h2>
-
-          <h4>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure culpa
-            porro ipsam nisi. Consequuntur, iure? Provident omnis recusandae
-            quidem quam. Possimus eveniet odio et explicabo veniam totam
-            voluptate, quis distinctio?
-          </h4>
-          <button onclick="location.href='pages/contact.html'">
-            Contact us!
-          </button>
-        </div>
-      </div>
-
-      <div id="index-content-form_contact" class="bg2">
+      <div id="index-content-form_contact" class="pc bg2">
         <div id="index-form_contact-d1">
           <div id="ifcd1t" class="ifcd0t">
             <div>
@@ -777,7 +506,10 @@
                 We have prepared a form for you to take and explore our stock
               </h4>
             </div>
-            <button onclick="location.href='pages/form.html'" data-i18n-key="index-form_contact-button-f">
+            <button
+              onclick="location.href='pages/form.html'"
+              data-i18n-key="index-form_contact-button-f"
+            >
               Fill out your order
             </button>
           </div>
@@ -787,30 +519,17 @@
             <div>
               <h2 data-i18n-key="index-form_contact-heading-c">contact</h2>
               <h4 data-i18n-key="index-form_contact-text-c">
-                If you are looking to contact us, please take a look at our options, or send us an inquiry message.
+                If you are looking to contact us, please take a look at our
+                options, or send us an inquiry message.
               </h4>
             </div>
-            <button onclick="location.href='pages/contact.html'" data-i18n-key="index-form_contact-button-c">
+            <button
+              onclick="location.href='pages/contact.html'"
+              data-i18n-key="index-form_contact-button-c"
+            >
               Contact us
             </button>
           </div>
-        </div>
-      </div>
-
-      <div class="flex-align bg2 hidden">
-        <h2 class="content-align flex-middle headline text-shadow">
-          Everything you need in one place
-        </h2>
-        <div
-          class="content-align content-box center-text round bg1 fadein outside-effect"
-        >
-          <h4>We have prepared a form for you to take and explore our stock</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            illum unde similique eius? Eos adipisci molestias perferendis
-            voluptas quibusdam distinctio autem ipsa laboriosam aliquid cumque
-            est, eveniet earum similique ullam?
-          </p>
         </div>
       </div>
     </main>

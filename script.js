@@ -10,7 +10,6 @@ $(document).ready(() => {
   const $html = $("html");
   const $heroVideo = $("#pc-index-hero-video");
   const $heroVideoContainer = $("#pc-index-video-container");
-  const $themeToggle = $("[data-theme-toggle]");
   const $moon = $("#moon");
   const $sun = $("#sun");
   const $langContainer = $(".container-lang");
@@ -25,31 +24,20 @@ $(document).ready(() => {
   // ReCaptcha widget
   const captchaManager = {
     init() {
+      this.container = $(".recaptcha-container");
       this.widgetId = null;
       this.currentTheme = themeManager.currentTheme;
       this.currentLang = langManager.currentLang;
       this.isScriptLoaded = false;
       this.pendingRender = false;
-      if ($("#recaptcha-container").length > 0) {
+      if (this.container.length > 0) {
         this.loadRecaptchaScript();
       }
     },
 
     loadRecaptchaScript() {
-      if (document.querySelector('script[src*="recaptcha/api.js"]')) {
-        // Script already loaded
-        this.isScriptLoaded = true;
-        if (typeof grecaptcha !== "undefined" && grecaptcha.render) {
-          this.renderRecaptcha();
-        } else {
-          // Wait for grecaptcha to be defined
-          this.waitForGrecaptcha();
-        }
-        return;
-      }
-
       const script = document.createElement("script");
-      script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+      script.src = "https://www.google.com/recaptcha/api.js";
       script.async = true;
       script.defer = true;
       script.onload = () => {
@@ -73,16 +61,15 @@ $(document).ready(() => {
         return;
       }
 
-      const container = document.getElementById("recaptcha-container");
-      if (!container) {
+      if (!this.container) {
         console.error("reCAPTCHA container not found");
         return;
       }
 
       try {
         if (this.widgetId === null) {
-          this.widgetId = grecaptcha.render(container, {
-            sitekey: "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
+          this.widgetId = grecaptcha.render(this.container[0], {
+            sitekey: "6LedPjQqAAAAAJMU6rOa7uttjsfEQQJmP0oBnWC4",
             theme: this.currentTheme,
             hl: this.getLangCode(this.currentLang),
           });
@@ -124,37 +111,110 @@ $(document).ready(() => {
   // Theme management
   const themeManager = {
     init() {
+      this.$themeSelect = $("#m-skeleton-theme-select");
+      this.$themeToggle = $("[data-theme-toggle]");
+      this.themeMap = {
+        light: "light",
+        dark: "dark",
+        neo: "dark",
+        metro: "light",
+        code: "dark",
+      };
+
       this.currentTheme = this.getTheme();
-      this.bindEvents();
       this.updateTheme(this.currentTheme);
+      this.updateSelectValue(this.currentTheme);
+      this.bindEvents();
+      this.addResizeListener();
+    },
+
+    canUseAltThemes() {
+      return $(window).width() < 1280;
     },
 
     getTheme() {
-      return (
-        localStorage.getItem("theme") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light")
-      );
+      if (this.canUseAltThemes()) {
+        return (
+          localStorage.getItem("altTheme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light")
+        );
+      } else {
+        return (
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light")
+        );
+      }
+    },
+
+    async updateCaptcha(theme) {
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+      while (captchaManager.widgetId === null || captchaManager.widgetId === undefined) {
+        await delay(100);
+      }
+
+      const captchaTheme = this.themeMap[theme] || "dark";
+      captchaManager.updateTheme(captchaTheme);
     },
 
     updateTheme(theme) {
       this.currentTheme = theme;
-      $html.attr("data-theme", theme);
-      $moon.toggleClass("hidden", theme === "dark");
-      $sun.toggleClass("hidden", theme === "light");
-      captchaManager.updateTheme(theme);
+      this.updateCaptcha(theme);
+      $("html").attr("data-theme", theme);
+      $("#moon").toggleClass("hidden", theme === "dark");
+      $("#sun").toggleClass("hidden", theme === "light");
+    },
+
+    updateSelectValue(theme) {
+      this.$themeSelect.val(theme);
     },
 
     toggleTheme() {
       const newTheme = this.currentTheme === "dark" ? "light" : "dark";
+
       localStorage.setItem("theme", newTheme);
+      localStorage.setItem("altTheme", newTheme);
+
+      this.updateSelectValue(newTheme);
       this.updateTheme(newTheme);
     },
 
-    bindEvents() {
-      $themeToggle.on("click", () => this.toggleTheme());
+    selectTheme(selectedTheme) {
+      localStorage.setItem("altTheme", selectedTheme);
+
+      this.updateSelectValue(selectedTheme);
+      this.updateTheme(selectedTheme);
     },
+
+    bindEvents() {
+      this.$themeToggle.on("click", () => this.toggleTheme());
+      this.$themeSelect.on("change", (e) => this.selectTheme(e.target.value));
+    },
+
+    addResizeListener() {
+      let lastCanUseAltThemes = this.canUseAltThemes();
+    
+      $(window).on("resize", () => {
+        const currentCanUseAltThemes = this.canUseAltThemes();
+    
+        if (!currentCanUseAltThemes && this.currentTheme !== "light" && this.currentTheme !== "dark") {
+          const newTheme = this.themeMap[this.currentTheme] || "dark";
+          this.updateTheme(newTheme);
+          this.updateSelectValue(newTheme);
+        } else if (currentCanUseAltThemes && !lastCanUseAltThemes) {
+          const newTheme = localStorage.getItem("altTheme");
+          this.updateTheme(newTheme);
+          this.updateSelectValue(newTheme);
+        }
+    
+        lastCanUseAltThemes = currentCanUseAltThemes;
+      });
+    }
   };
 
   // Language management
@@ -282,118 +342,6 @@ $(document).ready(() => {
     },
   };
 
-  // Parallax effect
-  const parallaxManager = {
-    init: function () {
-      this.bindEvents();
-    },
-    updateParallax: function () {
-      requestAnimationFrame(() => {
-        $(".dynamic-background").each(function () {
-          const viewportHeight = window.innerHeight;
-          const headerHeight = parseFloat(
-            rootStyles.getPropertyValue("--header-height").trim()
-          );
-          const $background = $(this);
-          const $parent = $background.parent();
-          const parentRect = $parent[0].getBoundingClientRect();
-          const parentHeight = parentRect.height;
-          const parentWidth = parentRect.width;
-          let percentage =
-            ((viewportHeight - parentRect.top) /
-              (viewportHeight + parentHeight - headerHeight)) *
-            100;
-          percentage = Math.max(0, Math.min(100, percentage));
-
-          //move the background
-          const bgFactor = 0.5;
-
-          $background.css(
-            "transform",
-            `translateY(${-percentage * bgFactor}%)`
-          );
-
-          // Move the circles
-          if ($parent.find("#circles").length > 0) {
-            const ballFactor = parentWidth / 100;
-            //const ballAdjust = ballFactor * 10;
-            const $circles = $parent.find("#circles");
-
-            $circles
-              .find("div:first-child, div:last-child")
-              .each((index, el) => {
-                const $el = $(el);
-                const direction = index === 0 ? 1 : -1;
-                const computedStyle = window.getComputedStyle(el);
-                const currentBackground =
-                  computedStyle.getPropertyValue("background-image");
-                const gradientMatch = currentBackground.match(
-                  /linear-gradient\((.*?deg,\s*)(.+)\)/
-                );
-
-                if (gradientMatch) {
-                  const gradientContent = gradientMatch[2];
-                  const gradientAngle = percentage * 1.8 + 1;
-                  $el.css({
-                    transform: `translateX(${
-                      direction * percentage * ballFactor * 2
-                    }px) translateY(-50%)`,
-                    backgroundImage: `linear-gradient(${gradientAngle}deg, ${gradientContent})`,
-                  });
-                } else {
-                  console.log(currentBackground, gradientMatch);
-                  console.warn("Gradient match not found");
-                }
-              });
-          }
-
-          //move the lines
-          if ($parent.find("#lines").length > 0) {
-            const linesFactor = -0.4;
-
-            $("#lines svg").css(
-              "transform",
-              `translateY(${-percentage * linesFactor}%)`
-            );
-          }
-
-          //move the boxes
-          if ($parent.find("#boxes").length > 0) {
-            $("#boxes #db1").css(
-              "transform",
-              `translateY(${percentage - 36}%)`
-            );
-            $("#boxes #db2").css(
-              "transform",
-              `translateY(${-percentage * 0.8}%)`
-            );
-            $("#boxes #db4").css(
-              "transform",
-              `translateY(${percentage * 0.6 - 42}%)`
-            );
-          }
-        });
-      });
-    },
-
-    bindEvents: function () {
-      this.updateParallax();
-      $window.on("scroll", () => {
-        if (!this.ticking) {
-          this.ticking = true;
-          requestAnimationFrame(() => {
-            this.updateParallax();
-            this.ticking = false;
-          });
-        }
-      });
-    },
-    bindEvents: function () {
-      this.updateParallax();
-      $window.on("scroll", this.updateParallax.bind(this));
-    },
-  };
-
   // Carousel initialization
   const carouselManager = {
     init: function () {
@@ -509,10 +457,14 @@ $(document).ready(() => {
         }
       );
 
-      if ($carouselElement && $carouselElement.find(".flickity-viewport").css("height") != "600px" && tries < 10) {
+      if (
+        $carouselElement &&
+        $carouselElement.find(".flickity-viewport").css("height") != "600px" &&
+        tries < 10
+      ) {
         console.warn("Carousel hasn't loaded properly, trying again...");
         this.initApCarousel();
-        tries++
+        tries++;
         return;
       }
       $window.on("resize", () => $carousel.reposition());
@@ -605,7 +557,10 @@ $(document).ready(() => {
 
         const captchaResponse = grecaptcha.getResponse();
         if (captchaResponse.length === 0) {
-          this.tempAlert(document.getElementById("recaptcha-container"), "cap");
+          this.tempAlert(
+            document.getElementsByClassName("recaptcha-container"),
+            "cap"
+          );
           this.showWarning("Please complete the CAPTCHA.");
           this.submitLoading(false);
           return;
@@ -717,7 +672,9 @@ $(document).ready(() => {
           this.tempAlertTranslate(localStorage.getItem("lang"));
           setTimeout(() => {
             this.$form[0].reset();
-            displayImage.removeImage("_");
+            try {
+              displayImage.removeImage("_");
+            } catch (e) {}
             grecaptcha.reset();
             this.$submitButton
               .css("pointer-events", "all")
@@ -765,7 +722,7 @@ $(document).ready(() => {
         return "";
       }
     },
-    
+
     initTelAutoFormat() {
       const telInput = this.$form.find("input[type=tel]");
       //const apiKey = "4e823293eb8e899168ec5555930887b8";
@@ -1017,8 +974,8 @@ $(document).ready(() => {
           ch: "正在提交",
         },
         sub01: {
-          en: "Form submitted successfully.",
-          sk: "Formulár bol úspešne odoslaný.",
+          en: "Form submitted successfully",
+          sk: "Formulár bol úspešne odoslaný",
           ch: "表格已成功提交。",
         },
         sub1: {
@@ -1171,12 +1128,15 @@ $(document).ready(() => {
       // Notify the user
       buttonFontSize = $button.css("font-size");
       $button
-        .addClass("show-popup fa-circle-check")
+        .addClass("show-popup show-popup-text fa-circle-check")
         .removeClass("fa-clone")
         .css("font-size", "1.24rem");
       setTimeout(() => {
+        $button.removeClass("show-popup");
+      }, 1500);
+      setTimeout(() => {
         $button
-          .removeClass("show-popup fa-circle-check")
+          .removeClass("show-popup-text fa-circle-check")
           .addClass("fa-clone")
           .css("font-size", buttonFontSize);
       }, 2000);
@@ -1188,49 +1148,83 @@ $(document).ready(() => {
     init() {
       this.movingContainer = $("#index-form_contact-d2");
       this.animationClass = "movingContainer-animate"; // CSS class that triggers animations
-  
+
       this.bindEvents();
     },
-    
+
     bindEvents() {
       $(window).on("scroll", () => {
         this.checkAnimationTrigger();
       });
     },
-  
+
     checkAnimationTrigger() {
       const containerTop = this.movingContainer.offset().top;
       const windowBottom = $(window).scrollTop() + $(window).height();
-  
+
       if (windowBottom >= containerTop) {
         this.triggerAnimation();
       }
     },
-  
+
     triggerAnimation() {
       this.movingContainer.addClass(this.animationClass);
-    }
+    },
+  };
+
+  // sidebar handler
+  const sidebarHandler = {
+    init() {
+      this.$sidebar = $("#sidebar");
+      this.$darkenBody = $("#bg-darken-all");
+      this.$sidebarToggle = $("#sidebar-toggle-icon");
+      this.$sidebarClose = $(".sidebar-close");
+      this.$sidebarContent = $(".sidebar-content");
+      this.$sidebarToggle.on("click", (event) => this.toggleSidebar(event));
+      this.$sidebarClose.on("click", (event) => this.toggleSidebar(event));
+      this.$darkenBody.on("click", (event) => this.toggleSidebar(event));
+    },
+
+    toggleSidebar(event) {
+      event.preventDefault();
+      this.$sidebar.toggleClass("sidebar-open");
+      this.$darkenBody.toggleClass("darkenAll-open");
+      $body.toggleClass("noscroll");
+    },
   };
 
   //check the window isn't inside an iframe
   if (window.self == window.top) {
-    // Initialize all managers
-    captchaManager.init();
+    //initialize global managers
     themeManager.init();
     langManager.init();
-    heroManager.init();
     fadeManager.init();
-    parallaxManager.init();
-    carouselManager.init();
-    contactOptionsManager.init();
-    formEventHandler.init();
+    sidebarHandler.init();
     //scrollHandler.init();
-    displayImage.init();
-    copyToClipboard.init();
-    FCanimation.init();
 
-    // Index Hero Animation
-    //$indexHeroContainer
+    // Initialize specific managers based on the page URL
+    window.onload = function () {
+      const topLocation = window.top.location.href;
+
+      if (topLocation.endsWith("index.html")) {
+        heroManager.init();
+        carouselManager.init();
+        FCanimation.init();
+      } else if (topLocation.endsWith("form.html")) {
+        captchaManager.init();
+        formEventHandler.init();
+        displayImage.init();
+      } else if (topLocation.endsWith("contact.html")) {
+        captchaManager.init();
+        contactOptionsManager.init();
+        formEventHandler.init();
+        copyToClipboard.init();
+      } else if (topLocation.endsWith("info.html")) {
+        // Nothing yet
+      } else {
+        console.error("Invalid page URL:", topLocation);
+      }
+    };
   } else {
     var topNav = document.getElementById("skeleton-header-container");
     var body = $("body");

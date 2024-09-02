@@ -263,7 +263,7 @@ body {
 }
 #pc-index-appliances-carousel .carousel-ap-bg {
   border-color: inherit;
-  border: 6px solid;
+  border: 6px solid var(--carousel-border-col);
   text-align: center;
   overflow: hidden;
 }
@@ -377,7 +377,7 @@ body {
   top: 0;
   left: 0;
   padding: 1.5rem 50px 3rem calc(50vw - var(--content-width)/2);
-  background-image: url(../../images/landing/form_contact_img3.jpg);
+  background-image: url(../../images/landing/form_contact_img3.webp);
   background-size: 150%;
   background-position: right 27%;
 }
@@ -445,4 +445,75 @@ body {
 }
 .movingContainer-animate::before {
   animation: moveBeforeElement 800ms ease-out;
+}
+
+#index-hero-mobile {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  min-height: 400px;
+  height: 80vh;
+  overflow: hidden;
+}
+#hero-mobile-img {
+  position: relative;
+}
+#hero-mobile-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+#m-index-hero-text {
+  position: relative;
+  z-index: 4;
+  padding: 2rem 3rem;
+  text-align: center;
+  color: var(--text1);
+  background: var(--bg1);
+  overflow: hidden;
+}
+#pc-index-hero-text h1 {
+  margin: 0;
+}
+#m-index-hero-button {
+  pointer-events: all;
+  transform-origin: top left;
+  font-size: 1.6rem;
+  margin: 20px 0 20px 0;
+  transition: all 200ms ease;
+}
+@keyframes hero-button-anim {
+  0% {}
+  50% {}
+  100% {}
+}
+
+
+
+@media only screen and (max-width: 1279px) {
+  #pc-index-appliances-carousel.carousel {
+    height: 400px;
+  }
+  #pc-index-appliances-carousel .carousel-cell {
+    width: 80%;
+  }
+
+  #pc-index-appliances-carousel.carousel::before {
+    background-image: linear-gradient(
+      90deg,
+      var(--bg2) 2%,
+      rgba(0, 0, 0, 0) 10%
+    );
+  }
+  #pc-index-appliances-carousel.carousel::after {
+    background-image: linear-gradient(
+      -90deg,
+      var(--bg2) 2%,
+      rgba(0, 0, 0, 0) 10%
+    );
+  }
 }

@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="sk" data-theme="light" style="font-size: var(--rem)">
   <head>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="../flickity/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script
-      src="https://www.google.com/recaptcha/api.js?render=explicit"
-      async
-      defer
-    ></script>
     <script src="https://cdn.jsdelivr.net/npm/google-libphonenumber@latest/dist/libphonenumber.js"></script>
     <script src="../script.js" defer></script>
 
@@ -21,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="../images/onebyone.ico" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+      href="../flickity/flickity.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
   </head>
@@ -29,16 +24,71 @@
     <header>
       <div id="skeleton-header-container" class="flex-align bg1">
         <nav class="content-align flex-between">
-          <div class="m" style="width: 40px; height: 40px">
-            <i
-              class="fa-solid fa-bars"
-              style="
-                display: block;
-                height: 40px;
-                font-size: 2rem;
-                color: var(--text1);
-              "
-            ></i>
+          <div id="m-skeleton-sidemenu-container" class="m">
+            <i id="sidebar-toggle-icon" class="fa-solid fa-bars"></i>
+            <div id="bg-darken-all"></div>
+            <div id="sidebar">
+              <div id="sidebar-header">
+                <h2>menu</h2>
+                <div class="sidebar-close">
+                  <i id="sidebar-toggle-icon" class="fa-solid fa-xmark"></i>
+                </div>
+              </div>
+              <div id="sidebar-content">
+                <ul>
+                  <li id="sidebar-cotent-list-form-button">
+                    <a href="form.html">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <h4>form</h4>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html">
+                      <h6>contact us</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="info.html">
+                      <h6>about us</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <h6>news: <br><br></h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae velit perferendis veniam corrupti, ad quod itaque quam rem enim nemo quos? Delectus suscipit temporibus repellat, esse in alias libero!</p>
+                  </li>
+                  <li>
+                    <h6>placeholder: <br><br></h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae velit perferendis veniam corrupti, ad quod itaque quam rem enim nemo quos? Delectus suscipit temporibus repellat, esse in alias libero!</p>
+                  </li>
+                  <li>
+                    <h6>language: </h6>
+                    <select
+                      data-lang-toggle
+                      id="m-skeleton-lang-select"
+                      class="m bg1"
+                    >
+                      <option value="sk">slovensky</option>
+                      <option value="en">english</option>
+                      <option value="ch">chinese</option>
+                    </select>
+                  </li>
+                  <li>
+                    <h6>theme: </h6>
+                    <select
+                      id="m-skeleton-theme-select"
+                      class="m bg1"
+                    >
+                      <option value="light">light</option>
+                      <option value="dark">dark</option>
+                      <option value="neo">neo</option>
+                      <option value="metro">metro</option>
+                      <option value="code">code</option>
+                    </select>
+                  </li>
+                  <li id="sidebar-scroll-correction"></li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div id="skeleton-logo-container">
             <a id="pc-skeleton-logo" href="../index.html"
@@ -54,7 +104,7 @@
                 <h3 class="bg1 underline" data-i18n-key="form-nav">survey</h3>
               </a>
               <ul class="sub-menu bg3">
-                <li><iframe src="form.html"></iframe></li>
+                <li><iframe class="pc" src="form.html"></iframe></li>
               </ul>
             </li>
             <li class="menu-item">
@@ -64,7 +114,7 @@
                 </h3>
               </a>
               <ul class="sub-menu bg3">
-                <li><iframe src="contact.html"></iframe></li>
+                <li><iframe class="pc" src="contact.html"></iframe></li>
               </ul>
             </li>
             <li class="menu-item">
@@ -72,12 +122,15 @@
                 <h3 class="bg1 underline" data-i18n-key="info-nav">about us</h3>
               </a>
               <ul class="sub-menu bg3">
-                <li><iframe src="info.html"></iframe></li>
+                <li><iframe class="pc" src="info.html"></iframe></li>
               </ul>
             </li>
           </ul>
-          <div id="pc-skeleton-right-side">
-            <div id="pc-skeleton-icons-contaier" data-theme-toggle>
+          <div id="skeleton-right-side">
+            <div id="m-skeleton-search" class="m">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="pc-skeleton-icons-contaier" class="pc" data-theme-toggle>
               <svg
                 id="moon"
                 class="theme-icon hidden"
@@ -100,15 +153,28 @@
                 />
               </svg>
             </div>
-            <select
+            <select id="pc-skeleton-lang-select"
               data-lang-toggle
-              id="pc-skeleton-dark-mode-select"
-              name="dark-mode-select"
               class="pc bg1"
             >
               <option value="sk">sk</option>
               <option value="en">en</option>
               <option value="ch">ch</option>
+            </select>
+            <select
+              id="pc-skeleton-hero-select"
+              name="hero-select"
+              class="pc bg1"
+            >
+              <option value="1" data-i18n-key="skeleton-hero-option1">
+                video
+              </option>
+              <option value="2" data-i18n-key="skeleton-hero-option2">
+                static
+              </option>
+              <option value="3" data-i18n-key="skeleton-hero-option3">
+                slider
+              </option>
             </select>
           </div>
         </nav>
@@ -117,7 +183,10 @@
 
     <body>
       <div id="form-hero-container" class="flex-align bg3 hero-container">
-        <div id="form-hero" class="content-align">
+        <div id="pc-form-hero" class="content-align pc">
+          <h1 data-i18n-key="form-hero">entry questionnaire</h1>
+        </div>
+        <div id="m-form-hero" class="content-align m">
           <h1 data-i18n-key="form-hero">entry questionnaire</h1>
         </div>
       </div>
@@ -352,7 +421,7 @@
             </div>
           </div>
           <div>
-            <div id="recaptcha-container" style="margin-bottom: -0.1rem"></div>
+            <div class="recaptcha-container" style="margin-bottom: -0.1rem"></div>
             <div class="form-alert" style="display: none">
               <i
                 class="fa-solid fa-triangle-exclamation"

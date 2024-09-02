@@ -15,6 +15,9 @@
 .in-iframe #skeleton-header-container {
   display: none !important;
 }
+.noscroll {
+  overflow: hidden !important;
+}
 
 .flex-align {
   position: relative;
@@ -239,6 +242,11 @@
   color: var(--text1);
   fill: var(--text1);
 }
+.bg1m {
+  background: var(--bg1);
+  color: var(--text1);
+  fill: var(--text1);
+}
 .bg2 {
   background: var(--bg2);
   color: var(--text2);
@@ -307,7 +315,7 @@
   top: -1rem;
   left: -1rem;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.089);
+  background: var(--form-every-other-bg);
 }
 .form-alert {
   width: fit-content;
@@ -326,7 +334,7 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   flex-direction: column;
   row-gap: 1rem;
 }
-.form-side-group div:has(textarea) {
+.form-side-group div:has(textarea):not(:has(.recaptcha-container)) {
   position: relative;
   flex-grow: 1;
   display: flex;
@@ -464,11 +472,11 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
 
 .click-option {
   text-align: center;
-  border-bottom: var(--option-border);
+  border-bottom: 4px solid var(--option-border);
   cursor: pointer;
 }
 .click-option.selected {
-  border-bottom: 4px solid var(--bg3);
+  border-bottom: 4px solid var(--option-selected-border);
 }
 .flex-between:has(.click-option) {
   column-gap: 10px;
@@ -559,8 +567,17 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
 }
 .option-text i.show-popup::after {
   opacity: 1;
+}
+.option-text i.show-popup-text::after {
   content: "copied!";
 }
 .option-text i:hover::after {
   opacity: 1;
+}
+
+.recaptcha-container {
+  position: relative;
+  display: block;
+  height: fit-content;
+  width: fit-content;
 }

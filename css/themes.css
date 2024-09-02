@@ -23,9 +23,18 @@
   --text5: #ffffff;
 
   /* index-hero-bg */
-  --index-hero-bg: var(--vermillon); /* #6d1d36;*/
+  --index-hero-bg: var(--vermillon);
   --index-hero-bg2: rgb(172, 31, 31);
   --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
+
+  /* sidebar elements */
+  --sidebar-form-button-bg: var(--vermillon);
+  --sidebar-form-button-bg-filter: brightness(2.5) saturate(0.8);
+  --sidebar-form-button-col: var(--vermillon);
+  --sidebar-form-button-col-filter: brightness(0.15) saturate(1.8);
+  --sidebar-top-border: grey;
+  --sidebar-list-col: var(--text1);
+  --sidebar-list-border: #a2a2a2;
 
   /* button */
   --button-bg: var(--vermillon);
@@ -34,14 +43,16 @@
   --button-text: #eeeeee;
 
   /* contact option */
-  --option-border: 4px solid rgba(0, 0, 0, 0.3);
+  --option-border: rgba(0, 0, 0, 0.3);
+  --option-selected-border: var(--vermillon);
 
-  /* form input */
+  /* form elements */
   --input-bg: #fcfcfc;
   --input-text: #111111;
   --placeholder: rgba(0, 0, 0, 0.5);
   --input-border: rgba(0, 0, 255, 0);
   --input-file-display-bg: rgb(216, 216, 216);
+  --form-every-other-bg: rgba(0, 0, 0, 0.05);
 
   /* interactive colors */
   --highlight: rgba(0, 0, 0, 0.1);
@@ -84,9 +95,18 @@
   --text5: #000000;
 
   /* index-hero-bg */
-  --index-hero-bg: rgb(46, 46, 46); /* #3f1421;*/
+  --index-hero-bg: #2e2e2e;
   --index-hero-bg2: #222222;
   --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) 100%);
+
+  /* sidebar elements */
+  --sidebar-form-button-bg: var(--vermillon);
+  --sidebar-form-button-bg-filter: brightness(1.8) saturate(0.8);
+  --sidebar-form-button-col: var(--vermillon);
+  --sidebar-form-button-col-filter: brightness(0.2) saturate(2);
+  --sidebar-top-border: rgb(54, 52, 52);
+  --sidebar-list-col: var(--text1);
+  --sidebar-list-border: #424242;
 
   /* button */
   --button-bg: var(--vermillon);
@@ -95,14 +115,16 @@
   --button-text: #eeeeee;
 
   /* contact option */
-  --option-border: 4px solid rgba(255, 255, 255, 0.2);
+  --option-border: rgba(255, 255, 255, 0.2);
+  --option-selected-border: var(--vermillon);
 
-  /* form input */
+  /* form elements */
   --input-bg: #111111;
   --input-text: #f2f2f2;
   --placeholder: rgba(255, 255, 255, 0.7);
   --input-border: rgba(0, 0, 255, 0);
   --input-file-display-bg: rgb(14, 14, 14);
+  --form-every-other-bg: rgba(0, 0, 0, 0.1);
 
   /* interactive colors */
   --highlight: rgba(255, 255, 255, 0.1);
@@ -118,4 +140,226 @@
   --outside-shadow: 2px 2px 2px rgba(0,0,0,0.1), 12px 12px 12px rgba(0,0,0,0.2), -2px -2px 2px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.1);
   --inset-shadow: inset 2px 2px 2px rgba(0,0,0,0.2), inset 12px 12px 12px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255, 255, 255, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
   --inset-shadow-strong: inset 2px 2px 2px rgba(0,0,0,0.5), inset 12px 12px 12px rgba(0,0,0,0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="neo"] {
+  --root: #0fe7f1;
+
+  /* background */
+  --bg1: #0e0b16;
+  --bg2: #1b0a57;
+  --bg3: var(--root);
+  --bg4: #3a1028;
+  --bg5: #00a8cc;
+
+  /* gradient */
+  --g1: linear-gradient(120deg, #00a8cc 0%, #4717f6 100%);
+  --g2: linear-gradient(300deg, #0ff1ce 0%, #8f00ff 100%);
+  --g3: linear-gradient(45deg, rgba(0, 248, 255, 1) 0%, rgba(137, 0, 255, 1) 100%);
+  --g4: radial-gradient(circle at 50% 50%, #0ff1ce 0%, #4717f6 70%, #0e0b16 100%);
+
+  /* text */
+  --text1: #e8e8e8;
+  --text2: #ff32b4; 
+  --text3: #ffffff;
+  --text4: var(--root);
+  --text5: #0ff1ce;
+
+  /* index-hero-bg */
+  --index-hero-bg: var(--root);
+  --index-hero-bg2: #333333;
+  --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
+
+  /* sidebar elements */
+  --sidebar-form-button-bg: var(--root);
+  --sidebar-form-button-bg-filter: brightness(1.2) saturate(0.8);
+  --sidebar-form-button-col: var(--root);
+  --sidebar-form-button-col-filter: brightness(0.4) saturate(1.6);
+  --sidebar-top-border: var(--root);
+  --sidebar-list-col: #c55a28;
+  --sidebar-list-border: #ffffff;
+
+  /* carousel elements */
+  --carousel-border-col: #ffffff; /*
+
+  /* button */
+  --button-bg: #ff32b4;
+  --button-bg-hover: #ed2bff;
+  --button-border: rgba(255, 255, 255, 0.123);
+  --button-text: #ffffff; 
+
+  /* contact option */
+  --option-border: rgba(77, 111, 139, 0.3);
+  --option-selected-border: #a4ff70;
+
+  /* form elements */
+  --input-bg: #0e0b16;
+  --input-text: #ffffff;
+  --placeholder: rgba(255, 255, 255, 0.829);
+  --input-border: rgba(0, 0, 255, 0);
+  --input-file-display-bg: #a2a2a2;
+  --form-every-other-bg: rgba(199, 75, 182, 0.1);
+
+  /* interactive colors */
+  --highlight: rgba(255, 255, 255, 0.1);
+  --selection-bg: #8f00ff;
+  --selection-text: #ffffff;
+  --warning-text: #ff6666;
+  --warning-bg: #0e0b16;
+
+  /* applicable effects */
+  --darken: brightness(0.8);
+  --logo-effect: invert() hue-rotate(50deg) saturate(2);
+  --text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.3);
+  --outside-shadow: 2px 2px 2px rgba(0,0,0,0.1), 12px 12px 12px rgba(0,0,0,0.2), -2px -2px 2px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.1);
+  --inset-shadow: inset 2px 2px 2px rgba(0,0,0,0.2), inset 12px 12px 12px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255, 255, 255, 0.05), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+  --inset-shadow-strong: inset 2px 2px 2px rgba(0,0,0,0.5), inset 12px 12px 12px rgba(0,0,0,0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="metro"] {
+  --root: #5f91e2;
+
+  /* background */
+  --bg1: #f0f0f0;
+  --bg2: #d4cbcb;
+  --bg3: var(--root);
+  --bg4: #f0f0f0;
+  --bg5: #d4d4d4;
+
+  /* gradient */
+  --g1: linear-gradient(120deg, #f0f0f0 0%, #a2a2a2 100%);
+  --g2: linear-gradient(320deg, #6d9eeb 0%, #333333 100%);
+  --g3: linear-gradient(6deg, #e6e6e6 0%, #cfcfcf 50%, #a2a2a2 100%);
+  --g4: radial-gradient(circle at 50% 50%, #f0f0f0 0%, #a2a2a2 100%);
+
+  /* text */
+  --text1: #292929;
+  --text2: #39338d;
+  --text3: #ffffff;
+  --text4: #292929;
+  --text5: #6d9eeb;
+
+  /* index-hero-bg */
+  --index-hero-bg: var(--root);
+  --index-hero-bg2: #333333;
+  --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
+
+  /* sidebar elements */
+  --sidebar-form-button-bg: var(--root);
+  --sidebar-form-button-bg-filter: brightness(1.2) saturate(0.8);
+  --sidebar-form-button-col: var(--root);
+  --sidebar-form-button-col-filter: brightness(0.4) saturate(1.6);
+  --sidebar-top-border: var(--root);
+  --sidebar-list-col: #292929;
+  --sidebar-list-border: #c4c4c4;
+
+  /* carousel elements */
+  --carousel-border-col: #39338d;
+
+  /* button */
+  --button-bg: var(--root);
+  --button-bg-hover: #313070;
+  --button-border: rgba(0, 0, 0, 0);
+  --button-text: #ffffff;
+
+  /* contact option */
+  --option-border: rgba(161, 136, 103, 0.3);
+  --option-selected-border: rgb(0, 0, 0);
+
+  /* form elements */
+  --input-bg: rgb(174, 200, 231);
+  --input-text: #020202;
+  --placeholder: rgba(255, 255, 255, 0.829);
+  --input-border: rgba(0, 0, 255, 0);
+  --input-file-display-bg: #a2a2a2;
+  --form-every-other-bg: rgba(0, 0, 0, 0.05);
+
+  /* interactive colors */
+  --highlight: rgba(0, 0, 0, 0.05);
+  --selection-bg: var(--root);
+  --selection-text: #ffffff;
+  --warning-text: #ff6666;
+  --warning-bg: #f0f0f0;
+
+  /* applicable effects */
+  --darken: brightness(0.95);
+  --logo-effect: grayscale(1) brightness(1);
+  --text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3), 0px 0px 5px rgba(255, 255, 255, 0.3);
+  --outside-shadow: 2px 2px 2px rgba(0,0,0,0.05), 12px 12px 12px rgba(0,0,0,0.1), -2px -2px 2px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.2);
+  --inset-shadow: inset 2px 2px 2px rgba(0,0,0,0.05), inset 12px 12px 12px rgba(0,0,0,0.1), inset -2px -2px 2px rgba(255, 255, 255, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.2);
+  --inset-shadow-strong: inset 2px 2px 2px rgba(0,0,0,0.2), inset 12px 12px 12px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="code"] {
+  --root: #81da6b;
+
+  /* background */
+  --bg1: #1d222c;
+  --bg2: #131924;
+  --bg3: var(--root);
+  --bg4: #1d222c;
+  --bg5: #d4d4d4;
+
+  /* gradient */
+  --g1: linear-gradient(120deg, #f0f0f0 0%, #a2a2a2 100%);
+  --g2: linear-gradient(320deg, #6d9eeb 0%, #333333 100%);
+  --g3: linear-gradient(6deg, #e6e6e6 0%, #cfcfcf 50%, #a2a2a2 100%);
+  --g4: radial-gradient(circle at 50% 50%, #f0f0f0 0%, #a2a2a2 100%);
+
+  /* text */
+  --text1: #fac451;
+  --text2: #83c5df;
+  --text3: #ffffff;
+  --text4: var(--root);
+  --text5: #6d9eeb;
+
+  /* index-hero-bg */
+  --index-hero-bg: var(--root);
+  --index-hero-bg2: #333333;
+  --index-darken-background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
+
+  /* sidebar elements */
+  --sidebar-form-button-bg: var(--root);
+  --sidebar-form-button-bg-filter: brightness(1.2) saturate(0.8);
+  --sidebar-form-button-col: var(--root);
+  --sidebar-form-button-col-filter: brightness(0.4) saturate(1.6);
+  --sidebar-top-border: var(--root);
+  --sidebar-list-col: #ff8181;
+  --sidebar-list-border: #472c4b;
+
+  /* carousel elements */
+  --carousel-border-col: var(--root);
+
+  /* button */
+  --button-bg: var(--root);
+  --button-bg-hover: #e7e7e7;
+  --button-border: rgba(0, 0, 0, 0);
+  --button-text: #781885;
+  
+  /* contact option */
+  --option-border: rgba(77, 111, 139, 0.3);
+  --option-selected-border: var(--root);
+
+  /* form elements */
+  --input-bg: #1d1629;
+  --input-text: #ffffff;
+  --placeholder: rgba(255, 255, 255, 0.829);
+  --input-border: rgba(0, 0, 255, 0);
+  --input-file-display-bg: #a2a2a2;
+
+  /* interactive colors */
+  --highlight: rgba(0, 0, 0, 0.05);
+  --selection-bg: rgba(231, 127, 57, 0.856);
+  --selection-text: #ff9822;
+  --warning-text: #ff6666;
+  --warning-bg: #f0f0f0;
+  --form-every-other-bg: rgba(199, 75, 182, 0.1);
+
+  /* applicable effects */
+  --darken: brightness(0.95);
+  --logo-effect: invert() brightness(1.2) hue-rotate(-130deg);
+  --text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3), 0px 0px 5px rgba(255, 255, 255, 0.3);
+  --outside-shadow: 2px 2px 2px rgba(0,0,0,0.05), 12px 12px 12px rgba(0,0,0,0.1), -2px -2px 2px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.2);
+  --inset-shadow: inset 2px 2px 2px rgba(0,0,0,0.05), inset 12px 12px 12px rgba(0,0,0,0.1), inset -2px -2px 2px rgba(255, 255, 255, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.2);
+  --inset-shadow-strong: inset 2px 2px 2px rgba(0,0,0,0.2), inset 12px 12px 12px rgba(0,0,0,0.3), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.5);
 }

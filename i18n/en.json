@@ -6,7 +6,10 @@
   "form-nav": "survey",
   "contact-nav": "contact",
   "info-nav": "about us",
-  "domov-nav": "home",
+  "home-nav": "home",
+  "menu-nav": "menu",
+  "lang-nav": "language: ",
+  "theme-nav": "theme: ",
   "skeleton-hero-option1": "video",
   "skeleton-hero-option2": "static",
   "skeleton-hero-option3": "slider",
@@ -14,6 +17,11 @@
   "mobile-sidebar-news-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
   "mobile-sidebar-etc": "et cetera",
   "mobile-sidebar-etc-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, minus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia omnis! Unde, sapiente.",
+  "theme-option-light": "light",
+  "theme-option-dark": "dark",
+  "theme-option-neo": "neo",
+  "theme-option-metro": "metro",
+  "theme-option-code": "code",
   "footer-form": "form",
   "footer-up": "up",
 
@@ -93,6 +101,7 @@
 
   "contact-hero": "contact page",
   "contact-hero-subtext": "everything you need for your questions and inquiries",
+  "m-contact-hero-subtext": "everything you need in once place",
 
   "contact-content1-heading": "how you can contact us",
 

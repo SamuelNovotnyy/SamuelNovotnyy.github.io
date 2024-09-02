@@ -4,7 +4,10 @@
   "form-nav": "dotazník",
   "contact-nav": "kontakt",
   "info-nav": "o spoločnosti",
-  "domov-nav": "domov",
+  "home-nav": "domov",
+  "menu-nav": "menu",
+  "lang-nav": "jazyk: ",
+  "theme-nav": "téma: ",
   "skeleton-hero-option1": "video",
   "skeleton-hero-option2": "hero",
   "skeleton-hero-option3": "slider",
@@ -12,6 +15,11 @@
   "mobile-sidebar-news-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, mínus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia sapiente! Un, laudantium itaque dolorem facere sed quidem.",
   "mobile-sidebar-etc": "a tak ďalej",
   "mobile-sidebar-etc-text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, mínus laudantium itaque dolorem facere sed quidem. Accusamus sed est rerum aut quasi voluptatibus ipsa iure officia sapiente! Un, laudantium itaque dolorem facere sed quidem.",
+  "theme-option-light": "svetlá",
+  "theme-option-dark": "tmavá",
+  "theme-option-neo": "neo",
+  "theme-option-metro": "metro",
+  "theme-option-code": "code",
   "footer-form": "dotazník",
   "footer-up": "hore",
 
@@ -89,7 +97,8 @@
   "form-file-upload-button": "Nahrať",
 
   "contact-hero": "kontaktná stránka",
-  "contact-hero-subtext": "všetko, čo potrebujete pre svoje otázky a otázky",
+  "contact-hero-subtext": "všetko, čo potrebujete pre svoje otázky a dotazy",
+  "m-contact-hero-subtext": "všetko, čo potrebujete na jedom mieste",
 
   "contact-content1-heading": "ako nás môžete kontaktovať",
 
@@ -107,7 +116,7 @@
 
   "contact-content1-option3-name": "navštívte nás",
   "contact-content1-option3-h0": "Radi sa s vami stretneme! Zastavte sa v našej kancelárii a prekonzultujte svoje potreby.",
-  "contact-content1-option3-h1": "address:",
+  "contact-content1-option3-h1": "adresa:",
   "contact-content1-option3-h2": "pracovný čas:",
   "contact-content1-option3-p2": "Pondelok až piatok, 9:00 - 18:00",
 
