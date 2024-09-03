@@ -1222,7 +1222,8 @@ $(document).ready(() => {
       } else if (topLocation.endsWith("info.html")) {
         // Nothing yet
       } else {
-        console.error("Invalid page URL:", topLocation);
+        console.error("Invalid page URL:", topLocation, "Redirecting to index");
+        window.top.location.href = "index.html";
       }
     };
   } else {

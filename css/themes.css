@@ -36,6 +36,9 @@
   --sidebar-list-col: var(--text1);
   --sidebar-list-border: #a2a2a2;
 
+  /* carousel elements */
+  --carousel-border-col: black;
+
   /* button */
   --button-bg: var(--vermillon);
   --button-bg-hover: orange;
@@ -107,6 +110,9 @@
   --sidebar-top-border: rgb(54, 52, 52);
   --sidebar-list-col: var(--text1);
   --sidebar-list-border: #424242;
+
+  /* carousel elements */
+  --carousel-border-col: white;
 
   /* button */
   --button-bg: var(--vermillon);
@@ -180,7 +186,7 @@
   --sidebar-list-border: #ffffff;
 
   /* carousel elements */
-  --carousel-border-col: #ffffff; /*
+  --carousel-border-col: #ffffff;
 
   /* button */
   --button-bg: #ff32b4;
