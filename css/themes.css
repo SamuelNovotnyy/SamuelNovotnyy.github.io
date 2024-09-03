@@ -32,7 +32,7 @@
   --sidebar-form-button-bg-filter: brightness(2.5) saturate(0.8);
   --sidebar-form-button-col: var(--vermillon);
   --sidebar-form-button-col-filter: brightness(0.15) saturate(1.8);
-  --sidebar-top-border: grey;
+  --sidebar-top-border: rgb(155, 180, 196);
   --sidebar-list-col: var(--text1);
   --sidebar-list-border: #a2a2a2;
 

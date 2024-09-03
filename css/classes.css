@@ -436,9 +436,10 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
 }
 
 .bgc {
-  background: rgb(231, 231, 231);
-  color: black;
+  background-color: #e7e7e7;
+  color: #000;
 }
+
 .construction {
   position: relative;
   display: flex;
@@ -448,25 +449,28 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   width: 100%;
   height: calc(100vh - var(--header-height));
   text-align: center;
-  font-family: Helvetica, sans-serif;
-  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 4em;
 }
+
 .construction::before {
   content: 'Under Construction';
   position: relative;
+  display: block;
   text-align: center;
-  font-family: Helvetica, sans-serif;
-  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 1em;
 }
+
 .construction::after {
   content: '';
   position: relative;
   display: block;
   width: 100%;
   height: 18rem;
-  background: url(../images/construction.png) no-repeat center center;
+  background: url('../images/construction.png') no-repeat center center;
   background-size: contain;
 }
 
@@ -475,24 +479,29 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   border-bottom: 4px solid var(--option-border);
   cursor: pointer;
 }
+
 .click-option.selected {
   border-bottom: 4px solid var(--option-selected-border);
 }
+
 .flex-between:has(.click-option) {
   column-gap: 10px;
   margin-bottom: 1rem;
 }
+
 .click-option h4 {
   margin: 0 0 8px 0;
   font-weight: 500 !important;
 }
+
 .content-option {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   margin: 0 0 60px 0;
   padding: 0;
 }
+
 .option-image {
   position: relative;
   height: 60vh;
@@ -500,6 +509,7 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   background-size: cover;
   background-position: center center;
 }
+
 .option-text {
   display: flex;
   flex-direction: column;
@@ -507,6 +517,7 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   width: 50%;
   padding: 1rem 3rem;
 }
+
 .option-text div {
   display: grid;
   align-items: center;
@@ -516,23 +527,27 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
     "option-name option-name"
     ". ."; 
 }
+
 .option-text h5 {
   flex-basis: 100%;
   margin: 0;
   grid-area: option-name;
 }
+
 .option-text p {
-  width: fit-content;
+  width: auto;
   margin: 0;
   padding: .7rem 0;
   line-height: 1;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: bold;
   font-size: 1.4rem;
 }
+
 .option-text i {
   position: relative;
-  height: fit-content;
+  display: inline-block;
+  height: auto;
   margin: 0 0 0 .7rem;
   padding: .5rem;
   font-size: 1.2rem;
@@ -541,12 +556,12 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   cursor: pointer;
   color: inherit;
 }
+
 .option-text i:hover {
   background: var(--highlight);
 }
+
 .option-text i::after {
-  --boder-clipboard-popup: 10px;
-  --bcp2: calc(var(--boder-clipboard-popup) / 2);
   opacity: 0;
   pointer-events: none;
   content: "copy to clipboard";
@@ -554,23 +569,26 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
   top: -.3rem;
   left: 50%;
   transform: translate(-50%, -100%);
-  padding: var(--boder-clipboard-popup);
+  padding: 10px;
   background-color: var(--bg3);
   color: var(--text3);
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 1.1rem;
   text-transform: capitalize;
-  text-wrap: nowrap;
+  white-space: nowrap;
   line-height: 1.2;
-  clip-path: polygon(var(--bcp2) var(--bcp2), calc(100% - var(--bcp2)) var(--bcp2), calc(100% - var(--bcp2)) calc(100% - var(--bcp2)), calc(50% - var(--bcp2)) calc(100% - var(--bcp2)), 50% 100%, calc(50% + var(--bcp2)) calc(100% - var(--bcp2)), var(--bcp2) calc(100% - var(--bcp2)));
-  transition: opacity 200ms ease-out;
+  clip-path: polygon(5px 5px, calc(100% - 5px) 5px, calc(100% - 5px) calc(100% - 5px), calc(50% - 5px) calc(100% - 5px), 50% 100%, calc(50% + 5px) calc(100% - 5px), 5px calc(100% - 5px));
+  transition: opacity 0.2s ease-out;
 }
+
 .option-text i.show-popup::after {
   opacity: 1;
 }
+
 .option-text i.show-popup-text::after {
   content: "copied!";
 }
+
 .option-text i:hover::after {
   opacity: 1;
 }
@@ -578,6 +596,6 @@ i.fa-triangle-exclamation, i.fa-cloud-upload, i.fa-circle-info {
 .recaptcha-container {
   position: relative;
   display: block;
-  height: fit-content;
-  width: fit-content;
+  height: auto;
+  width: auto;
 }

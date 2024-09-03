@@ -1,32 +1,35 @@
 #info-hero {
-   display: grid;
-   grid-template-columns: auto auto;
-   margin: 6rem 0 8rem 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 6rem 0 8rem 0;
 }
+
 #info-hero-img {
-   position: relative;
-   height: 100%;
-   aspect-ratio: 1;
-   margin: 0 80px;
-   background-image: url(../../images/about/info-hero.png);
-   background-size: cover;
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 80px;
+  background-image: url(../../images/about/info-hero.png);
+  background-size: cover;
+  background-position: center;
 }
+
 #info-hero-img::before {
-   content: '';
-   position: absolute;
-   z-index: -1;
-   /*background-color: var(--text1);*/
-   inset: 27% 34% 7% 34%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 27% 34% 7% 34%;
 }
 
 #info-hero-text {
-   flex-grow: 1;
-   margin-top: 1rem;
+  flex-grow: 1;
+  margin-top: 1rem;
 }
+
 #info-hero-text h4 {
-   font-weight: 600;
+  font-weight: 600;
 }
 
 #info-content-company {
-   padding: 0 0 60px 0;
+  padding-bottom: 60px;
 }
