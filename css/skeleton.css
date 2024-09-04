@@ -28,7 +28,6 @@ body {
   height: 100%;
 }
 #sidebar-toggle-icon {
-  margin-left: 10px;
   color: var(--text1);
   font-size: var(--header-icon-size);
   cursor: pointer;
@@ -183,9 +182,6 @@ body {
   height: 100%;
   width: var(--header-sides-width);
 }
-#pc-skeleton-icons-contaier, #pc-skeleton-lang-select, #m-skeleton-search {
-  margin-right: 10px;
-}
 
 #m-skeleton-search i {
   color: var(--text1);
@@ -242,6 +238,9 @@ body {
 
 
 @media only screen and (max-width: 1279px) {
+  #skeleton-header-container {
+    padding: 0 2rem;
+  }
   #footer-bottom {
     margin: 2rem 10vw 1rem 10vw;
     padding: 0.8rem 0 0 0;
